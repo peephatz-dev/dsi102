@@ -8,7 +8,9 @@ import {
   Layers,
   HelpCircle,
   Award,
-  Compass
+  Compass,
+  X,
+  Search
 } from 'lucide-react';
 
 export const Sidebar: React.FC = React.memo(() => {
@@ -18,7 +20,11 @@ export const Sidebar: React.FC = React.memo(() => {
     currentMode,
     setCurrentMode,
     completedSections,
-    flashcardMastery
+    flashcardMastery,
+    mobileMenuOpen,
+    setMobileMenuOpen,
+    searchQuery,
+    setSearchQuery
   } = useApp();
 
   const studyModes: { id: StudyMode; label: string; thaiLabel: string; icon: any; badge?: string }[] = [
@@ -61,9 +67,33 @@ export const Sidebar: React.FC = React.memo(() => {
   const masteredCards = Object.values(flashcardMastery).filter(s => s === 'known').length;
   const cardProgress = totalCards > 0 ? Math.round((masteredCards / totalCards) * 100) : 0;
 
-  return (
-    <aside className="w-64 shrink-0 border-r border-slate-200 bg-slate-50/70 p-4 flex flex-col justify-between overflow-y-auto select-none">
+  const handleSelectWeek = (wId: WeekId | 'all') => {
+    setCurrentWeek(wId);
+    setMobileMenuOpen(false);
+  };
+
+  const handleSelectMode = (mId: StudyMode) => {
+    setCurrentMode(mId);
+    setMobileMenuOpen(false);
+  };
+
+  const sidebarContent = (
+    <div className="flex flex-col h-full justify-between p-4 overflow-y-auto select-none">
       <div className="space-y-6">
+        {/* Mobile Search Input */}
+        <div className="md:hidden">
+          <div className="relative w-full">
+            <Search className="absolute left-3 top-2.5 h-3.5 w-3.5 text-slate-400" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search concepts, slides..."
+              className="w-full rounded-xl border border-slate-200 bg-white py-1.5 pl-9 pr-3 text-xs text-slate-900 placeholder-slate-400 focus:border-blue-600 focus:outline-none shadow-xs"
+            />
+          </div>
+        </div>
+
         {/* Week Selector Section */}
         <div>
           <span className="text-[10px] font-mono font-bold tracking-wider text-slate-500 uppercase px-2">
@@ -73,7 +103,7 @@ export const Sidebar: React.FC = React.memo(() => {
           <div className="mt-2 space-y-1">
             {/* Global All Weeks */}
             <button
-              onClick={() => setCurrentWeek('all')}
+              onClick={() => handleSelectWeek('all')}
               className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
                 currentWeek === 'all'
                   ? 'bg-blue-600 text-white shadow-sm'
@@ -94,7 +124,7 @@ export const Sidebar: React.FC = React.memo(() => {
               return (
                 <button
                   key={w.id}
-                  onClick={() => setCurrentWeek(w.id)}
+                  onClick={() => handleSelectWeek(w.id)}
                   className={`w-full flex items-center justify-between px-3 py-2 rounded-xl text-xs font-semibold transition-all ${
                     isActive
                       ? 'bg-white text-blue-700 border border-blue-200/80 shadow-xs'
@@ -132,7 +162,7 @@ export const Sidebar: React.FC = React.memo(() => {
               return (
                 <button
                   key={mode.id}
-                  onClick={() => setCurrentMode(mode.id)}
+                  onClick={() => handleSelectMode(mode.id)}
                   className={`w-full flex items-center justify-between px-3 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                     isActive
                       ? 'bg-blue-600 text-white shadow-sm shadow-blue-500/20'
@@ -183,6 +213,40 @@ export const Sidebar: React.FC = React.memo(() => {
           DSI102 • Bilingual Exam Platform
         </div>
       </div>
-    </aside>
+    </div>
+  );
+
+  return (
+    <>
+      {/* Desktop Sidebar (hidden on mobile) */}
+      <aside className="hidden md:flex w-64 shrink-0 border-r border-slate-200 bg-slate-50/70 flex-col justify-between overflow-y-auto">
+        {sidebarContent}
+      </aside>
+
+      {/* Mobile Slide-Over Drawer with Backdrop */}
+      {mobileMenuOpen && (
+        <div className="fixed inset-0 z-50 md:hidden flex">
+          {/* Backdrop */}
+          <div
+            onClick={() => setMobileMenuOpen(false)}
+            className="fixed inset-0 bg-slate-900/50 backdrop-blur-xs transition-opacity"
+          />
+
+          {/* Drawer Panel */}
+          <div className="relative w-72 max-w-[80vw] h-full bg-slate-50 border-r border-slate-200 shadow-2xl flex flex-col">
+            <div className="flex items-center justify-between p-3.5 border-b border-slate-200 bg-white">
+              <span className="text-xs font-black tracking-wider text-slate-900 font-mono">NAVIGATION</span>
+              <button
+                onClick={() => setMobileMenuOpen(false)}
+                className="p-1 text-slate-500 hover:text-slate-900 rounded-lg hover:bg-slate-100"
+              >
+                <X className="h-4 w-4" />
+              </button>
+            </div>
+            {sidebarContent}
+          </div>
+        </div>
+      )}
+    </>
   );
 });

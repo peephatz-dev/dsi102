@@ -32,6 +32,9 @@ interface AppContextType {
   // Search
   searchQuery: string;
   setSearchQuery: (query: string) => void;
+  // Mobile Navigation
+  mobileMenuOpen: boolean;
+  setMobileMenuOpen: (open: boolean) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -50,6 +53,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [currentMode, setCurrentMode] = useState<StudyMode>('study');
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [searchQuery, setSearchQuery] = useState<string>('');
+  const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
   // Dual pane PDF
   const [pdfViewerOpen, setPdfViewerOpen] = useState<boolean>(true);
@@ -214,6 +218,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         clearExamHistory,
         searchQuery,
         setSearchQuery,
+        mobileMenuOpen,
+        setMobileMenuOpen,
       }}
     >
       {children}

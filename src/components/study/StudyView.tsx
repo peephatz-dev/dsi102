@@ -148,17 +148,17 @@ export const StudyView: React.FC = () => {
   }, [currentWeek]);
 
   return (
-    <div className="mx-auto max-w-4xl px-5 py-8 space-y-8 bg-white min-h-full">
+    <div className="mx-auto max-w-4xl px-3 sm:px-5 py-5 sm:py-8 space-y-6 sm:space-y-8 bg-white min-h-full">
       {/* Course Overview Banner if 'all' */}
       {currentWeek === 'all' && (
-        <div className="rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-indigo-50/40 to-slate-50 p-6 shadow-xs">
+        <div className="rounded-2xl border border-blue-200 bg-gradient-to-r from-blue-50/80 via-indigo-50/40 to-slate-50 p-4 sm:p-6 shadow-xs">
           <div className="flex items-center gap-2">
             <span className="flex h-2.5 w-2.5 rounded-full bg-blue-600" />
             <span className="text-xs font-mono font-bold text-blue-800 uppercase tracking-wider">
               Comprehensive Course Map
             </span>
           </div>
-          <h2 className="mt-2 text-2xl font-black text-slate-900">DSI102: Complete Study Modules (Weeks 1 - 4)</h2>
+          <h2 className="mt-2 text-xl sm:text-2xl font-black text-slate-900">DSI102: Complete Study Modules (Weeks 1 - 4)</h2>
           <p className="mt-1 text-xs text-slate-600">
             Full lecture notes, bilingual Thai commentaries, interactive infographics, and direct slide references.
           </p>
@@ -225,19 +225,19 @@ export const StudyView: React.FC = () => {
                   {/* Module Header Bar */}
                   <div
                     onClick={() => toggleModule(module.id)}
-                    className="flex cursor-pointer items-center justify-between gap-3 p-4 bg-slate-50/80 hover:bg-slate-100/70 border-b border-slate-200/80 transition-colors select-none"
+                    className="flex cursor-pointer items-center justify-between gap-2.5 p-3 sm:p-4 bg-slate-50/80 hover:bg-slate-100/70 border-b border-slate-200/80 transition-colors select-none"
                   >
-                    <div className="flex items-center gap-3">
-                      <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-200 text-xs font-mono font-bold text-blue-700 shadow-xs">
+                    <div className="flex items-center gap-2.5 sm:gap-3">
+                      <div className="flex h-7 w-7 sm:h-8 sm:w-8 shrink-0 items-center justify-center rounded-lg bg-white border border-slate-200 text-xs font-mono font-bold text-blue-700 shadow-xs">
                         M{module.moduleNumber}
                       </div>
                       <div>
                         <h4 className="text-sm font-bold text-slate-900">{module.title}</h4>
-                        <p className="text-xs text-slate-500">{module.thaiTitle}</p>
+                        <p className="text-[11px] sm:text-xs text-slate-500">{module.thaiTitle}</p>
                       </div>
                     </div>
 
-                    <div className="flex items-center gap-3">
+                    <div className="flex items-center gap-2 sm:gap-3">
                       <button
                         onClick={(e) => {
                           e.stopPropagation();
@@ -259,7 +259,7 @@ export const StudyView: React.FC = () => {
 
                   {/* Module Subsections */}
                   {isExpanded && (
-                    <div className="divide-y divide-slate-100 p-6 space-y-6">
+                    <div className="divide-y divide-slate-100 p-3.5 sm:p-6 space-y-5 sm:space-y-6">
                       {module.subsections.map(sub => (
                         <SubsectionCard
                           key={sub.id}

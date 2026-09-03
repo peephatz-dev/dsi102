@@ -2,6 +2,7 @@ import React from 'react';
 import { AppProvider, useApp } from './context/AppContext';
 import { Navbar } from './components/layout/Navbar';
 import { Sidebar } from './components/layout/Sidebar';
+import { MobileBottomNav } from './components/layout/MobileBottomNav';
 import { DualPaneLayout } from './components/layout/DualPaneLayout';
 import { StudyView } from './components/study/StudyView';
 import { FlashcardDeck } from './components/flashcards/FlashcardDeck';
@@ -12,10 +13,10 @@ const MainAppContent: React.FC = () => {
   const { currentMode } = useApp();
 
   return (
-    <div className="flex h-screen w-screen flex-col overflow-hidden bg-slate-950 text-slate-100 antialiased font-sans">
+    <div className="flex h-screen w-screen flex-col overflow-hidden bg-white text-slate-900 antialiased font-sans">
       <Navbar />
 
-      <div className="flex flex-1 overflow-hidden">
+      <div className="flex flex-1 overflow-hidden relative">
         <Sidebar />
 
         <DualPaneLayout>
@@ -25,6 +26,9 @@ const MainAppContent: React.FC = () => {
           {currentMode === 'exam' && <ExamSimulator />}
         </DualPaneLayout>
       </div>
+
+      {/* Mobile Bottom Navigation for Smartphones */}
+      <MobileBottomNav />
     </div>
   );
 };

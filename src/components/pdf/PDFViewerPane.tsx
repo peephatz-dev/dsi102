@@ -9,7 +9,8 @@ import {
   Maximize2,
   Minimize2,
   X,
-  FileText
+  FileText,
+  ArrowLeft
 } from 'lucide-react';
 
 export const PDFViewerPane: React.FC = React.memo(() => {
@@ -52,16 +53,18 @@ export const PDFViewerPane: React.FC = React.memo(() => {
     if (pdfPage > 1) setPdfPage(pdfPage - 1);
   };
 
-  // Prevent mounting iframe completely if viewer is not open (anti-freeze optimization)
+  // Floating button when PDF is closed
   if (!pdfViewerOpen) {
     return (
-      <div className="fixed bottom-6 right-6 z-40">
+      <div className="fixed bottom-16 sm:bottom-6 right-4 sm:right-6 z-30">
         <button
           onClick={() => setPdfViewerOpen(true)}
-          className="flex items-center gap-2 rounded-full bg-blue-600 px-4 py-2.5 text-xs font-bold text-white shadow-xl shadow-blue-500/30 hover:bg-blue-700 transition-all hover:scale-105 border border-blue-400"
+          className="flex items-center gap-1.5 sm:gap-2 rounded-full bg-blue-600 px-3.5 sm:px-4 py-2 sm:py-2.5 text-xs font-bold text-white shadow-xl shadow-blue-500/30 hover:bg-blue-700 transition-all hover:scale-105 border border-blue-400"
+          aria-label="Open PDF slide viewer"
         >
           <FileText className="h-4 w-4" />
-          <span>Open Slide PDF (Page {pdfPage})</span>
+          <span className="hidden sm:inline">Open Slide PDF (Page {pdfPage})</span>
+          <span className="sm:hidden">Slide P.{pdfPage}</span>
         </button>
       </div>
     );
@@ -71,35 +74,42 @@ export const PDFViewerPane: React.FC = React.memo(() => {
 
   return (
     <div
-      className={`flex flex-col border-l border-slate-200 bg-white transition-all duration-200 relative ${
-        isExpanded ? 'fixed inset-0 z-50 w-full h-full' : 'h-full'
+      className={`flex flex-col border-l border-slate-200 bg-white transition-all duration-200 ${
+        isExpanded
+          ? 'fixed inset-0 z-50 w-full h-full'
+          : 'fixed inset-0 z-50 md:relative md:z-auto md:h-full w-full'
       }`}
-      style={!isExpanded ? { width: `${pdfSplitPercent}%` } : undefined}
+      style={!isExpanded ? { width: undefined } : undefined}
     >
       {/* PDF Header Toolbar */}
-      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-slate-50 px-3 py-2 text-xs">
-        {/* Left: Week selector & Slide title */}
-        <div className="flex items-center gap-2">
+      <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-slate-50 px-2.5 sm:px-3 py-2 text-xs">
+        {/* Left: Mobile back button + Week selector */}
+        <div className="flex items-center gap-1.5 sm:gap-2">
+          <button
+            onClick={() => setPdfViewerOpen(false)}
+            className="md:hidden flex items-center gap-1 rounded-lg bg-white border border-slate-200 px-2 py-1 text-slate-700 font-semibold shadow-xs"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            <span className="text-[11px]">Notes</span>
+          </button>
+
           <select
             value={activePdfWeek}
             onChange={(e) => {
               setActivePdfWeek(e.target.value as WeekId);
               setPdfPage(1);
             }}
-            className="rounded-lg border border-slate-300 bg-white px-2 py-1 font-bold text-slate-800 focus:border-blue-600 focus:outline-none shadow-xs"
+            className="rounded-lg border border-slate-300 bg-white px-2 py-1 font-bold text-slate-800 focus:border-blue-600 focus:outline-none shadow-xs text-xs"
           >
-            <option value="week1">Week 1 Slides (48p)</option>
-            <option value="week2">Week 2 Slides (54p)</option>
-            <option value="week3">Week 3 Slides (78p)</option>
-            <option value="week4">Week 4 Slides (48p)</option>
+            <option value="week1">Week 1 (48p)</option>
+            <option value="week2">Week 2 (54p)</option>
+            <option value="week3">Week 3 (78p)</option>
+            <option value="week4">Week 4 (48p)</option>
           </select>
-          <span className="hidden sm:inline text-slate-500 font-mono text-[11px]">
-            {weekInfo.pdfFileName.slice(0, 20)}...
-          </span>
         </div>
 
         {/* Center: Page Controls */}
-        <div className="flex items-center gap-1.5 bg-white rounded-lg p-0.5 border border-slate-200 shadow-xs">
+        <div className="flex items-center gap-1 bg-white rounded-lg p-0.5 border border-slate-200 shadow-xs">
           <button
             onClick={prevPage}
             disabled={pdfPage <= 1}
@@ -109,14 +119,14 @@ export const PDFViewerPane: React.FC = React.memo(() => {
             <ChevronLeft className="h-4 w-4" />
           </button>
 
-          <form onSubmit={handlePageSubmit} className="flex items-center gap-1">
-            <span className="text-[11px] text-slate-500 font-mono">Page</span>
+          <form onSubmit={handlePageSubmit} className="flex items-center gap-0.5 sm:gap-1">
+            <span className="hidden sm:inline text-[11px] text-slate-500 font-mono">Page</span>
             <input
               type="text"
               value={inputPage}
               onChange={(e) => setInputPage(e.target.value)}
               onBlur={handlePageSubmit}
-              className="w-10 rounded border border-slate-200 bg-slate-50 py-0.5 text-center font-mono text-xs font-bold text-slate-900 focus:border-blue-600 focus:outline-none"
+              className="w-8 sm:w-10 rounded border border-slate-200 bg-slate-50 py-0.5 text-center font-mono text-xs font-bold text-slate-900 focus:border-blue-600 focus:outline-none"
             />
             <span className="text-[11px] text-slate-500 font-mono">/ {maxPages}</span>
           </form>
@@ -134,7 +144,7 @@ export const PDFViewerPane: React.FC = React.memo(() => {
         {/* Right: Actions */}
         <div className="flex items-center gap-1 text-slate-600">
           {!isExpanded && (
-            <div className="hidden sm:flex items-center gap-1 border-r border-slate-200 pr-1">
+            <div className="hidden lg:flex items-center gap-1 border-r border-slate-200 pr-1">
               <button
                 onClick={() => setPdfSplitPercent(35)}
                 className={`px-1.5 py-0.5 rounded text-[10px] font-mono ${pdfSplitPercent === 35 ? 'bg-blue-600 text-white' : 'hover:text-slate-900'}`}
@@ -171,7 +181,7 @@ export const PDFViewerPane: React.FC = React.memo(() => {
 
           <button
             onClick={() => setIsExpanded(!isExpanded)}
-            className="rounded p-1 hover:text-slate-900 transition-colors"
+            className="hidden md:block rounded p-1 hover:text-slate-900 transition-colors"
             title={isExpanded ? 'Restore Split View' : 'Maximize PDF'}
           >
             {isExpanded ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
@@ -180,7 +190,7 @@ export const PDFViewerPane: React.FC = React.memo(() => {
           <button
             onClick={() => setPdfViewerOpen(false)}
             className="rounded p-1 hover:text-rose-600 transition-colors"
-            title="Close Split View"
+            title="Close PDF"
           >
             <X className="h-4 w-4" />
           </button>
@@ -200,9 +210,9 @@ export const PDFViewerPane: React.FC = React.memo(() => {
 
       {/* Synced Page Indicator Pill */}
       <div className="absolute bottom-3 left-3 z-10 pointer-events-none">
-        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/95 border border-slate-300 px-3 py-1 font-mono text-[11px] font-medium text-slate-800 shadow-md backdrop-blur">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/95 border border-slate-300 px-2.5 sm:px-3 py-1 font-mono text-[10px] sm:text-[11px] font-medium text-slate-800 shadow-md backdrop-blur">
           <span className="h-2 w-2 rounded-full bg-emerald-500 animate-pulse" />
-          <span>Synced: Page {pdfPage}</span>
+          <span>Slide Page {pdfPage}</span>
         </span>
       </div>
     </div>

@@ -81,7 +81,7 @@ export const QuizView: React.FC = React.memo(() => {
   const bestScoreInfo = quizScores[activeWeekId];
 
   return (
-    <div className="mx-auto max-w-3xl px-5 py-8 space-y-6 bg-white min-h-full">
+    <div className="mx-auto max-w-3xl px-3 sm:px-5 py-5 sm:py-8 space-y-5 sm:space-y-6 bg-white min-h-full">
       {/* Quiz Top Header */}
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-200 pb-4">
         <div>
@@ -93,7 +93,7 @@ export const QuizView: React.FC = React.memo(() => {
               Week {weekInfo.weekNumber}
             </span>
           </div>
-          <h3 className="text-xl font-black text-slate-900 mt-0.5">{weekInfo.title}</h3>
+          <h3 className="text-lg sm:text-xl font-black text-slate-900 mt-0.5">{weekInfo.title}</h3>
           <p className="text-xs text-slate-500">{questions.length} Academic Exam Questions with PDF Slide References</p>
         </div>
 
@@ -124,13 +124,13 @@ export const QuizView: React.FC = React.memo(() => {
       )}
 
       {/* Quiz Progress & Question Selector Bar */}
-      <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-4 shadow-xs">
+      <div className="rounded-2xl border border-slate-200 bg-slate-50/80 p-3 sm:p-4 shadow-xs">
         <div className="flex items-center justify-between text-xs text-slate-600 font-mono mb-3">
-          <span>Question Navigation: {answeredCount} of {questions.length} Answered</span>
-          <span className="font-bold text-blue-700">{submitted ? 'Reviewing Solutions' : 'In Progress'}</span>
+          <span>{answeredCount} of {questions.length} Answered</span>
+          <span className="font-bold text-blue-700">{submitted ? 'Reviewing' : 'In Progress'}</span>
         </div>
 
-        <div className="flex flex-wrap gap-2">
+        <div className="flex flex-wrap gap-1.5 sm:gap-2">
           {questions.map((q, idx) => {
             const isAnswered = selectedAnswers[q.id] !== undefined;
             const isCurrent = activeQuestionIdx === idx;
@@ -153,7 +153,7 @@ export const QuizView: React.FC = React.memo(() => {
               <button
                 key={q.id}
                 onClick={() => setActiveQuestionIdx(idx)}
-                className={`h-9 w-9 rounded-xl border font-mono text-xs transition-all flex items-center justify-center ${btnClass}`}
+                className={`h-8 w-8 sm:h-9 sm:w-9 rounded-xl border font-mono text-xs transition-all flex items-center justify-center ${btnClass}`}
               >
                 {idx + 1}
               </button>
@@ -164,7 +164,7 @@ export const QuizView: React.FC = React.memo(() => {
 
       {/* Active Question Card */}
       {currentQ && (
-        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-xs space-y-6">
+        <div className="rounded-3xl border border-slate-200 bg-white p-4 sm:p-6 shadow-xs space-y-5 sm:space-y-6">
           {/* Question Header */}
           <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-100 pb-4">
             <div className="flex items-center gap-2">
