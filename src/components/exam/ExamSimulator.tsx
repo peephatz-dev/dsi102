@@ -13,7 +13,8 @@ import {
   Award,
   RotateCcw,
   FileText,
-  History
+  History,
+  Zap
 } from 'lucide-react';
 
 export const ExamSimulator: React.FC = React.memo(() => {
@@ -27,6 +28,7 @@ export const ExamSimulator: React.FC = React.memo(() => {
   const [examState, setExamState] = useState<'intro' | 'active' | 'review'>('intro');
   const [questionCount, setQuestionCount] = useState<number>(20);
   const [examDurationMinutes, setExamDurationMinutes] = useState<number>(25);
+  const [instantCheck, setInstantCheck] = useState<boolean>(true); // Default true for instant answer validation
   const [examQuestions, setExamQuestions] = useState<QuizQuestion[]>([]);
   const [userAnswers, setUserAnswers] = useState<Record<string, number>>({});
   const [flaggedQuestions, setFlaggedQuestions] = useState<Record<string, boolean>>({});
@@ -124,6 +126,19 @@ export const ExamSimulator: React.FC = React.memo(() => {
   const handleSelectOption = (qId: string, optIdx: number) => {
     if (examState !== 'active') return;
     setUserAnswers(prev => ({ ...prev, [qId]: optIdx }));
+
+    if (instantCheck) {
+      const q = examQuestions.find(item => item.id === qId);
+      if (q && q.options[optIdx]?.isCorrect) {
+        try {
+          confetti({
+            particleCount: 35,
+            spread: 50,
+            origin: { y: 0.7 }
+          });
+        } catch (e) {}
+      }
+    }
   };
 
   const toggleFlag = (qId: string) => {
@@ -148,8 +163,8 @@ export const ExamSimulator: React.FC = React.memo(() => {
           </p>
 
           {/* Configuration */}
-          <div className="mt-6 inline-flex flex-wrap justify-center gap-4 text-left">
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xs">
+          <div className="mt-6 inline-flex flex-wrap justify-center gap-3 text-left">
+            <div className="rounded-2xl border border-slate-200 bg-white p-3.5 shadow-xs">
               <span className="text-xs font-mono text-slate-500 block mb-2 font-bold">Question Count:</span>
               <div className="flex gap-2">
                 {[15, 20, 28].map(cnt => (
@@ -171,12 +186,27 @@ export const ExamSimulator: React.FC = React.memo(() => {
               </div>
             </div>
 
-            <div className="rounded-2xl border border-slate-200 bg-white p-4 shadow-xs">
+            <div className="rounded-2xl border border-slate-200 bg-white p-3.5 shadow-xs">
               <span className="text-xs font-mono text-slate-500 block mb-2 font-bold">Time Allocated:</span>
-              <div className="flex items-center gap-2 text-xs font-mono font-bold text-blue-700">
+              <div className="flex items-center gap-2 text-xs font-mono font-bold text-blue-700 pt-1">
                 <Timer className="h-4 w-4 text-blue-600" />
                 <span>{examDurationMinutes} Minutes</span>
               </div>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-white p-3.5 shadow-xs">
+              <span className="text-xs font-mono text-slate-500 block mb-2 font-bold">Feedback Mode:</span>
+              <button
+                onClick={() => setInstantCheck(!instantCheck)}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-bold transition-all ${
+                  instantCheck
+                    ? 'bg-emerald-600 text-white shadow-xs'
+                    : 'bg-slate-100 text-slate-700 border border-slate-200'
+                }`}
+              >
+                <Zap className="h-3.5 w-3.5" />
+                <span>{instantCheck ? '⚡ ตรวจคำตอบทันที' : '📋 ตรวจตอนส่ง'}</span>
+              </button>
             </div>
           </div>
 
@@ -252,6 +282,21 @@ export const ExamSimulator: React.FC = React.memo(() => {
           </div>
 
           <div className="flex items-center gap-2 sm:gap-3">
+            {/* Instant feedback toggle */}
+            <button
+              onClick={() => setInstantCheck(!instantCheck)}
+              className={`flex items-center gap-1 px-2.5 sm:px-3 py-1 rounded-xl text-xs font-semibold transition-all border ${
+                instantCheck
+                  ? 'bg-emerald-50 text-emerald-800 border-emerald-300'
+                  : 'bg-white text-slate-600 border-slate-200 hover:text-slate-900'
+              }`}
+              title="สลับโหมดตรวจคำตอบทันทีเมื่อคลิก"
+            >
+              <Zap className="h-3.5 w-3.5 text-emerald-600" />
+              <span className="hidden sm:inline">{instantCheck ? 'ตรวจทันที (ON)' : 'ตรวจตอนจบ (OFF)'}</span>
+              <span className="sm:hidden font-mono text-[10px]">{instantCheck ? '⚡ ตรวจทันที' : '📋 สอบจริง'}</span>
+            </button>
+
             <div className={`flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-xl font-mono text-xs font-bold ${
               isWarningTime
                 ? 'bg-rose-50 text-rose-700 border border-rose-300 animate-pulse'
@@ -282,15 +327,27 @@ export const ExamSimulator: React.FC = React.memo(() => {
               const isAnswered = userAnswers[q.id] !== undefined;
               const isFlagged = flaggedQuestions[q.id];
               const isCurrent = currentIndex === idx;
+              const isCorrect = isAnswered && q.options[userAnswers[q.id]]?.isCorrect;
+              const isWrong = isAnswered && !isCorrect;
 
               let btnClass = 'border-slate-200 bg-white text-slate-700 hover:border-slate-300';
 
-              if (isCurrent) {
-                btnClass = 'border-blue-600 bg-blue-600 text-white font-bold shadow-xs ring-1 ring-blue-500';
+              if (instantCheck && isAnswered) {
+                if (isCorrect) {
+                  btnClass = 'border-emerald-500 bg-emerald-500 text-white font-bold shadow-xs';
+                } else if (isWrong) {
+                  btnClass = 'border-rose-500 bg-rose-500 text-white font-bold shadow-xs';
+                }
+              } else if (isCurrent) {
+                btnClass = 'border-blue-600 bg-blue-600 text-white font-bold shadow-xs';
               } else if (isFlagged) {
                 btnClass = 'border-amber-400 bg-amber-50 text-amber-900 font-bold';
               } else if (isAnswered) {
                 btnClass = 'border-blue-300 bg-blue-50 text-blue-800 font-semibold';
+              }
+
+              if (isCurrent) {
+                btnClass += ' ring-2 ring-blue-500 ring-offset-1';
               }
 
               return (
@@ -332,27 +389,72 @@ export const ExamSimulator: React.FC = React.memo(() => {
             <div className="space-y-3">
               {currentQ.options.map((opt, optIdx) => {
                 const isSelected = userAnswers[currentQ.id] === optIdx;
+                const isAnswered = userAnswers[currentQ.id] !== undefined;
+                const showInstant = instantCheck && isAnswered;
+
+                let cardStyle = 'border-slate-200 bg-slate-50/60 text-slate-700 hover:border-slate-300 hover:bg-white cursor-pointer';
+
+                if (showInstant) {
+                  if (opt.isCorrect) {
+                    cardStyle = isSelected
+                      ? 'border-emerald-500 bg-emerald-50 text-emerald-950 ring-2 ring-emerald-400 font-bold shadow-xs'
+                      : 'border-emerald-400 bg-emerald-50/80 text-emerald-950 border-dashed font-semibold';
+                  } else if (isSelected && !opt.isCorrect) {
+                    cardStyle = 'border-rose-500 bg-rose-50 text-rose-950 ring-2 ring-rose-400 font-semibold shadow-xs';
+                  } else {
+                    cardStyle = 'border-slate-200/60 bg-slate-50/40 text-slate-400 opacity-50 cursor-default';
+                  }
+                } else if (isSelected) {
+                  cardStyle = 'border-blue-600 bg-blue-50/80 text-slate-900 ring-1 ring-blue-500';
+                }
 
                 return (
                   <div
                     key={optIdx}
                     onClick={() => handleSelectOption(currentQ.id, optIdx)}
-                    className={`cursor-pointer rounded-2xl border p-4 transition-all shadow-xs ${
-                      isSelected
-                        ? 'border-blue-600 bg-blue-50/80 text-slate-900 ring-1 ring-blue-500'
-                        : 'border-slate-200 bg-slate-50/60 text-slate-700 hover:border-slate-300 hover:bg-white'
-                    }`}
+                    className={`rounded-2xl border p-3.5 sm:p-4 transition-all shadow-xs ${cardStyle}`}
                   >
                     <div className="flex items-start gap-3">
                       <span className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-lg font-mono text-xs font-bold ${
-                        isSelected ? 'bg-blue-600 text-white' : 'bg-slate-200 text-slate-700'
+                        showInstant && opt.isCorrect
+                          ? 'bg-emerald-600 text-white'
+                          : showInstant && isSelected && !opt.isCorrect
+                          ? 'bg-rose-600 text-white'
+                          : isSelected
+                          ? 'bg-blue-600 text-white'
+                          : 'bg-slate-200 text-slate-700'
                       }`}>
                         {['A', 'B', 'C', 'D'][optIdx]}
                       </span>
-                      <div className="text-xs leading-relaxed font-medium">
+
+                      <div className="flex-1 text-xs leading-relaxed font-medium">
                         <FormattedText content={opt.text} />
                       </div>
+
+                      {showInstant && opt.isCorrect && (
+                        <span className="flex items-center gap-1 rounded-full bg-emerald-100 border border-emerald-300 px-2.5 py-0.5 text-[10px] font-bold text-emerald-800 shrink-0">
+                          <CheckCircle2 className="h-3.5 w-3.5 text-emerald-600" />
+                          <span>{isSelected ? '✓ ถูกต้อง!' : '✓ คำตอบที่ถูกต้อง'}</span>
+                        </span>
+                      )}
+                      {showInstant && isSelected && !opt.isCorrect && (
+                        <span className="flex items-center gap-1 rounded-full bg-rose-100 border border-rose-300 px-2.5 py-0.5 text-[10px] font-bold text-rose-800 shrink-0">
+                          <XCircle className="h-3.5 w-3.5 text-rose-600" />
+                          <span>✗ ยังไม่ถูก</span>
+                        </span>
+                      )}
                     </div>
+
+                    {showInstant && (opt.isCorrect || isSelected) && (
+                      <div className={`mt-3 border-t pt-2.5 text-xs leading-relaxed ${
+                        opt.isCorrect ? 'border-emerald-200 text-emerald-950' : 'border-rose-200 text-rose-950'
+                      }`}>
+                        <span className="font-bold">
+                          {opt.isCorrect ? '✓ คำอธิบายเหตุผล: ' : '✗ ทำไมข้อนี้จึงไม่ถูกต้อง: '}
+                        </span>
+                        <FormattedText content={opt.explanation} />
+                      </div>
+                    )}
                   </div>
                 );
               })}
