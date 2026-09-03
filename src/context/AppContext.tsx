@@ -55,8 +55,8 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [mobileMenuOpen, setMobileMenuOpen] = useState<boolean>(false);
 
-  // Dual pane PDF
-  const [pdfViewerOpen, setPdfViewerOpen] = useState<boolean>(true);
+  // Dual pane PDF (default false so user starts directly with notes/information without slides)
+  const [pdfViewerOpen, setPdfViewerOpen] = useState<boolean>(false);
   const [pdfPage, setPdfPage] = useState<number>(1);
   const [activePdfWeek, setActivePdfWeek] = useState<WeekId>('week1');
   const [pdfSplitPercent, setPdfSplitPercent] = useState<number>(45);

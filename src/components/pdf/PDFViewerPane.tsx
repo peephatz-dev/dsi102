@@ -79,7 +79,7 @@ export const PDFViewerPane: React.FC = React.memo(() => {
           ? 'fixed inset-0 z-50 w-full h-full'
           : 'fixed inset-0 z-50 md:relative md:z-auto md:h-full w-full'
       }`}
-      style={!isExpanded ? { width: undefined } : undefined}
+      style={!isExpanded ? { width: `${pdfSplitPercent}%` } : undefined}
     >
       {/* PDF Header Toolbar */}
       <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-200 bg-slate-50 px-2.5 sm:px-3 py-2 text-xs">
