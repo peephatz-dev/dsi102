@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
-import { WEEKS_INFO } from '../../data/weeksInfo';
+import { WEEKS_INFO, ALL_WEEKS_LIST } from '../../data/weeksInfo';
 import { WeekId } from '../../types/course';
 import {
   ChevronLeft,
@@ -101,10 +101,11 @@ export const PDFViewerPane: React.FC = React.memo(() => {
             }}
             className="rounded-lg border border-slate-300 bg-white px-2 py-1 font-bold text-slate-800 focus:border-blue-600 focus:outline-none shadow-xs text-xs"
           >
-            <option value="week1">Week 1 (48p)</option>
-            <option value="week2">Week 2 (54p)</option>
-            <option value="week3">Week 3 (78p)</option>
-            <option value="week4">Week 4 (48p)</option>
+            {ALL_WEEKS_LIST.map(w => (
+              <option key={w.id} value={w.id}>
+                Week {w.weekNumber} ({w.totalPages}p)
+              </option>
+            ))}
           </select>
         </div>
 

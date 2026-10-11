@@ -114,7 +114,7 @@ export const Sidebar: React.FC = React.memo(() => {
                 <Compass className="h-4 w-4" />
                 <span>All Weeks (Global)</span>
               </div>
-              <span className="text-[10px] font-mono opacity-80">228p</span>
+              <span className="text-[10px] font-mono opacity-80">355p</span>
             </button>
 
             {/* Individual Weeks */}

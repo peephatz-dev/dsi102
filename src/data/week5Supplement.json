@@ -1,0 +1,80 @@
+[
+  {
+    "id": "week5-extra-1",
+    "weekId": "week5",
+    "moduleNumber": "+1",
+    "title": "Network links and cable construction",
+    "thaiTitle": "เส้นทางสื่อสารและองค์ประกอบสาย",
+    "pdfPageStart": 19,
+    "pdfPageEnd": 36,
+    "subsections": [
+      {
+        "id": "week5-extra-1-1",
+        "title": "Network links",
+        "thaiTitle": "Network links",
+        "pdfPage": 20,
+        "content": "Link คือเส้นทางสื่อสารระหว่างอุปกรณ์ โดยมี sender, medium และ receiver สื่อแบ่งเป็น wired เช่น copper/fiber และ wireless เช่น radio การเลือกสื่อต้องพิจารณาระยะทาง ความต้องการประสิทธิภาพ และสภาพแวดล้อม",
+        "thaiCommentary": "Link คือเส้นทางสื่อสารระหว่างอุปกรณ์ โดยมี sender, medium และ receiver สื่อแบ่งเป็น wired เช่น copper/fiber และ wireless เช่น radio การเลือกสื่อต้องพิจารณาระยะทาง ความต้องการประสิทธิภาพ และสภาพแวดล้อม"
+      },
+      {
+        "id": "week5-extra-1-2",
+        "title": "Coaxial cable",
+        "thaiTitle": "Coaxial cable",
+        "pdfPage": 31,
+        "content": "สาย coaxial มีตัวนำกลาง ฉนวน shield และ outer jacket โครงสร้าง shielding ช่วยลดผลจากสัญญาณรบกวน แตกต่างจาก twisted pair ที่สลับตำแหน่งตัวนำเพื่อให้ noise มีผลใกล้เคียงกัน",
+        "thaiCommentary": "สาย coaxial มีตัวนำกลาง ฉนวน shield และ outer jacket โครงสร้าง shielding ช่วยลดผลจากสัญญาณรบกวน แตกต่างจาก twisted pair ที่สลับตำแหน่งตัวนำเพื่อให้ noise มีผลใกล้เคียงกัน"
+      },
+      {
+        "id": "week5-extra-1-3",
+        "title": "RJ11, RJ45 and shielding",
+        "thaiTitle": "RJ11, RJ45 and shielding",
+        "pdfPage": 30,
+        "content": "RJ11 ใช้กับการเชื่อมต่อโทรศัพท์และมีขนาด/จำนวนหน้าสัมผัสน้อยกว่า RJ45 ที่ใช้กับ twisted-pair Ethernet คำย่อ U/F/S ในชื่อ shield หมายถึง unshielded, foil และ braid ตามตำแหน่งที่ระบุ ต้องอ่านทั้งส่วน overall shield และ shield ของคู่สาย",
+        "thaiCommentary": "RJ11 ใช้กับการเชื่อมต่อโทรศัพท์และมีขนาด/จำนวนหน้าสัมผัสน้อยกว่า RJ45 ที่ใช้กับ twisted-pair Ethernet คำย่อ U/F/S ในชื่อ shield หมายถึง unshielded, foil และ braid ตามตำแหน่งที่ระบุ ต้องอ่านทั้งส่วน overall shield และ shield ของคู่สาย"
+      }
+    ]
+  },
+  {
+    "id": "week5-extra-2",
+    "weekId": "week5",
+    "moduleNumber": "+2",
+    "title": "Wireless infrastructure and network types",
+    "thaiTitle": "โครงข่ายไร้สายและเครือข่ายตามหน้าที่",
+    "pdfPageStart": 43,
+    "pdfPageEnd": 54,
+    "subsections": [
+      {
+        "id": "week5-extra-2-1",
+        "title": "Microwave, satellite and cellular",
+        "thaiTitle": "Microwave, satellite and cellular",
+        "pdfPage": 47,
+        "content": "Terrestrial microwave ใช้เส้นทาง line-of-sight ระหว่างหอส่ง ส่วน satellite ใช้ ground station ผ่านดาวเทียม และ cellular แบ่งพื้นที่เป็น cell เพื่อรองรับอุปกรณ์เคลื่อนที่ ข้อจำกัดของตัวอย่างในสไลด์ขึ้นกับเทคโนโลยีและสภาพแวดล้อม",
+        "thaiCommentary": "Terrestrial microwave ใช้เส้นทาง line-of-sight ระหว่างหอส่ง ส่วน satellite ใช้ ground station ผ่านดาวเทียม และ cellular แบ่งพื้นที่เป็น cell เพื่อรองรับอุปกรณ์เคลื่อนที่ ข้อจำกัดของตัวอย่างในสไลด์ขึ้นกับเทคโนโลยีและสภาพแวดล้อม"
+      },
+      {
+        "id": "week5-extra-2-2",
+        "title": "Wireless sensor networks",
+        "thaiTitle": "Wireless sensor networks",
+        "pdfPage": 50,
+        "content": "Wireless sensor network รวม sensor หลายจุดส่งค่าที่วัดไปยังจุดกลาง เช่น ระบบตรวจวัดในอาคาร ประเด็นสำคัญคือบทบาทของ sensor, link และจุดรวบรวมข้อมูล ไม่ใช่อุปกรณ์ไร้สายทุกชนิดเป็น sensor network",
+        "thaiCommentary": "Wireless sensor network รวม sensor หลายจุดส่งค่าที่วัดไปยังจุดกลาง เช่น ระบบตรวจวัดในอาคาร ประเด็นสำคัญคือบทบาทของ sensor, link และจุดรวบรวมข้อมูล ไม่ใช่อุปกรณ์ไร้สายทุกชนิดเป็น sensor network"
+      },
+      {
+        "id": "week5-extra-2-3",
+        "title": "SAN and logical networks",
+        "thaiTitle": "SAN and logical networks",
+        "pdfPage": 53,
+        "content": "นอกจาก PAN/LAN/MAN/WAN ที่แบ่งตามพื้นที่แล้ว ยังแบ่งตามหน้าที่ได้ เช่น SAN สำหรับการเชื่อมต่อ storage และเครือข่ายเชิงตรรกะ/overlay การจำแนกตามขนาดกับการจำแนกตามจุดประสงค์เป็นคนละมิติ",
+        "thaiCommentary": "นอกจาก PAN/LAN/MAN/WAN ที่แบ่งตามพื้นที่แล้ว ยังแบ่งตามหน้าที่ได้ เช่น SAN สำหรับการเชื่อมต่อ storage และเครือข่ายเชิงตรรกะ/overlay การจำแนกตามขนาดกับการจำแนกตามจุดประสงค์เป็นคนละมิติ"
+      },
+      {
+        "id": "week5-extra-2-4",
+        "title": "Network topology trade-offs",
+        "thaiTitle": "Network topology trade-offs",
+        "pdfPage": 57,
+        "content": "Bus ใช้ backbone ร่วม Ring เชื่อมเป็นวง Star รวมที่อุปกรณ์กลาง Tree จัดลำดับชั้น และ Mesh มีหลายเส้นทาง ต้องเปรียบเทียบ fault tolerance กับต้นทุนและความซับซ้อน Star มีอุปกรณ์กลางเป็นจุดเสี่ยง ส่วน redundant paths ช่วยลดการพึ่งจุดเดียวแต่ต้องควบคุมเส้นทาง",
+        "thaiCommentary": "Bus ใช้ backbone ร่วม Ring เชื่อมเป็นวง Star รวมที่อุปกรณ์กลาง Tree จัดลำดับชั้น และ Mesh มีหลายเส้นทาง ต้องเปรียบเทียบ fault tolerance กับต้นทุนและความซับซ้อน Star มีอุปกรณ์กลางเป็นจุดเสี่ยง ส่วน redundant paths ช่วยลดการพึ่งจุดเดียวแต่ต้องควบคุมเส้นทาง"
+      }
+    ]
+  }
+]

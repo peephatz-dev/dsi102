@@ -1,0 +1,34 @@
+{
+  "week1": {
+    "source": "DSI102_Week1_Introduction to Digital Technology.pdf",
+    "pages": 48
+  },
+  "week2": {
+    "source": "Week2 Computer Platforms/DSI102_Week2_Computer_Platform.pdf",
+    "pages": 54
+  },
+  "week3": {
+    "source": "Week3 OS/DSI102_Week3_Operating_System.pdf",
+    "pages": 78
+  },
+  "week4": {
+    "source": "Week4 VMs and Cloud/DSI102_Week4_VM_Cloud.pdf",
+    "pages": 48
+  },
+  "week5": {
+    "source": "Week5 Intro to Network/DSI102_Week5_Introduction_to_Computer_Network.pdf",
+    "pages": 74
+  },
+  "week6": {
+    "source": "Week6 Network Communication/DSI102_Week6_Network_Communication.pdf",
+    "pages": 66
+  },
+  "week7": {
+    "source": "Week7 Network Security 1/DSI102_Week8_Network_Layers_Security.pdf",
+    "pages": 74
+  },
+  "week8": {
+    "source": "Week8 Network Security 2/DSI102_Week9_Cyber_Attacks.pdf",
+    "pages": 72
+  }
+}

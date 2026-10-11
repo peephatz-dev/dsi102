@@ -1,0 +1,2258 @@
+[
+  {
+    "week": "week1",
+    "module": "w1-m1",
+    "title": "เครื่องมือ → ระบบดิจิทัล → บริการดิจิทัล",
+    "sourcePages": [
+      4,
+      11
+    ],
+    "sourceCharacters": 2687,
+    "engine": "service",
+    "scenario": "กดจองหนังสือหนึ่งเล่ม แล้วระบบทำอะไรบ้าง",
+    "topics": [
+      {
+        "id": "w1-m1-s1",
+        "title": "The Hierarchy: Tool → System → Service",
+        "page": 5,
+        "characters": 534,
+        "existingInteractive": "infographic-w1-hierarchy",
+        "teachingScenes": [
+          "w1-m1"
+        ]
+      },
+      {
+        "id": "w1-m1-s2",
+        "title": "The 5 Building Blocks of Digital Technology",
+        "page": 9,
+        "characters": 704,
+        "existingInteractive": "infographic-w1-building-blocks",
+        "teachingScenes": [
+          "w1-m1",
+          "w1-m3",
+          "w6-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m2",
+    "title": "แอนะล็อก vs ดิจิทัล และการแทนค่าด้วยเลขฐานสอง",
+    "sourcePages": [
+      7,
+      8
+    ],
+    "sourceCharacters": 763,
+    "engine": "encoding",
+    "scenario": "ตัวอักษร A เดินทางไปเป็นข้อมูลบิต",
+    "topics": [
+      {
+        "id": "w1-m2-s1",
+        "title": "Continuous vs. Discrete Signals",
+        "page": 7,
+        "characters": 518,
+        "existingInteractive": "infographic-w1-analog-digital",
+        "teachingScenes": [
+          "w1-m2",
+          "week5-extra-1"
+        ]
+      },
+      {
+        "id": "w1-m2-s2",
+        "title": "Binary Abstraction: Bits, Bytes, and ASCII",
+        "page": 8,
+        "characters": 365,
+        "existingInteractive": "infographic-w1-binary",
+        "teachingScenes": [
+          "w1-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m3",
+    "title": "การจำแนกประเภทเทคโนโลยี: IT เทียบกับ OT",
+    "sourcePages": [
+      12,
+      20
+    ],
+    "sourceCharacters": 2629,
+    "engine": "sensor",
+    "scenario": "เซนเซอร์ส่งค่า แล้วเครื่องจักรได้รับคำสั่ง",
+    "topics": [
+      {
+        "id": "w1-m3-s1",
+        "title": "IT (Information Technology) vs. OT (Operational Technology)",
+        "page": 15,
+        "characters": 630,
+        "existingInteractive": "infographic-w1-it-vs-ot",
+        "teachingScenes": [
+          "w1-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m4",
+    "title": "คลาวด์คอมพิวติง: IaaS, PaaS และ SaaS",
+    "sourcePages": [
+      35,
+      36
+    ],
+    "sourceCharacters": 516,
+    "engine": "ownership",
+    "scenario": "ติดตั้งบริการเดียวกันบน IaaS / PaaS / SaaS",
+    "topics": [
+      {
+        "id": "w1-m4-s1",
+        "title": "The Cloud Service Pyramid & Management Boundaries",
+        "page": 36,
+        "characters": 963,
+        "existingInteractive": "infographic-w1-cloud-models",
+        "teachingScenes": [
+          "w1-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m5",
+    "title": "ความมั่นคงปลอดภัยสารสนเทศ: สามเหลี่ยม CIA และพื้นที่เสี่ยง",
+    "sourcePages": [
+      39,
+      40
+    ],
+    "sourceCharacters": 584,
+    "engine": "access",
+    "scenario": "ขอดูข้อมูล และตรวจผลต่อ CIA",
+    "topics": [
+      {
+        "id": "w1-m5-s1",
+        "title": "The CIA Triad Core Pillars",
+        "page": 39,
+        "characters": 867,
+        "existingInteractive": "infographic-w1-cia-triad",
+        "teachingScenes": [
+          "w1-m5",
+          "w8-m5",
+          "capacity"
+        ]
+      },
+      {
+        "id": "w1-m5-s2",
+        "title": "Attack Surface",
+        "page": 39,
+        "characters": 560,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m1",
+          "w7-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m6",
+    "title": "ท่อกระบวนการทำงานของ AI และระบบอัตโนมัติ",
+    "sourcePages": [
+      20,
+      21
+    ],
+    "sourceCharacters": 537,
+    "engine": "sensor",
+    "scenario": "ข้อมูล sensor → วิเคราะห์ → สั่งงาน → ติดตามผล",
+    "topics": [
+      {
+        "id": "w1-m6-s1",
+        "title": "The 5-Stage Operational Pipeline",
+        "page": 20,
+        "characters": 856,
+        "existingInteractive": "infographic-w1-ai-pipeline",
+        "teachingScenes": [
+          "w1-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week1",
+    "module": "w1-m7",
+    "title": "การบริหารการเปลี่ยนแปลงและการเปิดรับเทคโนโลยี",
+    "sourcePages": [
+      29,
+      30
+    ],
+    "sourceCharacters": 714,
+    "engine": "decision",
+    "scenario": "ทดลองระบบดิจิทัลก่อนขยายการใช้งาน",
+    "topics": [
+      {
+        "id": "w1-m7-s1",
+        "title": "Structured 5-Step Digital Adoption Process",
+        "page": 30,
+        "characters": 1000,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w1-m7"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m1",
+    "title": "นิยาม โครงสร้างสแต็ก และวิวัฒนาการของแพลตฟอร์มคอมพิวเตอร์",
+    "sourcePages": [
+      1,
+      11
+    ],
+    "sourceCharacters": 3167,
+    "engine": "platform",
+    "scenario": "โปรแกรมสั่งพิมพ์ผ่าน OS และ driver",
+    "topics": [
+      {
+        "id": "w2-m1-s1",
+        "title": "Platform = Hardware Architecture + Software Environment",
+        "page": 6,
+        "characters": 673,
+        "existingInteractive": "infographic-w2-stack",
+        "teachingScenes": [
+          "w2-m1",
+          "w2-m6"
+        ]
+      },
+      {
+        "id": "w2-m1-s2",
+        "title": "The 5-Layer Platform Stack & Abstraction Flow",
+        "page": 8,
+        "characters": 836,
+        "existingInteractive": "infographic-w2-stack",
+        "teachingScenes": [
+          "w2-m1",
+          "w2-m6"
+        ]
+      },
+      {
+        "id": "w2-m1-s3",
+        "title": "Evolution of Computer Platforms",
+        "page": 11,
+        "characters": 961,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w2-m1",
+          "w2-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m2",
+    "title": "สถาปัตยกรรมฮาร์ดแวร์และการจัดระเบียบระบบคอมพิวเตอร์",
+    "sourcePages": [
+      12,
+      16
+    ],
+    "sourceCharacters": 1066,
+    "engine": "cpu",
+    "scenario": "ดู CPU อ่านคำสั่ง บวกเลข และเขียนผล",
+    "topics": [
+      {
+        "id": "w2-m2-s1",
+        "title": "Von Neumann Architecture & The Motherboard",
+        "page": 14,
+        "characters": 786,
+        "existingInteractive": "infographic-w2-von-neumann",
+        "teachingScenes": [
+          "w2-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m3",
+    "title": "หน่วยประมวลผล: CPU, GPU และชิปเร่งความเร็ว AI เฉพาะทาง",
+    "sourcePages": [
+      17,
+      24
+    ],
+    "sourceCharacters": 2357,
+    "engine": "parallel",
+    "scenario": "แบ่งงานคำนวณเป็นชุดให้ตัวประมวลผล",
+    "topics": [
+      {
+        "id": "w2-m3-s1",
+        "title": "The CPU & The Instruction Machine Cycle",
+        "page": 18,
+        "characters": 690,
+        "existingInteractive": "infographic-w2-cpu-gpu",
+        "teachingScenes": [
+          "w2-m2"
+        ]
+      },
+      {
+        "id": "w2-m3-s2",
+        "title": "Architectural Comparison: CPU vs. GPU vs. AI Accelerators",
+        "page": 23,
+        "characters": 923,
+        "existingInteractive": "infographic-w2-cpu-gpu",
+        "teachingScenes": [
+          "w2-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m4",
+    "title": "ลำดับชั้นหน่วยความจำและการจัดเก็บข้อมูล",
+    "sourcePages": [
+      25,
+      34
+    ],
+    "sourceCharacters": 2666,
+    "engine": "memory",
+    "scenario": "CPU ขอข้อมูลซ้ำ: อ่านจาก cache หรือ RAM",
+    "topics": [
+      {
+        "id": "w2-m4-s1",
+        "title": "The Memory Hierarchy Pyramid",
+        "page": 27,
+        "characters": 950,
+        "existingInteractive": "infographic-w2-memory-pyramid",
+        "teachingScenes": [
+          "w2-m4"
+        ]
+      },
+      {
+        "id": "w2-m4-s2",
+        "title": "SRAM vs. DRAM & Volatility",
+        "page": 30,
+        "characters": 1058,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "volatility",
+          "w2-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m5",
+    "title": "ระบบนำเข้า/ส่งออก และโครงสร้างพื้นฐานบัสระบบ",
+    "sourcePages": [
+      35,
+      39
+    ],
+    "sourceCharacters": 1326,
+    "engine": "bus",
+    "scenario": "ต่อ address, control และ data bus ในการอ่าน memory",
+    "topics": [
+      {
+        "id": "w2-m5-s1",
+        "title": "The System Bus: Address, Data, and Control",
+        "page": 39,
+        "characters": 971,
+        "existingInteractive": "infographic-w2-von-neumann",
+        "teachingScenes": [
+          "w2-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m6",
+    "title": "สแต็กซอฟต์แวร์ ไคลเอนต์-เซิร์ฟเวอร์ และแพลตฟอร์มคลาวด์แบบกระจาย",
+    "sourcePages": [
+      40,
+      46
+    ],
+    "sourceCharacters": 1903,
+    "engine": "service",
+    "scenario": "Browser → application server → database → browser",
+    "topics": [
+      {
+        "id": "w2-m6-s1",
+        "title": "Client-Server Architecture & Multi-Tier Systems",
+        "page": 44,
+        "characters": 873,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w2-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week2",
+    "module": "w2-m7",
+    "title": "การจำแนกประเภทแพลตฟอร์มและเมทริกซ์การชดเชยทางสถาปัตยกรรม (Trade-offs)",
+    "sourcePages": [
+      47,
+      54
+    ],
+    "sourceCharacters": 2215,
+    "engine": "decision",
+    "scenario": "เลือก platform ตาม workload และข้อจำกัด",
+    "topics": [
+      {
+        "id": "w2-m7-s1",
+        "title": "The Engineering Trade-off Matrix",
+        "page": 48,
+        "characters": 1145,
+        "existingInteractive": "infographic-w2-tradeoffs",
+        "teachingScenes": [
+          "w2-m7"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m1",
+    "title": "บทนำสู่ระบบปฏิบัติการ: วิกฤตหากไม่มี OS และ 3 บทบาทหลัก",
+    "sourcePages": [
+      8,
+      21
+    ],
+    "sourceCharacters": 4056,
+    "engine": "platform",
+    "scenario": "Application เรียก OS เพื่อใช้เครื่องพิมพ์",
+    "topics": [
+      {
+        "id": "w3-m1-s1",
+        "title": "What Happens When You Click an Application?",
+        "page": 9,
+        "characters": 886,
+        "existingInteractive": "infographic-w3-no-os",
+        "teachingScenes": [
+          "w3-m1"
+        ]
+      },
+      {
+        "id": "w3-m1-s2",
+        "title": "The \"No-OS\" Dilemma & The 3 Roles of an OS",
+        "page": 12,
+        "characters": 1236,
+        "existingInteractive": "infographic-w3-no-os",
+        "teachingScenes": [
+          "w3-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m2",
+    "title": "การจัดการระบบ I/O: โพลลิ่ง สัญญาณขัดจังหวะ แทรป และ DMA",
+    "sourcePages": [
+      22,
+      26
+    ],
+    "sourceCharacters": 1265,
+    "engine": "io",
+    "scenario": "อุปกรณ์ส่งข้อมูลเข้า RAM และแจ้ง CPU",
+    "topics": [
+      {
+        "id": "w3-m2-s1",
+        "title": "Polling vs. Hardware Interrupts vs. Traps/Exceptions",
+        "page": 23,
+        "characters": 942,
+        "existingInteractive": "infographic-w3-interrupt-trap",
+        "teachingScenes": [
+          "w3-m2"
+        ]
+      },
+      {
+        "id": "w3-m2-s2",
+        "title": "Direct Memory Access (DMA): Eliminating the CPU Bottleneck",
+        "page": 25,
+        "characters": 895,
+        "existingInteractive": "infographic-w3-dma",
+        "teachingScenes": [
+          "w3-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m3",
+    "title": "โครงสร้างภายในระบบย่อย I/O: Spooling เทียบกับ Buffering",
+    "sourcePages": [
+      27,
+      36
+    ],
+    "sourceCharacters": 2002,
+    "engine": "buffer",
+    "scenario": "ส่งข้อมูลด้วย buffer, cache หรือ print spool",
+    "topics": [
+      {
+        "id": "w3-m3-s1",
+        "title": "Spooling vs. Buffering vs. Caching",
+        "page": 34,
+        "characters": 819,
+        "existingInteractive": "infographic-w3-spooling",
+        "teachingScenes": [
+          "w3-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m4",
+    "title": "การจัดการโพรเซส, โครงสร้าง PCB และการสลับบริบทการทำงาน",
+    "sourcePages": [
+      37,
+      45
+    ],
+    "sourceCharacters": 2476,
+    "engine": "process",
+    "scenario": "Process ขอ CPU แล้วรอ I/O ก่อนกลับเข้าคิว",
+    "topics": [
+      {
+        "id": "w3-m4-s1",
+        "title": "Program vs. Process & The 5 Process States",
+        "page": 37,
+        "characters": 821,
+        "existingInteractive": "infographic-w3-process-lifecycle",
+        "teachingScenes": [
+          "w3-m4"
+        ]
+      },
+      {
+        "id": "w3-m4-s2",
+        "title": "The Process Control Block (PCB) & Context Switch Overhead",
+        "page": 38,
+        "characters": 918,
+        "existingInteractive": "infographic-w3-process-lifecycle",
+        "teachingScenes": [
+          "context",
+          "w3-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m5",
+    "title": "อัลกอริทึมการจัดตารางเวลาซีพียู: FCFS, Round Robin และ Priority",
+    "sourcePages": [
+      46,
+      58
+    ],
+    "sourceCharacters": 3510,
+    "engine": "scheduler",
+    "scenario": "CPU รัน P1 / P2 / P3 ตามนโยบายที่เลือก",
+    "topics": [
+      {
+        "id": "w3-m5-s1",
+        "title": "FCFS & The Convoy Effect",
+        "page": 49,
+        "characters": 915,
+        "existingInteractive": "infographic-w3-scheduling",
+        "teachingScenes": [
+          "w3-m5"
+        ]
+      },
+      {
+        "id": "w3-m5-s2",
+        "title": "Round Robin (RR) & Time Quantum Trade-Off",
+        "page": 54,
+        "characters": 871,
+        "existingInteractive": "infographic-w3-scheduling",
+        "teachingScenes": [
+          "w3-m5"
+        ]
+      },
+      {
+        "id": "w3-m5-s3",
+        "title": "Priority Scheduling, Starvation & Aging",
+        "page": 51,
+        "characters": 891,
+        "existingInteractive": "infographic-w3-scheduling",
+        "teachingScenes": [
+          "w3-m5",
+          "aging"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week3",
+    "module": "w3-m6",
+    "title": "การจัดการหน่วยความจำหลัก และสถาปัตยกรรมแบ่งหน้า (Paging)",
+    "sourcePages": [
+      59,
+      73
+    ],
+    "sourceCharacters": 5031,
+    "engine": "paging",
+    "scenario": "แปล virtual page + offset ไปเป็น physical address",
+    "topics": [
+      {
+        "id": "w3-m6-s1",
+        "title": "Paging Architecture: Pages, Frames & Address Translation",
+        "page": 64,
+        "characters": 939,
+        "existingInteractive": "infographic-w3-paging",
+        "teachingScenes": [
+          "w3-m6",
+          "emat"
+        ]
+      },
+      {
+        "id": "w3-m6-s2",
+        "title": "Translation Look-Aside Buffer (TLB) & EMAT Calculation",
+        "page": 69,
+        "characters": 919,
+        "existingInteractive": "infographic-w3-paging",
+        "teachingScenes": [
+          "emat",
+          "w3-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week4",
+    "module": "w4-m1",
+    "title": "ปัญหาของโครงสร้างพื้นฐานดั้งเดิมและการกำเนิดของการจำลองเสมือน",
+    "sourcePages": [
+      1,
+      12
+    ],
+    "sourceCharacters": 4046,
+    "engine": "virtual",
+    "scenario": "จัด RAM ของ host ให้ VM หลายเครื่อง",
+    "topics": [
+      {
+        "id": "w4-m1-s1",
+        "title": "The Problem with Physical Bare-Metal Servers",
+        "page": 3,
+        "characters": 1000,
+        "existingInteractive": "infographic-w4-server-consolidation",
+        "teachingScenes": [
+          "w4-m1"
+        ]
+      },
+      {
+        "id": "w4-m1-s2",
+        "title": "The Virtualization Breakthrough",
+        "page": 8,
+        "characters": 759,
+        "existingInteractive": "infographic-w4-server-consolidation",
+        "teachingScenes": [
+          "w4-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week4",
+    "module": "w4-m2",
+    "title": "สถาปัตยกรรมไฮเปอร์ไวเซอร์และการบริหารจัดการเครื่องเสมือน",
+    "sourcePages": [
+      13,
+      22
+    ],
+    "sourceCharacters": 3183,
+    "engine": "hypervisor",
+    "scenario": "คำขอของ VM ผ่าน hypervisor แต่ละประเภท",
+    "topics": [
+      {
+        "id": "w4-m2-s1",
+        "title": "Type 1 (Bare-Metal) vs. Type 2 (Hosted) Hypervisors",
+        "page": 15,
+        "characters": 985,
+        "existingInteractive": "infographic-w4-hypervisors",
+        "teachingScenes": [
+          "w4-m2"
+        ]
+      },
+      {
+        "id": "w4-m2-s2",
+        "title": "Snapshots, Cloning & Live VM Migration",
+        "page": 20,
+        "characters": 905,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "snapshot",
+          "w4-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week4",
+    "module": "w4-m3",
+    "title": "จากเครื่องเสมือนสู่คลาวด์คอมพิวติง: 5 คุณลักษณะตามมาตรฐาน NIST",
+    "sourcePages": [
+      23,
+      28
+    ],
+    "sourceCharacters": 1939,
+    "engine": "elastic",
+    "scenario": "คำขอบริการเพิ่มขึ้น แล้วจัด instance เพิ่ม",
+    "topics": [
+      {
+        "id": "w4-m3-s1",
+        "title": "Virtualization != Cloud Computing",
+        "page": 24,
+        "characters": 697,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w4-m3",
+          "w4-m4"
+        ]
+      },
+      {
+        "id": "w4-m3-s2",
+        "title": "The 5 Essential Cloud Characteristics (NIST)",
+        "page": 27,
+        "characters": 1328,
+        "existingInteractive": "infographic-w4-cloud-characteristics",
+        "teachingScenes": [
+          "w4-m3",
+          "w4-m4"
+        ]
+      },
+      {
+        "id": "w4-m3-s3",
+        "title": "Scalability vs. Elasticity",
+        "page": 28,
+        "characters": 761,
+        "existingInteractive": "infographic-w4-scalability-elasticity",
+        "teachingScenes": [
+          "w4-m3",
+          "w4-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week4",
+    "module": "w4-m4",
+    "title": "รูปแบบการให้บริการบนระบบคลาวด์: IaaS, PaaS และ SaaS",
+    "sourcePages": [
+      29,
+      35
+    ],
+    "sourceCharacters": 2479,
+    "engine": "ownership",
+    "scenario": "ดูผู้รับผิดชอบขณะติดตั้ง application",
+    "topics": [
+      {
+        "id": "w4-m4-s1",
+        "title": "The IT Stack Responsibility Gradient",
+        "page": 34,
+        "characters": 964,
+        "existingInteractive": "infographic-w4-shared-responsibility",
+        "teachingScenes": [
+          "w4-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week4",
+    "module": "w4-m5",
+    "title": "รูปแบบการติดตั้ง ความรับผิดชอบร่วมด้านความปลอดภัย และคอนเทนเนอร์ vs เครื่องเสมือน",
+    "sourcePages": [
+      36,
+      42
+    ],
+    "sourceCharacters": 2425,
+    "engine": "container",
+    "scenario": "เริ่ม workload แบบ VM หรือ container",
+    "topics": [
+      {
+        "id": "w4-m5-s1",
+        "title": "Shared Responsibility Model for Cloud Security",
+        "page": 41,
+        "characters": 746,
+        "existingInteractive": "infographic-w4-shared-responsibility",
+        "teachingScenes": [
+          "w4-m4"
+        ]
+      },
+      {
+        "id": "w4-m5-s2",
+        "title": "Virtual Machines vs. Containers",
+        "page": 42,
+        "characters": 788,
+        "existingInteractive": "infographic-w4-vm-vs-container",
+        "teachingScenes": [
+          "w4-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m1",
+    "title": "นิยามของระบบเครือข่ายคอมพิวเตอร์ และ 4 คำถามหลัก",
+    "sourcePages": [
+      1,
+      6
+    ],
+    "sourceCharacters": 1635,
+    "engine": "forward",
+    "scenario": "ต่อ PC เข้าสู่ LAN แล้วส่ง frame",
+    "topics": [
+      {
+        "id": "w5-m1-s1",
+        "title": "What is a Computer Network?",
+        "page": 4,
+        "characters": 751,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m1"
+        ]
+      },
+      {
+        "id": "w5-m1-s2",
+        "title": "The 4 Questions of Networking Mental Framework",
+        "page": 5,
+        "characters": 610,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m2",
+    "title": "ระบบนิเวศอุปกรณ์เครือข่าย: ฮับ vs สวิตช์ vs เราเตอร์ vs AP vs โมเด็ม",
+    "sourcePages": [
+      7,
+      18
+    ],
+    "sourceCharacters": 3951,
+    "engine": "forward",
+    "scenario": "ส่งถึง PC B ผ่าน Hub / Switch / Router",
+    "topics": [
+      {
+        "id": "w5-m2-s1",
+        "title": "Hub (Layer 1) vs. Switch (Layer 2) vs. Router (Layer 3)",
+        "page": 17,
+        "characters": 1333,
+        "existingInteractive": "infographic-w5-devices",
+        "teachingScenes": [
+          "w5-m2"
+        ]
+      },
+      {
+        "id": "w5-m2-s2",
+        "title": "Access Point, Modem & Repeater Roles",
+        "page": 15,
+        "characters": 762,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-1",
+          "w5-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m3",
+    "title": "สื่อนำสัญญาณแบบมีสาย: สายคู่บิดเกลียว, มาตรฐานหัว RJ45 และประเภทสายสัญญาณ",
+    "sourcePages": [
+      22,
+      36
+    ],
+    "sourceCharacters": 4220,
+    "engine": "cable",
+    "scenario": "ต่อขา Ethernet ที่ปลายสายทั้งสอง",
+    "topics": [
+      {
+        "id": "w5-m3-s1",
+        "title": "Twisted-Pair Physics & Differential Signaling",
+        "page": 32,
+        "characters": 1058,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "differential",
+          "w5-m3"
+        ]
+      },
+      {
+        "id": "w5-m3-s2",
+        "title": "T568A vs. T568B Wiring Standards & Cable Types",
+        "page": 27,
+        "characters": 1194,
+        "existingInteractive": "infographic-w5-cabling",
+        "teachingScenes": [
+          "w5-m3"
+        ]
+      },
+      {
+        "id": "w5-m3-s3",
+        "title": "Ethernet Cable Categories & Performance Ladder",
+        "page": 34,
+        "characters": 724,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m3",
+          "week5-extra-1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m4",
+    "title": "ระบบเครือข่ายใยแก้วนำแสง (Fiber Optic): หลักการ, Single-mode vs Multi-mode",
+    "sourcePages": [
+      37,
+      42
+    ],
+    "sourceCharacters": 1156,
+    "engine": "fiber",
+    "scenario": "ส่ง pulse แสงผ่าน core ไปยัง receiver",
+    "topics": [
+      {
+        "id": "w5-m4-s1",
+        "title": "Fiber Anatomy & Total Internal Reflection",
+        "page": 39,
+        "characters": 1046,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m4"
+        ]
+      },
+      {
+        "id": "w5-m4-s2",
+        "title": "Single-Mode vs. Multi-Mode Fiber Comparison",
+        "page": 41,
+        "characters": 1042,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m5",
+    "title": "เครือข่ายไร้สาย, คลื่นความถี่วิทยุ และโทโพโลยีเครือข่าย",
+    "sourcePages": [
+      43,
+      62
+    ],
+    "sourceCharacters": 3650,
+    "engine": "topology",
+    "scenario": "หาเส้นทางใหม่เมื่อ link หนึ่งขาด",
+    "topics": [
+      {
+        "id": "w5-m5-s1",
+        "title": "Wireless Spectrum, Microwave & Satellite Orbits",
+        "page": 44,
+        "characters": 1094,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-2",
+          "week5-extra-1"
+        ]
+      },
+      {
+        "id": "w5-m5-s2",
+        "title": "Network Topologies & Single Point of Failure",
+        "page": 56,
+        "characters": 1234,
+        "existingInteractive": "infographic-w5-topology",
+        "teachingScenes": [
+          "w5-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "w5-m6",
+    "title": "ขอบเขตเครือข่าย (PAN-WAN), ขอบเขตการเข้าถึง และการป้องกันความปลอดภัย",
+    "sourcePages": [
+      51,
+      74
+    ],
+    "sourceCharacters": 4762,
+    "engine": "scope",
+    "scenario": "ผู้ใช้ภายในและคู่ค้าขอเข้าบริการองค์กร",
+    "topics": [
+      {
+        "id": "w5-m6-s1",
+        "title": "Geographic Scope & Access Boundaries",
+        "page": 52,
+        "characters": 1091,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m6",
+          "w7-m3"
+        ]
+      },
+      {
+        "id": "w5-m6-s2",
+        "title": "Network Defense Tools & Small Office Architecture",
+        "page": 65,
+        "characters": 1023,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m2",
+          "w7-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "week5-extra-1",
+    "title": "เส้นทางสื่อสารและองค์ประกอบสาย",
+    "sourcePages": [
+      19,
+      36
+    ],
+    "sourceCharacters": 4718,
+    "engine": "media",
+    "scenario": "แปลงข้อมูลเป็นสัญญาณบนสื่อที่เลือก",
+    "topics": [
+      {
+        "id": "week5-extra-1-1",
+        "title": "Network links",
+        "page": 20,
+        "characters": 400,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-1",
+          "w5-m3"
+        ]
+      },
+      {
+        "id": "week5-extra-1-2",
+        "title": "Coaxial cable",
+        "page": 31,
+        "characters": 340,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-1",
+          "w5-m3"
+        ]
+      },
+      {
+        "id": "week5-extra-1-3",
+        "title": "RJ11, RJ45 and shielding",
+        "page": 30,
+        "characters": 466,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-1",
+          "w5-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week5",
+    "module": "week5-extra-2",
+    "title": "โครงข่ายไร้สายและเครือข่ายตามหน้าที่",
+    "sourcePages": [
+      43,
+      54
+    ],
+    "sourceCharacters": 2538,
+    "engine": "specialNetwork",
+    "scenario": "เลือกเส้นทาง Satellite / Sensor / SAN",
+    "topics": [
+      {
+        "id": "week5-extra-2-1",
+        "title": "Microwave, satellite and cellular",
+        "page": 47,
+        "characters": 452,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-2",
+          "week5-extra-1"
+        ]
+      },
+      {
+        "id": "week5-extra-2-2",
+        "title": "Wireless sensor networks",
+        "page": 50,
+        "characters": 384,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-2",
+          "w1-m3"
+        ]
+      },
+      {
+        "id": "week5-extra-2-3",
+        "title": "SAN and logical networks",
+        "page": 53,
+        "characters": 366,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week5-extra-2"
+        ]
+      },
+      {
+        "id": "week5-extra-2-4",
+        "title": "Network topology trade-offs",
+        "page": 57,
+        "characters": 508,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w5-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m1",
+    "title": "แนวคิดหลัก: โปรโตคอล กฎเกณฑ์การสื่อสาร และเหตุผลที่เครือข่ายต้องแบ่งเป็นเลเยอร์",
+    "sourcePages": [
+      1,
+      8
+    ],
+    "sourceCharacters": 2523,
+    "engine": "protocol",
+    "scenario": "ผู้รับแปลข้อความตาม format ที่ตกลงไว้",
+    "topics": [
+      {
+        "id": "w6-m1-s1",
+        "title": "Connected ≠ Communicating",
+        "page": 6,
+        "characters": 697,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m1"
+        ]
+      },
+      {
+        "id": "w6-m1-s2",
+        "title": "Protocol as a Rulebook: Syntax, Semantics, Timing & Action",
+        "page": 7,
+        "characters": 828,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m1"
+        ]
+      },
+      {
+        "id": "w6-m1-s3",
+        "title": "Why Do Networks Use Layers? (4 Core Advantages)",
+        "page": 8,
+        "characters": 968,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m2",
+    "title": "การห่อหุ้มข้อมูล (Encapsulation) และชื่อเรียกหน่วยข้อมูล (PDU) ในแต่ละเลเยอร์",
+    "sourcePages": [
+      9,
+      11
+    ],
+    "sourceCharacters": 905,
+    "engine": "encapsulation",
+    "scenario": "ห่อข้อความด้วย TCP / IPv4 / Ethernet",
+    "topics": [
+      {
+        "id": "w6-m2-s1",
+        "title": "Encapsulation: Data Gets Wrapped",
+        "page": 9,
+        "characters": 1019,
+        "existingInteractive": "infographic-w6-encapsulation",
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "w6-m2-s2",
+        "title": "Vocabulary: Data Units by Layer & Common Misconceptions",
+        "page": 10,
+        "characters": 1079,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m3",
+    "title": "แบบจำลอง OSI 7 เลเยอร์ และการวินิจฉัยปัญหาตามลำดับชั้น",
+    "sourcePages": [
+      12,
+      27
+    ],
+    "sourceCharacters": 4627,
+    "engine": "encapsulation",
+    "scenario": "จับหน้าที่ OSI กับข้อมูลที่ถูกห่อจริง",
+    "topics": [
+      {
+        "id": "w6-m3-s1",
+        "title": "OSI 7 Layers Overview & Duplex Modes",
+        "page": 13,
+        "characters": 1548,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "w6-m3-s2",
+        "title": "Troubleshooting by Layer Framework",
+        "page": 56,
+        "characters": 1143,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "diagnose"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m4",
+    "title": "ระบบแอดเดรสของอินเทอร์เน็ต: IPv4, CIDR Prefix, การแบ่งซับเน็ต และ IPv6",
+    "sourcePages": [
+      28,
+      44
+    ],
+    "sourceCharacters": 4665,
+    "engine": "subnet",
+    "scenario": "คำนวณว่า IP อยู่ใน subnet ไหน",
+    "topics": [
+      {
+        "id": "w6-m4-s1",
+        "title": "IPv4 Structure, Octets & Private Ranges",
+        "page": 32,
+        "characters": 921,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m4"
+        ]
+      },
+      {
+        "id": "w6-m4-s2",
+        "title": "CIDR Notation & Subnet Mask Mechanics",
+        "page": 34,
+        "characters": 1035,
+        "existingInteractive": "infographic-w6-subnetting",
+        "teachingScenes": [
+          "w6-m4"
+        ]
+      },
+      {
+        "id": "w6-m4-s3",
+        "title": "IPv6 Architecture vs. IPv4 Comparison",
+        "page": 39,
+        "characters": 1207,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "ipv6",
+          "w6-m4"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m5",
+    "title": "โปรโตคอลระดับทรานสปอร์ตเลเยอร์: เจาะลึก TCP vs UDP",
+    "sourcePages": [
+      45,
+      51
+    ],
+    "sourceCharacters": 2424,
+    "engine": "transport",
+    "scenario": "ส่งข้อมูลหนึ่งชุดและจำลองการสูญหาย",
+    "topics": [
+      {
+        "id": "w6-m5-s1",
+        "title": "TCP 3-Way Handshake & Reliable Data Delivery",
+        "page": 47,
+        "characters": 1087,
+        "existingInteractive": "infographic-w6-tcp-udp",
+        "teachingScenes": [
+          "w6-m5"
+        ]
+      },
+      {
+        "id": "w6-m5-s2",
+        "title": "UDP Characteristics & Protocol Selection Scenarios",
+        "page": 49,
+        "characters": 1369,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "w6-m6",
+    "title": "การวินิจฉัยเครือข่ายด้วย ICMP และขั้นตอนการเปิดเว็บไซต์ตั้งแต่ต้นจนจบ",
+    "sourcePages": [
+      52,
+      66
+    ],
+    "sourceCharacters": 4918,
+    "engine": "web",
+    "scenario": "เปิด https://library.example.test/",
+    "topics": [
+      {
+        "id": "w6-m6-s1",
+        "title": "ICMP Message Types, Ping & Traceroute Mechanics",
+        "page": 54,
+        "characters": 1343,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week6-extra-2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "w6-m6-s2",
+        "title": "Applied Walkthrough: What Happens When You Open a Website?",
+        "page": 58,
+        "characters": 1261,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m6",
+          "w6-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "week6-extra-1",
+    "title": "หน้าที่ของแต่ละเลเยอร์อย่างละเอียด",
+    "sourcePages": [
+      15,
+      26
+    ],
+    "sourceCharacters": 4004,
+    "engine": "encapsulation",
+    "scenario": "จาก application data ไปเป็นสัญญาณบน link",
+    "topics": [
+      {
+        "id": "week6-extra-1-1",
+        "title": "Application and presentation",
+        "page": 15,
+        "characters": 450,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "week6-extra-1-2",
+        "title": "Session and transport",
+        "page": 17,
+        "characters": 458,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "week6-extra-1-3",
+        "title": "Network layer and routing",
+        "page": 21,
+        "characters": 358,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "week6-extra-1-4",
+        "title": "Data link, LLC and MAC",
+        "page": 23,
+        "characters": 384,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "week6-extra-1-5",
+        "title": "Physical signals",
+        "page": 25,
+        "characters": 320,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "week6-extra-2",
+    "title": "ส่วนหัวแพ็กเก็ตและบริบทการกำหนดที่อยู่",
+    "sourcePages": [
+      28,
+      44
+    ],
+    "sourceCharacters": 4665,
+    "engine": "ttl",
+    "scenario": "ส่ง packet ผ่าน routers และลด TTL",
+    "topics": [
+      {
+        "id": "week6-extra-2-1",
+        "title": "TCP/IP mapping",
+        "page": 30,
+        "characters": 504,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week6-extra-2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "week6-extra-2-2",
+        "title": "Classful addressing and CIDR",
+        "page": 35,
+        "characters": 414,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m4"
+        ]
+      },
+      {
+        "id": "week6-extra-2-3",
+        "title": "IPv4 and IPv6 headers",
+        "page": 38,
+        "characters": 524,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "ipv6",
+          "w6-m4"
+        ]
+      },
+      {
+        "id": "week6-extra-2-4",
+        "title": "IPv4-compatible and mapped notation",
+        "page": 44,
+        "characters": 466,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "ipv6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week6",
+    "module": "week6-extra-3",
+    "title": "DNS และเส้นทางเว็บครบทุกชั้น",
+    "sourcePages": [
+      57,
+      66
+    ],
+    "sourceCharacters": 3076,
+    "engine": "addressing",
+    "scenario": "ชื่อ → IP → MAC ของ next hop → port",
+    "topics": [
+      {
+        "id": "week6-extra-3-1",
+        "title": "DNS name resolution",
+        "page": 59,
+        "characters": 364,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m6"
+        ]
+      },
+      {
+        "id": "week6-extra-3-2",
+        "title": "MAC, IP and port",
+        "page": 60,
+        "characters": 430,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "week6-extra-3"
+        ]
+      },
+      {
+        "id": "week6-extra-3-3",
+        "title": "HTTPS and encapsulation",
+        "page": 61,
+        "characters": 538,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m6",
+          "w6-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m1",
+    "title": "แนวคิดความปลอดภัยหลายชั้น",
+    "sourcePages": [
+      1,
+      13
+    ],
+    "sourceCharacters": 4153,
+    "engine": "boundary",
+    "scenario": "คำขอจากภายนอกผ่าน defense in depth",
+    "topics": [
+      {
+        "id": "w7-m1-s1",
+        "title": "Layered security",
+        "page": 6,
+        "characters": 510,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "w7-m1-s2",
+        "title": "Security layers",
+        "page": 10,
+        "characters": 494,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w6-m2",
+          "diagnose"
+        ]
+      },
+      {
+        "id": "w7-m1-s3",
+        "title": "Security lifecycle",
+        "page": 11,
+        "characters": 400,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m8",
+          "w7-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m2",
+    "title": "ขอบเขตเครือข่ายและบริการสาธารณะ",
+    "sourcePages": [
+      14,
+      20
+    ],
+    "sourceCharacters": 1741,
+    "engine": "boundary",
+    "scenario": "Internet → Firewall → DMZ → Internal service",
+    "topics": [
+      {
+        "id": "w7-m2-s1",
+        "title": "Firewall",
+        "page": 16,
+        "characters": 412,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m2"
+        ]
+      },
+      {
+        "id": "w7-m2-s2",
+        "title": "DMZ",
+        "page": 17,
+        "characters": 416,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m2"
+        ]
+      },
+      {
+        "id": "w7-m2-s3",
+        "title": "IDS vs IPS",
+        "page": 18,
+        "characters": 328,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m2"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m3",
+    "title": "ควบคุมการสื่อสารภายใน",
+    "sourcePages": [
+      21,
+      28
+    ],
+    "sourceCharacters": 2199,
+    "engine": "segment",
+    "scenario": "เครื่องหนึ่งขอข้ามจาก Guest ไป Internal",
+    "topics": [
+      {
+        "id": "w7-m3-s1",
+        "title": "Segmentation",
+        "page": 23,
+        "characters": 402,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m3"
+        ]
+      },
+      {
+        "id": "w7-m3-s2",
+        "title": "VPN",
+        "page": 25,
+        "characters": 342,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m5",
+          "w7-m3"
+        ]
+      },
+      {
+        "id": "w7-m3-s3",
+        "title": "NAC",
+        "page": 26,
+        "characters": 364,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m4",
+    "title": "ป้องกันและบำรุงรักษาอุปกรณ์",
+    "sourcePages": [
+      29,
+      35
+    ],
+    "sourceCharacters": 1993,
+    "engine": "patch",
+    "scenario": "ตรวจเวอร์ชัน → อัปเดต → ตรวจซ้ำ",
+    "topics": [
+      {
+        "id": "w7-m4-s1",
+        "title": "Anti-malware",
+        "page": 31,
+        "characters": 360,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m3",
+          "w7-m4"
+        ]
+      },
+      {
+        "id": "w7-m4-s2",
+        "title": "Patch management",
+        "page": 32,
+        "characters": 300,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m4"
+        ]
+      },
+      {
+        "id": "w7-m4-s3",
+        "title": "Host and mobile security",
+        "page": 33,
+        "characters": 432,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m4",
+          "w7-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m5",
+    "title": "ตัวตน สิทธิ์ input และ session",
+    "sourcePages": [
+      36,
+      41
+    ],
+    "sourceCharacters": 1834,
+    "engine": "access",
+    "scenario": "Server ตรวจสิทธิ์ก่อนคืน record",
+    "topics": [
+      {
+        "id": "w7-m5-s1",
+        "title": "Secure lifecycle",
+        "page": 37,
+        "characters": 308,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "lifecycle"
+        ]
+      },
+      {
+        "id": "w7-m5-s2",
+        "title": "Authentication vs authorization",
+        "page": 39,
+        "characters": 450,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m5",
+          "mfa"
+        ]
+      },
+      {
+        "id": "w7-m5-s3",
+        "title": "Email security",
+        "page": 40,
+        "characters": 338,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m4",
+          "mfa"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m6",
+    "title": "สิทธิ์ การเข้ารหัส และการกู้คืน",
+    "sourcePages": [
+      42,
+      50
+    ],
+    "sourceCharacters": 2641,
+    "engine": "backup",
+    "scenario": "ไฟล์เสียหาย แล้ว restore จากชุดสำรอง",
+    "topics": [
+      {
+        "id": "w7-m6-s1",
+        "title": "ACL and encryption",
+        "page": 44,
+        "characters": 348,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m5",
+          "w8-m5"
+        ]
+      },
+      {
+        "id": "w7-m6-s2",
+        "title": "Backup",
+        "page": 46,
+        "characters": 392,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m6"
+        ]
+      },
+      {
+        "id": "w7-m6-s3",
+        "title": "Recovery objectives",
+        "page": 47,
+        "characters": 436,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "recovery",
+          "w7-m6"
+        ]
+      },
+      {
+        "id": "w7-m6-s4",
+        "title": "RAID and DLP",
+        "page": 48,
+        "characters": 450,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "raid",
+          "w7-m6"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m7",
+    "title": "คน นโยบาย และการยืนยันตัวตน",
+    "sourcePages": [
+      51,
+      56
+    ],
+    "sourceCharacters": 2027,
+    "engine": "phishing",
+    "scenario": "อีเมลขอรหัสผ่าน แล้วผู้ใช้ตัดสินใจ",
+    "topics": [
+      {
+        "id": "w7-m7-s1",
+        "title": "Awareness and policy",
+        "page": 52,
+        "characters": 436,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m4",
+          "mfa"
+        ]
+      },
+      {
+        "id": "w7-m7-s2",
+        "title": "MFA",
+        "page": 54,
+        "characters": 376,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "mfa",
+          "w7-m7"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m8",
+    "title": "ความรับผิดชอบร่วมและสิทธิ์บนคลาวด์",
+    "sourcePages": [
+      57,
+      63
+    ],
+    "sourceCharacters": 2297,
+    "engine": "ownership",
+    "scenario": "Cloud IAM และผู้ดูแล workload",
+    "topics": [
+      {
+        "id": "w7-m8-s1",
+        "title": "Shared responsibility",
+        "page": 59,
+        "characters": 360,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w4-m4"
+        ]
+      },
+      {
+        "id": "w7-m8-s2",
+        "title": "IAM",
+        "page": 60,
+        "characters": 334,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m5",
+          "w7-m8"
+        ]
+      },
+      {
+        "id": "w7-m8-s3",
+        "title": "Workload and cloud network",
+        "page": 61,
+        "characters": 380,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m8"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week7",
+    "module": "w7-m9",
+    "title": "เชื่อมทุกชั้นเป็นระบบเดียว",
+    "sourcePages": [
+      64,
+      74
+    ],
+    "sourceCharacters": 4213,
+    "engine": "incident",
+    "scenario": "ตรวจเหตุ → แยกเครื่อง → กู้ระบบ",
+    "topics": [
+      {
+        "id": "w7-m9-s1",
+        "title": "Coordinated controls",
+        "page": 65,
+        "characters": 452,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m8",
+          "w7-m1"
+        ]
+      },
+      {
+        "id": "w7-m9-s2",
+        "title": "Benefits and challenges",
+        "page": 68,
+        "characters": 472,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m8",
+          "w7-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m1",
+    "title": "พื้นฐานการโจมตีและผลกระทบ",
+    "sourcePages": [
+      1,
+      8
+    ],
+    "sourceCharacters": 3689,
+    "engine": "access",
+    "scenario": "คำขอที่ไม่ถูกต้องกระทบข้อมูลและบริการ",
+    "topics": [
+      {
+        "id": "w8-m1-s1",
+        "title": "Cyberattack and CIA",
+        "page": 7,
+        "characters": 518,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w1-m5",
+          "w8-m5",
+          "capacity"
+        ]
+      },
+      {
+        "id": "w8-m1-s2",
+        "title": "Verify before concluding",
+        "page": 2,
+        "characters": 402,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m1"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m2",
+    "title": "แยกช่องโหว่ ภัยคุกคาม และความเสี่ยง",
+    "sourcePages": [
+      9,
+      17
+    ],
+    "sourceCharacters": 4222,
+    "engine": "patch",
+    "scenario": "จุดอ่อนที่ยังไม่แก้ถูกนำไปใช้",
+    "topics": [
+      {
+        "id": "w8-m2-s1",
+        "title": "Core vocabulary",
+        "page": 10,
+        "characters": 480,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m2"
+        ]
+      },
+      {
+        "id": "w8-m2-s2",
+        "title": "Attack surface and insiders",
+        "page": 13,
+        "characters": 460,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m1",
+          "w7-m5"
+        ]
+      },
+      {
+        "id": "w8-m2-s3",
+        "title": "Password reuse",
+        "page": 17,
+        "characters": 436,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "reuse",
+          "mfa"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m3",
+    "title": "แยกกลไกของซอฟต์แวร์อันตราย",
+    "sourcePages": [
+      18,
+      29
+    ],
+    "sourceCharacters": 5920,
+    "engine": "malware",
+    "scenario": "ไฟล์ถูกเปิด เครื่องเปลี่ยนสถานะ และแพร่ต่อได้ไหม",
+    "topics": [
+      {
+        "id": "w8-m3-s1",
+        "title": "Virus, worm and Trojan",
+        "page": 20,
+        "characters": 422,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m3"
+        ]
+      },
+      {
+        "id": "w8-m3-s2",
+        "title": "Ransomware",
+        "page": 24,
+        "characters": 458,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m3"
+        ]
+      },
+      {
+        "id": "w8-m3-s3",
+        "title": "Spyware, keylogger and botnet",
+        "page": 26,
+        "characters": 462,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m3"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m4",
+    "title": "ตรวจความเชื่อถือและแรงกดดัน",
+    "sourcePages": [
+      30,
+      39
+    ],
+    "sourceCharacters": 5017,
+    "engine": "phishing",
+    "scenario": "Phishing request → ตรวจสอบ → รายงาน",
+    "topics": [
+      {
+        "id": "w8-m4-s1",
+        "title": "Persuasion triggers",
+        "page": 31,
+        "characters": 410,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m4",
+          "mfa"
+        ]
+      },
+      {
+        "id": "w8-m4-s2",
+        "title": "Phishing variants",
+        "page": 35,
+        "characters": 414,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m4",
+          "mfa"
+        ]
+      },
+      {
+        "id": "w8-m4-s3",
+        "title": "Trusted verification",
+        "page": 36,
+        "characters": 446,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m4",
+          "mfa"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m5",
+    "title": "ความพร้อมใช้ การดักฟัง และตัวตน",
+    "sourcePages": [
+      40,
+      50
+    ],
+    "sourceCharacters": 4966,
+    "engine": "tls",
+    "scenario": "ผู้สังเกต traffic เห็นอะไรเมื่อใช้ TLS",
+    "topics": [
+      {
+        "id": "w8-m5-s1",
+        "title": "DoS vs DDoS",
+        "page": 42,
+        "characters": 486,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "capacity"
+        ]
+      },
+      {
+        "id": "w8-m5-s2",
+        "title": "MITM and sniffing",
+        "page": 45,
+        "characters": 462,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m5"
+        ]
+      },
+      {
+        "id": "w8-m5-s3",
+        "title": "Spoofing and session misuse",
+        "page": 47,
+        "characters": 576,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "session",
+          "w8-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m6",
+    "title": "input output และการตรวจสิทธิ์",
+    "sourcePages": [
+      51,
+      59
+    ],
+    "sourceCharacters": 4387,
+    "engine": "application",
+    "scenario": "Untrusted input เข้าสู่ server / browser",
+    "topics": [
+      {
+        "id": "w8-m6-s1",
+        "title": "SQL injection",
+        "page": 53,
+        "characters": 452,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m6"
+        ]
+      },
+      {
+        "id": "w8-m6-s2",
+        "title": "XSS and CSRF",
+        "page": 54,
+        "characters": 530,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "webSafety"
+        ]
+      },
+      {
+        "id": "w8-m6-s3",
+        "title": "Broken access control",
+        "page": 56,
+        "characters": 428,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w7-m5"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m7",
+    "title": "เชื่อมกรณีศึกษากับการป้องกัน",
+    "sourcePages": [
+      60,
+      65
+    ],
+    "sourceCharacters": 2838,
+    "engine": "caseStudy",
+    "scenario": "กรณีศึกษา → หลักฐาน → controls → การฟื้นบริการ",
+    "topics": [
+      {
+        "id": "w8-m7-s1",
+        "title": "WannaCry",
+        "page": 61,
+        "characters": 488,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m7"
+        ]
+      },
+      {
+        "id": "w8-m7-s2",
+        "title": "Equifax and Colonial Pipeline",
+        "page": 63,
+        "characters": 608,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m7"
+        ]
+      }
+    ]
+  },
+  {
+    "week": "week8",
+    "module": "w8-m8",
+    "title": "ตรวจหลักฐาน ควบคุม และคืนระบบ",
+    "sourcePages": [
+      66,
+      72
+    ],
+    "sourceCharacters": 3222,
+    "engine": "incident",
+    "scenario": "เดินวงจร incident response จนบริการกลับมา",
+    "topics": [
+      {
+        "id": "w8-m8-s1",
+        "title": "Defense and response cycle",
+        "page": 68,
+        "characters": 444,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m8",
+          "w7-m1"
+        ]
+      },
+      {
+        "id": "w8-m8-s2",
+        "title": "University incident triage",
+        "page": 70,
+        "characters": 446,
+        "existingInteractive": null,
+        "teachingScenes": [
+          "w8-m8",
+          "w7-m1"
+        ]
+      }
+    ]
+  }
+]

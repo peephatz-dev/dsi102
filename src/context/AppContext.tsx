@@ -1,4 +1,5 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+import React, { createContext, useContext, useState, useEffect, useCallback, ReactNode } from 'react';
+import { ALL_FLASHCARDS } from '../data/allContent';
 import { WeekId, StudyMode, ExamAttempt } from '../types/course';
 
 interface AppContextType {
@@ -49,7 +50,7 @@ const STORAGE_KEYS = {
 };
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
-  const [currentWeek, setCurrentWeek] = useState<WeekId | 'all'>('week1');
+  const [currentWeek, setCurrentWeek] = useState<WeekId | 'all'>('all');
   const [currentMode, setCurrentMode] = useState<StudyMode>('study');
   const [theme, setTheme] = useState<'dark' | 'light'>('light');
   const [searchQuery, setSearchQuery] = useState<string>('');
@@ -74,6 +75,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       if (savedTheme) {
         setTheme(savedTheme);
         document.documentElement.classList.toggle('dark', savedTheme === 'dark');
+        document.documentElement.dataset.theme = savedTheme;
       } else {
         document.documentElement.classList.remove('dark');
         document.documentElement.classList.add('light');
@@ -111,6 +113,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       const next = prev === 'dark' ? 'light' : 'dark';
       localStorage.setItem(STORAGE_KEYS.THEME, next);
       document.documentElement.classList.toggle('dark', next === 'dark');
+      document.documentElement.dataset.theme = next;
       return next;
     });
   };
@@ -144,7 +147,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         next = {};
       } else {
         Object.keys(next).forEach(k => {
-          if (k.startsWith(`${weekId}-`)) {
+          if (ALL_FLASHCARDS[weekId].some(card => card.id === k)) {
             delete next[k];
           }
         });
@@ -154,7 +157,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     });
   };
 
-  const recordQuizScore = (quizKey: string, score: number, total: number) => {
+  const recordQuizScore = useCallback((quizKey: string, score: number, total: number) => {
     setQuizScores(prev => {
       const existing = prev[quizKey];
       const best = existing ? Math.max(existing.bestScore, score) : score;
@@ -170,15 +173,15 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       localStorage.setItem(STORAGE_KEYS.QUIZ_SCORES, JSON.stringify(next));
       return next;
     });
-  };
+  }, []);
 
-  const saveExamAttempt = (attempt: ExamAttempt) => {
+  const saveExamAttempt = useCallback((attempt: ExamAttempt) => {
     setExamHistory(prev => {
       const next = [attempt, ...prev].slice(0, 50); // keep last 50
       localStorage.setItem(STORAGE_KEYS.EXAM_HISTORY, JSON.stringify(next));
       return next;
     });
-  };
+  }, []);
 
   const clearExamHistory = () => {
     setExamHistory([]);

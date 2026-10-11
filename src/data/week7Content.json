@@ -1,0 +1,1574 @@
+{
+  "modules": [
+    {
+      "id": "w7-m1",
+      "weekId": "week7",
+      "moduleNumber": 1,
+      "title": "Layered security",
+      "thaiTitle": "แนวคิดความปลอดภัยหลายชั้น",
+      "pdfPageStart": 1,
+      "pdfPageEnd": 13,
+      "overview": "การป้องกันหลายชั้นใช้เทคโนโลยี ห้าชั้นหลักคือ Prevent",
+      "subsections": [
+        {
+          "id": "w7-m1-s1",
+          "title": "Layered security",
+          "thaiTitle": "Layered security",
+          "pdfPage": 6,
+          "content": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน",
+          "thaiCommentary": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน",
+          "memoryTip": "ไม่ได้ ต้องใช้การควบคุมหลายชั้นที่ดูแลคน อุปกรณ์ แอปพลิเคชัน เครือข่าย และข้อมูล"
+        },
+        {
+          "id": "w7-m1-s2",
+          "title": "Security layers",
+          "thaiTitle": "Security layers",
+          "pdfPage": 10,
+          "content": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย",
+          "thaiCommentary": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย",
+          "memoryTip": "User awareness"
+        },
+        {
+          "id": "w7-m1-s3",
+          "title": "Security lifecycle",
+          "thaiTitle": "Security lifecycle",
+          "pdfPage": 11,
+          "content": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน",
+          "thaiCommentary": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน",
+          "memoryTip": "Recover"
+        }
+      ]
+    },
+    {
+      "id": "w7-m2",
+      "weekId": "week7",
+      "moduleNumber": 2,
+      "title": "Perimeter security",
+      "thaiTitle": "ขอบเขตเครือข่ายและบริการสาธารณะ",
+      "pdfPageStart": 14,
+      "pdfPageEnd": 20,
+      "overview": "Firewall DMZ IDS",
+      "subsections": [
+        {
+          "id": "w7-m2-s1",
+          "title": "Firewall",
+          "thaiTitle": "Firewall",
+          "pdfPage": 16,
+          "content": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย",
+          "thaiCommentary": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย",
+          "memoryTip": "Firewall"
+        },
+        {
+          "id": "w7-m2-s2",
+          "title": "DMZ",
+          "thaiTitle": "DMZ",
+          "pdfPage": 17,
+          "content": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN",
+          "thaiCommentary": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN",
+          "memoryTip": "DMZ"
+        },
+        {
+          "id": "w7-m2-s3",
+          "title": "IDS vs IPS",
+          "thaiTitle": "IDS vs IPS",
+          "pdfPage": 18,
+          "content": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน",
+          "thaiCommentary": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน",
+          "memoryTip": "IDS"
+        }
+      ]
+    },
+    {
+      "id": "w7-m3",
+      "weekId": "week7",
+      "moduleNumber": 3,
+      "title": "Network security",
+      "thaiTitle": "ควบคุมการสื่อสารภายใน",
+      "pdfPageStart": 21,
+      "pdfPageEnd": 28,
+      "overview": "แบ่งเครือข่ายเป็นโซนตามบทบาท VPN Network",
+      "subsections": [
+        {
+          "id": "w7-m3-s1",
+          "title": "Segmentation",
+          "thaiTitle": "Segmentation",
+          "pdfPage": 23,
+          "content": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย",
+          "thaiCommentary": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย",
+          "memoryTip": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย"
+        },
+        {
+          "id": "w7-m3-s2",
+          "title": "VPN",
+          "thaiTitle": "VPN",
+          "pdfPage": 25,
+          "content": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง",
+          "thaiCommentary": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง",
+          "memoryTip": "VPN"
+        },
+        {
+          "id": "w7-m3-s3",
+          "title": "NAC",
+          "thaiTitle": "NAC",
+          "pdfPage": 26,
+          "content": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ",
+          "thaiCommentary": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ",
+          "memoryTip": "NAC"
+        }
+      ]
+    },
+    {
+      "id": "w7-m4",
+      "weekId": "week7",
+      "moduleNumber": 4,
+      "title": "Endpoint security",
+      "thaiTitle": "ป้องกันและบำรุงรักษาอุปกรณ์",
+      "pdfPageStart": 29,
+      "pdfPageEnd": 35,
+      "overview": "Anti-malware วงจร Host",
+      "subsections": [
+        {
+          "id": "w7-m4-s1",
+          "title": "Anti-malware",
+          "thaiTitle": "Anti-malware",
+          "pdfPage": 31,
+          "content": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control",
+          "thaiCommentary": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control",
+          "memoryTip": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก"
+        },
+        {
+          "id": "w7-m4-s2",
+          "title": "Patch management",
+          "thaiTitle": "Patch management",
+          "pdfPage": 32,
+          "content": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา",
+          "thaiCommentary": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา",
+          "memoryTip": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ"
+        },
+        {
+          "id": "w7-m4-s3",
+          "title": "Host and mobile security",
+          "thaiTitle": "Host and mobile security",
+          "pdfPage": 33,
+          "content": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม",
+          "thaiCommentary": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม",
+          "memoryTip": "Host-based monitoring"
+        }
+      ]
+    },
+    {
+      "id": "w7-m5",
+      "weekId": "week7",
+      "moduleNumber": 5,
+      "title": "Application security",
+      "thaiTitle": "ตัวตน สิทธิ์ input และ session",
+      "pdfPageStart": 36,
+      "pdfPageEnd": 41,
+      "overview": "ความปลอดภัยต้องอยู่ในขั้น Authentication Email",
+      "subsections": [
+        {
+          "id": "w7-m5-s1",
+          "title": "Secure lifecycle",
+          "thaiTitle": "Secure lifecycle",
+          "pdfPage": 37,
+          "content": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ",
+          "thaiCommentary": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ",
+          "memoryTip": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ"
+        },
+        {
+          "id": "w7-m5-s2",
+          "title": "Authentication vs authorization",
+          "thaiTitle": "Authentication vs authorization",
+          "pdfPage": 39,
+          "content": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ",
+          "thaiCommentary": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ",
+          "memoryTip": "Authorization"
+        },
+        {
+          "id": "w7-m5-s3",
+          "title": "Email security",
+          "thaiTitle": "Email security",
+          "pdfPage": 40,
+          "content": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน",
+          "thaiCommentary": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน",
+          "memoryTip": "ไม่ควร ต้องดูการสูญเสียข้อมูลทางขาออกด้วย"
+        }
+      ]
+    },
+    {
+      "id": "w7-m6",
+      "weekId": "week7",
+      "moduleNumber": 6,
+      "title": "Data security and recovery",
+      "thaiTitle": "สิทธิ์ การเข้ารหัส และการกู้คืน",
+      "pdfPageStart": 42,
+      "pdfPageEnd": 50,
+      "overview": "ACL Full MTD RAID",
+      "subsections": [
+        {
+          "id": "w7-m6-s1",
+          "title": "ACL and encryption",
+          "thaiTitle": "ACL and encryption",
+          "pdfPage": 44,
+          "content": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์",
+          "thaiCommentary": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์",
+          "memoryTip": "Data at rest"
+        },
+        {
+          "id": "w7-m6-s2",
+          "title": "Backup",
+          "thaiTitle": "Backup",
+          "pdfPage": 46,
+          "content": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน",
+          "thaiCommentary": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน",
+          "memoryTip": "Incremental backup"
+        },
+        {
+          "id": "w7-m6-s3",
+          "title": "Recovery objectives",
+          "thaiTitle": "Recovery objectives",
+          "pdfPage": 47,
+          "content": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง",
+          "thaiCommentary": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง",
+          "memoryTip": "RPO"
+        },
+        {
+          "id": "w7-m6-s4",
+          "title": "RAID and DLP",
+          "thaiTitle": "RAID and DLP",
+          "pdfPage": 48,
+          "content": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print",
+          "thaiCommentary": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print",
+          "memoryTip": "ไม่ได้ ความทนทานของ disk ไม่ครอบคลุมการลบผิดหรือการเสียหายของข้อมูลทุกแบบ"
+        }
+      ]
+    },
+    {
+      "id": "w7-m7",
+      "weekId": "week7",
+      "moduleNumber": 7,
+      "title": "User awareness and policy",
+      "thaiTitle": "คน นโยบาย และการยืนยันตัวตน",
+      "pdfPageStart": 51,
+      "pdfPageEnd": 56,
+      "overview": "ผู้ใช้ควรสังเกต MFA",
+      "subsections": [
+        {
+          "id": "w7-m7-s1",
+          "title": "Awareness and policy",
+          "thaiTitle": "Awareness and policy",
+          "pdfPage": 52,
+          "content": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร",
+          "thaiCommentary": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร",
+          "memoryTip": "ตรวจผ่านช่องทางที่เชื่อถือได้และรายงานเหตุ"
+        },
+        {
+          "id": "w7-m7-s2",
+          "title": "MFA",
+          "thaiTitle": "MFA",
+          "pdfPage": 54,
+          "content": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ",
+          "thaiCommentary": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ",
+          "memoryTip": "Multi-factor authentication"
+        }
+      ]
+    },
+    {
+      "id": "w7-m8",
+      "weekId": "week7",
+      "moduleNumber": 8,
+      "title": "Cloud and workload security",
+      "thaiTitle": "ความรับผิดชอบร่วมและสิทธิ์บนคลาวด์",
+      "pdfPageStart": 57,
+      "pdfPageEnd": 63,
+      "overview": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ IAM Workload",
+      "subsections": [
+        {
+          "id": "w7-m8-s1",
+          "title": "Shared responsibility",
+          "thaiTitle": "Shared responsibility",
+          "pdfPage": 59,
+          "content": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS",
+          "thaiCommentary": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS",
+          "memoryTip": "ต้องจัดการตามส่วนความรับผิดชอบของลูกค้า"
+        },
+        {
+          "id": "w7-m8-s2",
+          "title": "IAM",
+          "thaiTitle": "IAM",
+          "pdfPage": 60,
+          "content": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ",
+          "thaiCommentary": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ",
+          "memoryTip": "IAM"
+        },
+        {
+          "id": "w7-m8-s3",
+          "title": "Workload and cloud network",
+          "thaiTitle": "Workload and cloud network",
+          "pdfPage": 61,
+          "content": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้",
+          "thaiCommentary": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้",
+          "memoryTip": "ไม่จริง ยังต้องมีนโยบาย traffic และการตั้งค่าของลูกค้า"
+        }
+      ]
+    },
+    {
+      "id": "w7-m9",
+      "weekId": "week7",
+      "moduleNumber": 9,
+      "title": "Defense in depth",
+      "thaiTitle": "เชื่อมทุกชั้นเป็นระบบเดียว",
+      "pdfPageStart": 64,
+      "pdfPageEnd": 74,
+      "overview": "Defense ประโยชน์คือกระจายความเสี่ยง",
+      "subsections": [
+        {
+          "id": "w7-m9-s1",
+          "title": "Coordinated controls",
+          "thaiTitle": "Coordinated controls",
+          "pdfPage": 65,
+          "content": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน",
+          "thaiCommentary": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน",
+          "memoryTip": "ไม่ควร ชั้นถัดไปควรยังลด ตรวจพบ หรือจำกัดความเสียหายได้"
+        },
+        {
+          "id": "w7-m9-s2",
+          "title": "Benefits and challenges",
+          "thaiTitle": "Benefits and challenges",
+          "pdfPage": 68,
+          "content": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve",
+          "thaiCommentary": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve",
+          "memoryTip": "ไม่รับประกัน ต้องดูแลและประเมินผลร่วมกัน"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "w7-f1",
+      "weekId": "week7",
+      "front": "Firewall เพียงตัวเดียวรับประกันความปลอดภัยทั้งระบบได้หรือไม่?",
+      "back": "ไม่ได้ ต้องใช้การควบคุมหลายชั้นที่ดูแลคน อุปกรณ์ แอปพลิเคชัน เครือข่าย และข้อมูล",
+      "thaiExplanation": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน",
+      "category": "Layered security",
+      "pdfPage": 6
+    },
+    {
+      "id": "w7-f2",
+      "weekId": "week7",
+      "front": "การอบรมให้รายงานอีเมลผิดปกติอยู่ชั้นใด?",
+      "back": "User awareness",
+      "thaiExplanation": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย",
+      "category": "Layered security",
+      "pdfPage": 10
+    },
+    {
+      "id": "w7-f3",
+      "weekId": "week7",
+      "front": "การเรียกคืนข้อมูลจาก backup หลังเกิดเหตุจัดเป็นหน้าที่ใด?",
+      "back": "Recover",
+      "thaiExplanation": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน",
+      "category": "Layered security",
+      "pdfPage": 11
+    },
+    {
+      "id": "w7-f4",
+      "weekId": "week7",
+      "front": "อุปกรณ์ใดควบคุม traffic ตามกฎที่ขอบเขต?",
+      "back": "Firewall",
+      "thaiExplanation": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย",
+      "category": "Perimeter security",
+      "pdfPage": 16
+    },
+    {
+      "id": "w7-f5",
+      "weekId": "week7",
+      "front": "ควรวาง public web server ในโซนใดเพื่อแยกจาก LAN ภายใน?",
+      "back": "DMZ",
+      "thaiExplanation": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN",
+      "category": "Perimeter security",
+      "pdfPage": 17
+    },
+    {
+      "id": "w7-f6",
+      "weekId": "week7",
+      "front": "ระบบตรวจพบสิ่งผิดปกติแล้วแจ้งเตือน โดยไม่บล็อกเองคืออะไร?",
+      "back": "IDS",
+      "thaiExplanation": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน",
+      "category": "Perimeter security",
+      "pdfPage": 18
+    },
+    {
+      "id": "w7-f7",
+      "weekId": "week7",
+      "front": "การแบ่งโซน guest กับ server ช่วยลดอะไรเมื่อเกิดเหตุ?",
+      "back": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+      "thaiExplanation": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย",
+      "category": "Network security",
+      "pdfPage": 23
+    },
+    {
+      "id": "w7-f8",
+      "weekId": "week7",
+      "front": "การเชื่อมผู้ใช้ระยะไกลผ่าน encrypted tunnel ใช้อะไร?",
+      "back": "VPN",
+      "thaiExplanation": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง",
+      "category": "Network security",
+      "pdfPage": 25
+    },
+    {
+      "id": "w7-f9",
+      "weekId": "week7",
+      "front": "สิ่งใดกำหนดว่าอุปกรณ์ใดมีสิทธิเชื่อมเครือข่ายใด?",
+      "back": "NAC",
+      "thaiExplanation": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ",
+      "category": "Network security",
+      "pdfPage": 26
+    },
+    {
+      "id": "w7-f10",
+      "weekId": "week7",
+      "front": "เหตุใดต้องตรวจพฤติกรรมต่อเนื่องหลังติดตั้งโปรแกรม?",
+      "back": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+      "thaiExplanation": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control",
+      "category": "Endpoint security",
+      "pdfPage": 31
+    },
+    {
+      "id": "w7-f11",
+      "weekId": "week7",
+      "front": "หลังติดตั้ง patch ควรทำอะไรต่อ?",
+      "back": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+      "thaiExplanation": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา",
+      "category": "Endpoint security",
+      "pdfPage": 32
+    },
+    {
+      "id": "w7-f12",
+      "weekId": "week7",
+      "front": "ต้องการตรวจไฟล์และ log ภายในเครื่อง ควรดู monitoring แบบใด?",
+      "back": "Host-based monitoring",
+      "thaiExplanation": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม",
+      "category": "Endpoint security",
+      "pdfPage": 33
+    },
+    {
+      "id": "w7-f13",
+      "weekId": "week7",
+      "front": "ความปลอดภัยควรเริ่มเฉพาะตอนเปิดระบบใช่หรือไม่?",
+      "back": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+      "thaiExplanation": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ",
+      "category": "Application security",
+      "pdfPage": 37
+    },
+    {
+      "id": "w7-f14",
+      "weekId": "week7",
+      "front": "ตรวจว่านักศึกษาอ่านได้เฉพาะเกรดตนเองเป็นการควบคุมใด?",
+      "back": "Authorization",
+      "thaiExplanation": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ",
+      "category": "Application security",
+      "pdfPage": 39
+    },
+    {
+      "id": "w7-f15",
+      "weekId": "week7",
+      "front": "ระบบกรองอีเมลควรพิจารณาเฉพาะขาเข้าหรือไม่?",
+      "back": "ไม่ควร ต้องดูการสูญเสียข้อมูลทางขาออกด้วย",
+      "thaiExplanation": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน",
+      "category": "Application security",
+      "pdfPage": 40
+    },
+    {
+      "id": "w7-f16",
+      "weekId": "week7",
+      "front": "การเข้ารหัสไฟล์บน disk เป็นการป้องกันข้อมูลสถานะใด?",
+      "back": "Data at rest",
+      "thaiExplanation": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์",
+      "category": "Data security and recovery",
+      "pdfPage": 44
+    },
+    {
+      "id": "w7-f17",
+      "weekId": "week7",
+      "front": "สำรองเฉพาะข้อมูลที่เปลี่ยนไปเรียกว่าอะไร?",
+      "back": "Incremental backup",
+      "thaiExplanation": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน",
+      "category": "Data security and recovery",
+      "pdfPage": 46
+    },
+    {
+      "id": "w7-f18",
+      "weekId": "week7",
+      "front": "ยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกิน 1 ชั่วโมงคือค่าใด?",
+      "back": "RPO",
+      "thaiExplanation": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง",
+      "category": "Data security and recovery",
+      "pdfPage": 47
+    },
+    {
+      "id": "w7-f19",
+      "weekId": "week7",
+      "front": "RAID ทดแทน backup ได้หรือไม่?",
+      "back": "ไม่ได้ ความทนทานของ disk ไม่ครอบคลุมการลบผิดหรือการเสียหายของข้อมูลทุกแบบ",
+      "thaiExplanation": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print",
+      "category": "Data security and recovery",
+      "pdfPage": 48
+    },
+    {
+      "id": "w7-f20",
+      "weekId": "week7",
+      "front": "เมื่อพบคำขอแปลกที่อ้างว่าเป็น IT ควรทำอย่างไร?",
+      "back": "ตรวจผ่านช่องทางที่เชื่อถือได้และรายงานเหตุ",
+      "thaiExplanation": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร",
+      "category": "User awareness and policy",
+      "pdfPage": 52
+    },
+    {
+      "id": "w7-f21",
+      "weekId": "week7",
+      "front": "รหัสผ่านร่วมกับอุปกรณ์ยืนยันเป็นแนวทางใด?",
+      "back": "Multi-factor authentication",
+      "thaiExplanation": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ",
+      "category": "User awareness and policy",
+      "pdfPage": 54
+    },
+    {
+      "id": "w7-f22",
+      "weekId": "week7",
+      "front": "ย้ายขึ้นคลาวด์แล้วลูกค้ายังต้องจัดการสิทธิ์ผู้ใช้หรือไม่?",
+      "back": "ต้องจัดการตามส่วนความรับผิดชอบของลูกค้า",
+      "thaiExplanation": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS",
+      "category": "Cloud and workload security",
+      "pdfPage": 59
+    },
+    {
+      "id": "w7-f23",
+      "weekId": "week7",
+      "front": "บริการใดควบคุม identity, role และ permissions บนคลาวด์?",
+      "back": "IAM",
+      "thaiExplanation": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ",
+      "category": "Cloud and workload security",
+      "pdfPage": 60
+    },
+    {
+      "id": "w7-f24",
+      "weekId": "week7",
+      "front": "ระบบ cloud ไม่ต้องควบคุม traffic เพราะผู้ให้บริการดูแลทั้งหมด จริงหรือไม่?",
+      "back": "ไม่จริง ยังต้องมีนโยบาย traffic และการตั้งค่าของลูกค้า",
+      "thaiExplanation": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้",
+      "category": "Cloud and workload security",
+      "pdfPage": 61
+    },
+    {
+      "id": "w7-f25",
+      "weekId": "week7",
+      "front": "ชั้นแรกพลาดแล้วทุกชั้นควรพลาดตามหรือไม่?",
+      "back": "ไม่ควร ชั้นถัดไปควรยังลด ตรวจพบ หรือจำกัดความเสียหายได้",
+      "thaiExplanation": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน",
+      "category": "Defense in depth",
+      "pdfPage": 65
+    },
+    {
+      "id": "w7-f26",
+      "weekId": "week7",
+      "front": "เพิ่มเครื่องมือจำนวนมากโดยไม่บำรุงรักษารับประกันความปลอดภัยหรือไม่?",
+      "back": "ไม่รับประกัน ต้องดูแลและประเมินผลร่วมกัน",
+      "thaiExplanation": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve",
+      "category": "Defense in depth",
+      "pdfPage": 68
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "w7-q1",
+      "weekId": "week7",
+      "question": "Firewall เพียงตัวเดียวรับประกันความปลอดภัยทั้งระบบได้หรือไม่?",
+      "options": [
+        {
+          "text": "DMZ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน"
+        },
+        {
+          "text": "ไม่ได้ ต้องใช้การควบคุมหลายชั้นที่ดูแลคน อุปกรณ์ แอปพลิเคชัน เครือข่าย และข้อมูล",
+          "isCorrect": true,
+          "explanation": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน"
+        },
+        {
+          "text": "Firewall",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน"
+        }
+      ],
+      "pdfPage": 6,
+      "topic": "Layered security",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q2",
+      "weekId": "week7",
+      "question": "การอบรมให้รายงานอีเมลผิดปกติอยู่ชั้นใด?",
+      "options": [
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย"
+        },
+        {
+          "text": "User awareness",
+          "isCorrect": true,
+          "explanation": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย"
+        },
+        {
+          "text": "DMZ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย"
+        }
+      ],
+      "pdfPage": 10,
+      "topic": "Security layers",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q3",
+      "weekId": "week7",
+      "question": "การเรียกคืนข้อมูลจาก backup หลังเกิดเหตุจัดเป็นหน้าที่ใด?",
+      "options": [
+        {
+          "text": "Recover",
+          "isCorrect": true,
+          "explanation": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน"
+        }
+      ],
+      "pdfPage": 11,
+      "topic": "Security lifecycle",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q4",
+      "weekId": "week7",
+      "question": "อุปกรณ์ใดควบคุม traffic ตามกฎที่ขอบเขต?",
+      "options": [
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย"
+        },
+        {
+          "text": "Firewall",
+          "isCorrect": true,
+          "explanation": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย"
+        },
+        {
+          "text": "DMZ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย"
+        }
+      ],
+      "pdfPage": 16,
+      "topic": "Firewall",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q5",
+      "weekId": "week7",
+      "question": "ควรวาง public web server ในโซนใดเพื่อแยกจาก LAN ภายใน?",
+      "options": [
+        {
+          "text": "DMZ",
+          "isCorrect": true,
+          "explanation": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN"
+        }
+      ],
+      "pdfPage": 17,
+      "topic": "DMZ",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q6",
+      "weekId": "week7",
+      "question": "ระบบตรวจพบสิ่งผิดปกติแล้วแจ้งเตือน โดยไม่บล็อกเองคืออะไร?",
+      "options": [
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": true,
+          "explanation": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน"
+        }
+      ],
+      "pdfPage": 18,
+      "topic": "IDS vs IPS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q7",
+      "weekId": "week7",
+      "question": "การแบ่งโซน guest กับ server ช่วยลดอะไรเมื่อเกิดเหตุ?",
+      "options": [
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": true,
+          "explanation": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย"
+        },
+        {
+          "text": "DMZ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย"
+        },
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย"
+        }
+      ],
+      "pdfPage": 23,
+      "topic": "Segmentation",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q8",
+      "weekId": "week7",
+      "question": "การเชื่อมผู้ใช้ระยะไกลผ่าน encrypted tunnel ใช้อะไร?",
+      "options": [
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": true,
+          "explanation": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง"
+        }
+      ],
+      "pdfPage": 25,
+      "topic": "VPN",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q9",
+      "weekId": "week7",
+      "question": "สิ่งใดกำหนดว่าอุปกรณ์ใดมีสิทธิเชื่อมเครือข่ายใด?",
+      "options": [
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ"
+        },
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": true,
+          "explanation": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ"
+        }
+      ],
+      "pdfPage": 26,
+      "topic": "NAC",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q10",
+      "weekId": "week7",
+      "question": "เหตุใดต้องตรวจพฤติกรรมต่อเนื่องหลังติดตั้งโปรแกรม?",
+      "options": [
+        {
+          "text": "IDS",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control"
+        },
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": true,
+          "explanation": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control"
+        }
+      ],
+      "pdfPage": 31,
+      "topic": "Anti-malware",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q11",
+      "weekId": "week7",
+      "question": "หลังติดตั้ง patch ควรทำอะไรต่อ?",
+      "options": [
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": true,
+          "explanation": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา"
+        }
+      ],
+      "pdfPage": 32,
+      "topic": "Patch management",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q12",
+      "weekId": "week7",
+      "question": "ต้องการตรวจไฟล์และ log ภายในเครื่อง ควรดู monitoring แบบใด?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": true,
+          "explanation": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม"
+        }
+      ],
+      "pdfPage": 33,
+      "topic": "Host and mobile security",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q13",
+      "weekId": "week7",
+      "question": "ความปลอดภัยควรเริ่มเฉพาะตอนเปิดระบบใช่หรือไม่?",
+      "options": [
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": true,
+          "explanation": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ"
+        },
+        {
+          "text": "ขอบเขตผลกระทบและการเคลื่อนที่ที่ไม่จำเป็นภายในเครือข่าย",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ"
+        }
+      ],
+      "pdfPage": 37,
+      "topic": "Secure lifecycle",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q14",
+      "weekId": "week7",
+      "question": "ตรวจว่านักศึกษาอ่านได้เฉพาะเกรดตนเองเป็นการควบคุมใด?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ"
+        },
+        {
+          "text": "Authorization",
+          "isCorrect": true,
+          "explanation": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ"
+        }
+      ],
+      "pdfPage": 39,
+      "topic": "Authentication vs authorization",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q15",
+      "weekId": "week7",
+      "question": "ระบบกรองอีเมลควรพิจารณาเฉพาะขาเข้าหรือไม่?",
+      "options": [
+        {
+          "text": "ไม่ควร ต้องดูการสูญเสียข้อมูลทางขาออกด้วย",
+          "isCorrect": true,
+          "explanation": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน"
+        },
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน"
+        }
+      ],
+      "pdfPage": 40,
+      "topic": "Email security",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q16",
+      "weekId": "week7",
+      "question": "การเข้ารหัสไฟล์บน disk เป็นการป้องกันข้อมูลสถานะใด?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์"
+        },
+        {
+          "text": "Data at rest",
+          "isCorrect": true,
+          "explanation": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์"
+        },
+        {
+          "text": "VPN",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์"
+        }
+      ],
+      "pdfPage": 44,
+      "topic": "ACL and encryption",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q17",
+      "weekId": "week7",
+      "question": "สำรองเฉพาะข้อมูลที่เปลี่ยนไปเรียกว่าอะไร?",
+      "options": [
+        {
+          "text": "Incremental backup",
+          "isCorrect": true,
+          "explanation": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน"
+        },
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน"
+        }
+      ],
+      "pdfPage": 46,
+      "topic": "Backup",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q18",
+      "weekId": "week7",
+      "question": "ยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกิน 1 ชั่วโมงคือค่าใด?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง"
+        },
+        {
+          "text": "RPO",
+          "isCorrect": true,
+          "explanation": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง"
+        }
+      ],
+      "pdfPage": 47,
+      "topic": "Recovery objectives",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q19",
+      "weekId": "week7",
+      "question": "RAID ทดแทน backup ได้หรือไม่?",
+      "options": [
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print"
+        },
+        {
+          "text": "ไม่ได้ ความทนทานของ disk ไม่ครอบคลุมการลบผิดหรือการเสียหายของข้อมูลทุกแบบ",
+          "isCorrect": true,
+          "explanation": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print"
+        }
+      ],
+      "pdfPage": 48,
+      "topic": "RAID and DLP",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q20",
+      "weekId": "week7",
+      "question": "เมื่อพบคำขอแปลกที่อ้างว่าเป็น IT ควรทำอย่างไร?",
+      "options": [
+        {
+          "text": "ตรวจผ่านช่องทางที่เชื่อถือได้และรายงานเหตุ",
+          "isCorrect": true,
+          "explanation": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร"
+        },
+        {
+          "text": "NAC",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร"
+        },
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร"
+        }
+      ],
+      "pdfPage": 52,
+      "topic": "Awareness and policy",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q21",
+      "weekId": "week7",
+      "question": "รหัสผ่านร่วมกับอุปกรณ์ยืนยันเป็นแนวทางใด?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ"
+        },
+        {
+          "text": "Multi-factor authentication",
+          "isCorrect": true,
+          "explanation": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ"
+        }
+      ],
+      "pdfPage": 54,
+      "topic": "MFA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q22",
+      "weekId": "week7",
+      "question": "ย้ายขึ้นคลาวด์แล้วลูกค้ายังต้องจัดการสิทธิ์ผู้ใช้หรือไม่?",
+      "options": [
+        {
+          "text": "พฤติกรรมผิดปกติอาจเกิดหลังการตรวจครั้งแรก",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS"
+        },
+        {
+          "text": "ต้องจัดการตามส่วนความรับผิดชอบของลูกค้า",
+          "isCorrect": true,
+          "explanation": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS"
+        }
+      ],
+      "pdfPage": 59,
+      "topic": "Shared responsibility",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q23",
+      "weekId": "week7",
+      "question": "บริการใดควบคุม identity, role และ permissions บนคลาวด์?",
+      "options": [
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ"
+        },
+        {
+          "text": "IAM",
+          "isCorrect": true,
+          "explanation": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ"
+        }
+      ],
+      "pdfPage": 60,
+      "topic": "IAM",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q24",
+      "weekId": "week7",
+      "question": "ระบบ cloud ไม่ต้องควบคุม traffic เพราะผู้ให้บริการดูแลทั้งหมด จริงหรือไม่?",
+      "options": [
+        {
+          "text": "Authorization",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้"
+        },
+        {
+          "text": "ไม่จริง ยังต้องมีนโยบาย traffic และการตั้งค่าของลูกค้า",
+          "isCorrect": true,
+          "explanation": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้"
+        }
+      ],
+      "pdfPage": 61,
+      "topic": "Workload and cloud network",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q25",
+      "weekId": "week7",
+      "question": "ชั้นแรกพลาดแล้วทุกชั้นควรพลาดตามหรือไม่?",
+      "options": [
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน"
+        },
+        {
+          "text": "ไม่ควร ชั้นถัดไปควรยังลด ตรวจพบ หรือจำกัดความเสียหายได้",
+          "isCorrect": true,
+          "explanation": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน"
+        },
+        {
+          "text": "ยืนยันว่าอัปเดตสำเร็จและระบบทำงานตามที่ต้องการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน"
+        }
+      ],
+      "pdfPage": 65,
+      "topic": "Coordinated controls",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w7-q26",
+      "weekId": "week7",
+      "question": "เพิ่มเครื่องมือจำนวนมากโดยไม่บำรุงรักษารับประกันความปลอดภัยหรือไม่?",
+      "options": [
+        {
+          "text": "Authorization",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve"
+        },
+        {
+          "text": "ไม่รับประกัน ต้องดูแลและประเมินผลร่วมกัน",
+          "isCorrect": true,
+          "explanation": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve"
+        },
+        {
+          "text": "Host-based monitoring",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve"
+        },
+        {
+          "text": "ไม่ใช่ ต้องรวมอยู่ตลอดวงจรพัฒนาและปฏิบัติการ",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve"
+        }
+      ],
+      "pdfPage": 68,
+      "topic": "Benefits and challenges",
+      "difficulty": "medium"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "w7-c1",
+      "term": "Layered security",
+      "definition": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน",
+      "thaiDefinition": "การป้องกันหลายชั้นใช้เทคโนโลยี นโยบาย และกระบวนการร่วมกันเพื่อคุ้มครองทรัพย์สินดิจิทัล แต่ละชั้นมีหน้าที่ต่างกัน เมื่อชั้นหนึ่งพลาด ชั้นอื่นยังลดความเสียหายได้ เช่น firewall ควบคุมขอบเขต ส่วน endpoint monitoring ตรวจพฤติกรรมในเครื่อง และ backup ช่วยกู้คืน",
+      "pdfPage": 6,
+      "category": "Layered security"
+    },
+    {
+      "id": "w7-c2",
+      "term": "Security layers",
+      "definition": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย",
+      "thaiDefinition": "ห้าชั้นหลักคือ perimeter, network, endpoint, data และ user awareness โดยมี application, cloud และ workload เป็นส่วนสนับสนุน ระบบมหาวิทยาลัยต้องดูทั้งเส้นทางจากอินเทอร์เน็ตถึงข้อมูลนักศึกษา และการตัดสินใจของผู้ใช้ ไม่ใช่พิจารณาเฉพาะอุปกรณ์เครือข่าย",
+      "pdfPage": 10,
+      "category": "Layered security"
+    },
+    {
+      "id": "w7-c3",
+      "term": "Security lifecycle",
+      "definition": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน",
+      "thaiDefinition": "Prevent ลดโอกาสเกิดเหตุ Detect สังเกตความผิดปกติ Respond ควบคุมและจัดการเหตุ Recover คืนบริการและข้อมูล ทั้งสี่เป็นหน้าที่คนละแบบที่ต้องทำงานเชื่อมกัน การมีมาตรการป้องกันไม่ได้ทำให้ไม่ต้องวางแผนกู้คืน",
+      "pdfPage": 11,
+      "category": "Layered security"
+    },
+    {
+      "id": "w7-c4",
+      "term": "Firewall",
+      "definition": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย",
+      "thaiDefinition": "Firewall ตัดสินใจอนุญาตหรือบล็อกการสื่อสารตามกฎที่กำหนดไว้ที่ขอบเขตระหว่างเครือข่ายที่เชื่อถือกับภายนอก ประสิทธิผลขึ้นกับการตั้งค่าและการบำรุงรักษา จึงไม่ใช่การรับประกันว่าข้อมูลทุกอย่างที่ผ่านเข้ามาปลอดภัย",
+      "pdfPage": 16,
+      "category": "Perimeter security"
+    },
+    {
+      "id": "w7-c5",
+      "term": "DMZ",
+      "definition": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN",
+      "thaiDefinition": "DMZ แยกบริการที่ต้องให้คนภายนอกเข้าถึง เช่น public web server ออกจาก internal LAN เพื่อจำกัดการเข้าถึงระบบภายใน การอยู่ใน DMZ ไม่ได้หมายความว่าเชื่อถือได้ทั้งหมด ต้องควบคุมเส้นทางระหว่าง Internet, DMZ และ LAN",
+      "pdfPage": 17,
+      "category": "Perimeter security"
+    },
+    {
+      "id": "w7-c6",
+      "term": "IDS vs IPS",
+      "definition": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน",
+      "thaiDefinition": "IDS เน้นตรวจพบและแจ้งเตือน ส่วน IPS สามารถแทรกแซงหรือป้องกัน traffic ได้ ทั้งสองต้องอาศัยกฎ ข้อมูลตรวจจับ และการติดตามผล การแจ้งเตือนกับการบล็อกมีผลต่อบริการต่างกัน",
+      "pdfPage": 18,
+      "category": "Perimeter security"
+    },
+    {
+      "id": "w7-c7",
+      "term": "Segmentation",
+      "definition": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย",
+      "thaiDefinition": "แบ่งเครือข่ายเป็นโซนตามบทบาท เช่น นักศึกษา บุคลากร guest และ server เพื่อบังคับใช้นโยบายและลดการเข้าถึงที่ไม่จำเป็น การแบ่งโซนช่วยจำกัด blast radius เมื่อเกิดเหตุ แต่ต้องมีกฎควบคุมเส้นทางระหว่างโซนด้วย",
+      "pdfPage": 23,
+      "category": "Network security"
+    },
+    {
+      "id": "w7-c8",
+      "term": "VPN",
+      "definition": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง",
+      "thaiDefinition": "VPN สร้างช่องทางสื่อสารที่ได้รับการป้องกันผ่านเครือข่ายสาธารณะ เช่น ผู้ใช้ระยะไกลเชื่อมเข้ามหาวิทยาลัย การเข้ารหัสเส้นทางไม่ทดแทนการตรวจตัวตนหรือการรักษาความปลอดภัยปลายทาง",
+      "pdfPage": 25,
+      "category": "Network security"
+    },
+    {
+      "id": "w7-c9",
+      "term": "NAC",
+      "definition": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ",
+      "thaiDefinition": "Network Access Control ตรวจผู้ใช้และอุปกรณ์ก่อนใช้นโยบายการเชื่อมต่อ เช่น อุปกรณ์นักศึกษาเข้าถึงเครือข่ายนักศึกษา guest ใช้อินเทอร์เน็ตเท่านั้น ส่วนอุปกรณ์ไม่รู้จักถูกจำกัดหรือปฏิเสธ",
+      "pdfPage": 26,
+      "category": "Network security"
+    },
+    {
+      "id": "w7-c10",
+      "term": "Anti-malware",
+      "definition": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control",
+      "thaiDefinition": "Anti-malware สแกน วิเคราะห์ เฝ้าดู กักกัน และแก้ไขซอฟต์แวร์อันตราย การตรวจครั้งแรกไม่พอ เพราะพฤติกรรมผิดปกติอาจปรากฏหลังโปรแกรมเริ่มทำงาน ต้องใช้ร่วมกับ patching และ access control",
+      "pdfPage": 31,
+      "category": "Endpoint security"
+    },
+    {
+      "id": "w7-c11",
+      "term": "Patch management",
+      "definition": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา",
+      "thaiDefinition": "วงจร patch คือค้นหาซอฟต์แวร์ จัดลำดับความสำคัญ อัปเดต และยืนยันผล ไม่ใช่เพียงกดติดตั้งแล้วถือว่าเสร็จ อุปกรณ์ที่ปลอดภัยต้องได้รับการบำรุงรักษาตลอดเวลา",
+      "pdfPage": 32,
+      "category": "Endpoint security"
+    },
+    {
+      "id": "w7-c12",
+      "term": "Host and mobile security",
+      "definition": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม",
+      "thaiDefinition": "Host monitoring ดู log, file และ system state ในเครื่อง ต่างจาก network monitoring ที่ดูการสื่อสารระหว่างเครื่อง อุปกรณ์มือถือยังต้องมี access control, encryption, updates, permissions และติดตั้งแอปจากแหล่งที่เหมาะสม",
+      "pdfPage": 33,
+      "category": "Endpoint security"
+    },
+    {
+      "id": "w7-c13",
+      "term": "Secure lifecycle",
+      "definition": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ",
+      "thaiDefinition": "ความปลอดภัยต้องอยู่ในขั้น design, build, test, fix และ monitor ของแอปพลิเคชัน การเพิ่มมาตรการหลังพัฒนาเสร็จเพียงอย่างเดียวไม่ครอบคลุมปัญหาตั้งแต่การออกแบบ",
+      "pdfPage": 37,
+      "category": "Application security"
+    },
+    {
+      "id": "w7-c14",
+      "term": "Authentication vs authorization",
+      "definition": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ",
+      "thaiDefinition": "Authentication ตอบว่าเป็นใคร Authorization ตอบว่ามีสิทธิ์ทำอะไร Input validation ตรวจข้อมูลก่อนใช้ Session management ดูความเชื่อถือได้ของการเข้าสู่ระบบที่ยังใช้งานอยู่ ผู้ที่ล็อกอินได้ไม่ควรอ่านข้อมูลของคนอื่นได้โดยอัตโนมัติ",
+      "pdfPage": 39,
+      "category": "Application security"
+    },
+    {
+      "id": "w7-c15",
+      "term": "Email security",
+      "definition": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน",
+      "thaiDefinition": "Email gateway ตรวจและกรองข้อความขาเข้า ลด phishing และ malicious content รวมทั้งควบคุมข้อความขาออกที่อาจทำข้อมูลอ่อนไหวรั่วไหล ต้องใช้ร่วมกับการฝึกผู้ใช้และช่องทางรายงาน",
+      "pdfPage": 40,
+      "category": "Application security"
+    },
+    {
+      "id": "w7-c16",
+      "term": "ACL and encryption",
+      "definition": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์",
+      "thaiDefinition": "ACL และ access matrix แสดงว่าแต่ละบทบาทอ่านหรือแก้ไขทรัพยากรใดได้ สิทธิ์ควรสะท้อนความจำเป็นทางงาน Encryption ปกป้องข้อมูลทั้ง at rest และ in transit แต่ไม่ทดแทนการกำหนดสิทธิ์",
+      "pdfPage": 44,
+      "category": "Data security and recovery"
+    },
+    {
+      "id": "w7-c17",
+      "term": "Backup",
+      "definition": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน",
+      "thaiDefinition": "Full backup สำเนาข้อมูลทั้งหมด ใช้เวลาและพื้นที่มากกว่า Incremental backup เก็บส่วนที่เปลี่ยนไป จึงเล็กและเร็วกว่าแต่การกู้คืนอาจต้องใช้หลายชุด การทดสอบ restore และตรวจผลเป็นส่วนจำเป็นของแผนกู้คืน",
+      "pdfPage": 46,
+      "category": "Data security and recovery"
+    },
+    {
+      "id": "w7-c18",
+      "term": "Recovery objectives",
+      "definition": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง",
+      "thaiDefinition": "MTD คือเวลาหยุดงานสูงสุดที่ยอมรับได้ RTO คือเป้าหมายเวลาคืนระบบ RPO คือข้อมูลที่ยอมสูญเสียได้เมื่อวัดเป็นเวลา WRT คือเวลาตรวจสอบและกลับมาทำงาน ตัวอย่าง RPO 1 ชั่วโมงหมายถึงยอมสูญเสียข้อมูลย้อนหลังได้ไม่เกินหนึ่งชั่วโมง",
+      "pdfPage": 47,
+      "category": "Data security and recovery"
+    },
+    {
+      "id": "w7-c19",
+      "term": "RAID and DLP",
+      "definition": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print",
+      "thaiDefinition": "RAID 0 ทำ striping โดยไม่มี redundancy RAID 1 ทำ mirroring และ RAID 5 ใช้ striping กับ parity RAID ช่วยด้านความพร้อมใช้ตามรูปแบบแต่ไม่แทน backup ส่วน DLP ตรวจนโยบายก่อนข้อมูลอ่อนไหวออกจากองค์กร เช่น upload, forward หรือ print",
+      "pdfPage": 48,
+      "category": "Data security and recovery"
+    },
+    {
+      "id": "w7-c20",
+      "term": "Awareness and policy",
+      "definition": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร",
+      "thaiDefinition": "ผู้ใช้ควรสังเกต red flags ปฏิบัติตาม password policy ใช้บริการที่องค์กรอนุมัติ และรายงานเหตุผิดปกติ Policies และ procedures ทำให้ความคาดหวังกลายเป็นงานที่ทำซ้ำได้ การอบรมควรต่อเนื่องและใช้สถานการณ์จริงที่เหมาะกับองค์กร",
+      "pdfPage": 52,
+      "category": "User awareness and policy"
+    },
+    {
+      "id": "w7-c21",
+      "term": "MFA",
+      "definition": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ",
+      "thaiDefinition": "MFA ใช้หลักฐานยืนยันตัวตนมากกว่าหนึ่งประเภท เช่น something you know ร่วมกับ something you have หรือ are รหัสผ่านสองชุดยังอยู่ในประเภท knowledge เดียวกัน จึงไม่ใช่การเพิ่มปัจจัยที่เป็นอิสระ",
+      "pdfPage": 54,
+      "category": "User awareness and policy"
+    },
+    {
+      "id": "w7-c22",
+      "term": "Shared responsibility",
+      "definition": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS",
+      "thaiDefinition": "ผู้ให้บริการปกป้องส่วนโครงสร้างพื้นฐานตามรูปแบบบริการ ลูกค้ายังรับผิดชอบ identity, access, application และ data protection ในส่วนที่ตนควบคุม ขอบเขตแตกต่างกันตาม IaaS, PaaS และ SaaS",
+      "pdfPage": 59,
+      "category": "Cloud and workload security"
+    },
+    {
+      "id": "w7-c23",
+      "term": "IAM",
+      "definition": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ",
+      "thaiDefinition": "IAM จัดการตัวตนและสิทธิ์ เชื่อม authentication เช่น MFA/SSO กับ role และ policy ก่อนเข้าถึง resource การกำหนดสิทธิ์เกินจำเป็นเพิ่มความเสี่ยงแม้บัญชีจะยืนยันตัวตนสำเร็จ",
+      "pdfPage": 60,
+      "category": "Cloud and workload security"
+    },
+    {
+      "id": "w7-c24",
+      "term": "Workload and cloud network",
+      "definition": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้",
+      "thaiDefinition": "Workload ที่กระจายข้าม on-premises และหลาย cloud เพิ่มจุดที่ต้องดูแล Cloud ยังต้องมี security groups, network ACLs, firewall/IDPS และ encryption ต้องรักษาความคล่องตัวควบคู่กับกฎที่ตรวจสอบได้",
+      "pdfPage": 61,
+      "category": "Cloud and workload security"
+    },
+    {
+      "id": "w7-c25",
+      "term": "Coordinated controls",
+      "definition": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน",
+      "thaiDefinition": "Defense in Depth เชื่อม people, data, application, endpoint, network และ perimeter โดย cloud/workload ครอบคลุมหลายชั้น เมื่อ boundary ผิดพลาด segmentation ยังจำกัดการเข้าถึง host monitoring ยังตรวจเหตุ และ backup ยังช่วยกู้คืน",
+      "pdfPage": 65,
+      "category": "Defense in depth"
+    },
+    {
+      "id": "w7-c26",
+      "term": "Benefits and challenges",
+      "definition": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve",
+      "thaiDefinition": "ประโยชน์คือกระจายความเสี่ยง ครอบคลุมปัญหาหลายแบบ และตรวจพบได้เร็วขึ้น ข้อท้าทายคือความซับซ้อน ค่าใช้จ่าย user friction และการเชื่อมเครื่องมือ ชั้นที่ตั้งไว้แต่ไม่ดูแลอาจสร้างความมั่นใจผิด ต้อง patch, train, document, measure และ improve",
+      "pdfPage": 68,
+      "category": "Defense in depth"
+    }
+  ]
+}

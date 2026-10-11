@@ -6,16 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "check": "node scripts/validate-course.cjs"
   },
   "dependencies": {
+    "@radix-ui/react-tabs": "^1.1.22",
+    "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "framer-motion": "^11.18.2",
     "lucide-react": "^0.475.0",
+    "motion": "^14.1.0",
+    "pdfjs-dist": "^4.10.38",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "tailwind-merge": "^2.6.0",
-    "canvas-confetti": "^1.9.4"
+    "tailwind-merge": "^2.6.0"
   },
   "devDependencies": {
     "@types/canvas-confetti": "^1.9.0",

@@ -53,6 +53,34 @@ export const WEEKS_INFO: Record<WeekId, WeekInfo> = {
     accentColor: '#f59e0b', // amber-500
     gradient: 'from-amber-500 to-orange-600',
   },
+  week5: {
+    id: 'week5',
+    weekNumber: 5,
+    title: 'Introduction to Computer Network',
+    thaiTitle: 'บทนำสู่ระบบเครือข่ายคอมพิวเตอร์',
+    shortDesc: 'Network Devices (Hub, Switch, Router, AP, Modem), Physical Links (Twisted Pair, Coaxial, Fiber Optic), T568A/B Wiring, Wireless Spectrum, Network Scopes, and Topologies.',
+    pdfFileName: 'DSI102_Week5_Introduction_to_Computer_Network.pdf',
+    pdfFilePath: '/pdfs/week5.pdf',
+    totalPages: 74,
+    badge: 'Hardware & Topology',
+    accentColor: '#06b6d4', // cyan-500
+    gradient: 'from-cyan-600 to-blue-600',
+  },
+  week6: {
+    id: 'week6',
+    weekNumber: 6,
+    title: 'Network Communication: How Data Moves Across Networks',
+    thaiTitle: 'การสื่อสารในระบบเครือข่าย: โปรโตคอล เลเยอร์ และการเดินทางของแพ็กเก็ต',
+    shortDesc: 'Layered Models (OSI 7 Layers vs TCP/IP 4 Layers), Encapsulation & PDU, IP Addressing (IPv4 vs IPv6, CIDR, Subnet Mask), TCP 3-Way Handshake vs UDP, ICMP Diagnostics (Ping, Traceroute), and End-to-End Packet Walk.',
+    pdfFileName: 'DSI102_Week6_Network_Communication.pdf',
+    pdfFilePath: '/pdfs/week6.pdf',
+    totalPages: 66,
+    badge: 'Protocols & Layered Models',
+    accentColor: '#ec4899', // pink-500
+    gradient: 'from-pink-600 to-rose-600',
+  },
+  week7: { id: 'week7', weekNumber: 7, title: 'Network Security: All Layers', thaiTitle: 'ความปลอดภัยหลายชั้นและ Defense in Depth', shortDesc: 'Perimeter, network, endpoint, application, data, users, cloud, and recovery.', pdfFileName: 'DSI102_Week8_Network_Layers_Security.pdf', pdfFilePath: '/pdfs/week7.pdf', totalPages: 74, badge: 'Security layers', accentColor: '#6366f1', gradient: '' },
+  week8: { id: 'week8', weekNumber: 8, title: 'Cyber Attacks, Threats and Vulnerabilities', thaiTitle: 'ภัยคุกคาม ช่องโหว่ และการตอบสนองต่อเหตุ', shortDesc: 'Malware, phishing, network and application threats, case studies, incident response.', pdfFileName: 'DSI102_Week9_Cyber_Attacks.pdf', pdfFilePath: '/pdfs/week8.pdf', totalPages: 72, badge: 'Cybersecurity', accentColor: '#6366f1', gradient: '' },
 };
 
 export const ALL_WEEKS_LIST: WeekInfo[] = [
@@ -60,4 +88,8 @@ export const ALL_WEEKS_LIST: WeekInfo[] = [
   WEEKS_INFO.week2,
   WEEKS_INFO.week3,
   WEEKS_INFO.week4,
+  WEEKS_INFO.week5,
+  WEEKS_INFO.week6,
+  WEEKS_INFO.week7,
+  WEEKS_INFO.week8,
 ];

@@ -46,6 +46,10 @@ export const ExamSimulator: React.FC = React.memo(() => {
       week2: { total: 0, correct: 0 },
       week3: { total: 0, correct: 0 },
       week4: { total: 0, correct: 0 },
+      week5: { total: 0, correct: 0 },
+      week6: { total: 0, correct: 0 },
+      week7: { total: 0, correct: 0 },
+      week8: { total: 0, correct: 0 },
     };
 
     examQuestions.forEach(q => {
@@ -159,7 +163,7 @@ export const ExamSimulator: React.FC = React.memo(() => {
           <Award className="h-12 w-12 sm:h-16 sm:w-16 mx-auto text-blue-600" />
           <h2 className="text-xl sm:text-3xl font-black text-slate-900">DSI102 Comprehensive Mock Exam Simulator</h2>
           <p className="text-xs sm:text-sm text-slate-600 max-w-xl mx-auto leading-relaxed">
-            Test your readiness with randomized questions drawn from all 4 weeks. Features countdown timer, question flagging, detailed performance analytics, and slide reference verification.
+            Test your readiness with randomized questions drawn from all 8 weeks. Features countdown timer, question flagging, detailed performance analytics, and slide reference verification.
           </p>
 
           {/* Configuration */}
@@ -511,8 +515,8 @@ export const ExamSimulator: React.FC = React.memo(() => {
         </p>
 
         {/* Per-Week Mastery Breakdown */}
-        <div className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3 text-left">
-          {(['week1', 'week2', 'week3', 'week4'] as WeekId[]).map(wId => {
+        <div className="mt-4 sm:mt-6 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2 sm:gap-2.5 text-left">
+          {(['week1', 'week2', 'week3', 'week4', 'week5', 'week6'] as WeekId[]).map(wId => {
             const b = attempt.weekBreakdown[wId];
             const pct = b && b.total > 0 ? Math.round((b.correct / b.total) * 100) : 0;
             const weekInfo = WEEKS_INFO[wId];

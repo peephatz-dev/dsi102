@@ -1,0 +1,131 @@
+[
+  {
+    "id": "week6-extra-1",
+    "weekId": "week6",
+    "moduleNumber": "+1",
+    "title": "OSI responsibilities by layer",
+    "thaiTitle": "หน้าที่ของแต่ละเลเยอร์อย่างละเอียด",
+    "pdfPageStart": 15,
+    "pdfPageEnd": 26,
+    "subsections": [
+      {
+        "id": "week6-extra-1-1",
+        "title": "Application and presentation",
+        "thaiTitle": "Application and presentation",
+        "pdfPage": 15,
+        "content": "Application layer เชื่อมบริการเครือข่ายกับโปรแกรมผู้ใช้ เช่น HTTP/HTTPS Presentation layer จัดรูปแบบ แปลง representation บีบอัด หรือเข้ารหัสข้อมูลตามแนวคิด OSI อย่าสับสนชื่อ Application layer กับตัวโปรแกรมทั้งหมดที่ผู้ใช้เปิด",
+        "thaiCommentary": "Application layer เชื่อมบริการเครือข่ายกับโปรแกรมผู้ใช้ เช่น HTTP/HTTPS Presentation layer จัดรูปแบบ แปลง representation บีบอัด หรือเข้ารหัสข้อมูลตามแนวคิด OSI อย่าสับสนชื่อ Application layer กับตัวโปรแกรมทั้งหมดที่ผู้ใช้เปิด"
+      },
+      {
+        "id": "week6-extra-1-2",
+        "title": "Session and transport",
+        "thaiTitle": "Session and transport",
+        "pdfPage": 17,
+        "content": "Session layer ดูการสนทนาที่ดำเนินอยู่ Transport layer ดูการสื่อสาร end-to-end ระหว่าง process รวม segmentation, reliability และ port ตาม protocol Duplex แบ่งเป็น simplex, half-duplex และ full-duplex โดยอธิบายทิศทางและจังหวะส่งรับ",
+        "thaiCommentary": "Session layer ดูการสนทนาที่ดำเนินอยู่ Transport layer ดูการสื่อสาร end-to-end ระหว่าง process รวม segmentation, reliability และ port ตาม protocol Duplex แบ่งเป็น simplex, half-duplex และ full-duplex โดยอธิบายทิศทางและจังหวะส่งรับ"
+      },
+      {
+        "id": "week6-extra-1-3",
+        "title": "Network layer and routing",
+        "thaiTitle": "Network layer and routing",
+        "pdfPage": 21,
+        "content": "Network layer ใช้ IP และ route เพื่อส่ง packet ข้ามเครือข่าย Router ตรวจ destination และ routing table เลือก next hop/interface ต่างจาก switch ที่ส่ง frame ใน link ท้องถิ่นตาม MAC",
+        "thaiCommentary": "Network layer ใช้ IP และ route เพื่อส่ง packet ข้ามเครือข่าย Router ตรวจ destination และ routing table เลือก next hop/interface ต่างจาก switch ที่ส่ง frame ใน link ท้องถิ่นตาม MAC"
+      },
+      {
+        "id": "week6-extra-1-4",
+        "title": "Data link, LLC and MAC",
+        "thaiTitle": "Data link, LLC and MAC",
+        "pdfPage": 23,
+        "content": "Data Link layer ส่ง frame ผ่าน link ท้องถิ่น ใช้ addressing, framing และ error detection ตามเทคโนโลยี IEEE 802 แบ่งหน้าที่เชิงแนวคิดเป็น LLC กับ MAC โดย MAC ดูการเข้าถึงสื่อและ address ใน link",
+        "thaiCommentary": "Data Link layer ส่ง frame ผ่าน link ท้องถิ่น ใช้ addressing, framing และ error detection ตามเทคโนโลยี IEEE 802 แบ่งหน้าที่เชิงแนวคิดเป็น LLC กับ MAC โดย MAC ดูการเข้าถึงสื่อและ address ใน link"
+      },
+      {
+        "id": "week6-extra-1-5",
+        "title": "Physical signals",
+        "thaiTitle": "Physical signals",
+        "pdfPage": 25,
+        "content": "Physical layer แทน bits เป็นสัญญาณบนสื่อ เช่น electrical บน copper, optical บน fiber หรือ radio ในอากาศ การมีสัญญาณไม่ได้พิสูจน์ว่า protocol ในชั้นสูงเข้ากันได้",
+        "thaiCommentary": "Physical layer แทน bits เป็นสัญญาณบนสื่อ เช่น electrical บน copper, optical บน fiber หรือ radio ในอากาศ การมีสัญญาณไม่ได้พิสูจน์ว่า protocol ในชั้นสูงเข้ากันได้"
+      }
+    ]
+  },
+  {
+    "id": "week6-extra-2",
+    "weekId": "week6",
+    "moduleNumber": "+2",
+    "title": "IP headers and addressing context",
+    "thaiTitle": "ส่วนหัวแพ็กเก็ตและบริบทการกำหนดที่อยู่",
+    "pdfPageStart": 28,
+    "pdfPageEnd": 44,
+    "subsections": [
+      {
+        "id": "week6-extra-2-1",
+        "title": "TCP/IP mapping",
+        "thaiTitle": "TCP/IP mapping",
+        "pdfPage": 30,
+        "content": "TCP/IP ใช้ Application, Transport, Internet และ Network access โดยรวม Application/Presentation/Session ของ OSI เข้าด้วยกัน และรวม Data Link/Physical เป็น network access ทั้งสองเป็นแบบจำลองหน้าที่ ไม่ใช่คำสั่งว่าทุก implementation ต้องแยกเป็นกล่องตรงกัน",
+        "thaiCommentary": "TCP/IP ใช้ Application, Transport, Internet และ Network access โดยรวม Application/Presentation/Session ของ OSI เข้าด้วยกัน และรวม Data Link/Physical เป็น network access ทั้งสองเป็นแบบจำลองหน้าที่ ไม่ใช่คำสั่งว่าทุก implementation ต้องแยกเป็นกล่องตรงกัน"
+      },
+      {
+        "id": "week6-extra-2-2",
+        "title": "Classful addressing and CIDR",
+        "thaiTitle": "Classful addressing and CIDR",
+        "pdfPage": 35,
+        "content": "Classful addressing เป็นบริบทประวัติศาสตร์ของ class A/B/C ส่วนการแบ่ง prefix สมัยใหม่ใช้ CIDR /n ซึ่งระบุจำนวน network bits การรู้เลข octet แรกไม่เพียงพอที่จะสรุป subnet ในระบบ CIDR ต้องอ่าน prefix หรือ mask",
+        "thaiCommentary": "Classful addressing เป็นบริบทประวัติศาสตร์ของ class A/B/C ส่วนการแบ่ง prefix สมัยใหม่ใช้ CIDR /n ซึ่งระบุจำนวน network bits การรู้เลข octet แรกไม่เพียงพอที่จะสรุป subnet ในระบบ CIDR ต้องอ่าน prefix หรือ mask"
+      },
+      {
+        "id": "week6-extra-2-3",
+        "title": "IPv4 and IPv6 headers",
+        "thaiTitle": "IPv4 and IPv6 headers",
+        "pdfPage": 38,
+        "content": "IPv4 header มี field ควบคุม เช่น TTL จำกัดอายุ packet และ Protocol ระบุ upper-layer protocol IPv6 base header ใช้ address 128-bit และรูปแบบที่เรียบง่ายขึ้น มี Hop Limit และ Next Header ต้องอ่านความหมาย field ตาม protocol ไม่สรุปว่า header ต่างกันเพียงขนาดที่อยู่",
+        "thaiCommentary": "IPv4 header มี field ควบคุม เช่น TTL จำกัดอายุ packet และ Protocol ระบุ upper-layer protocol IPv6 base header ใช้ address 128-bit และรูปแบบที่เรียบง่ายขึ้น มี Hop Limit และ Next Header ต้องอ่านความหมาย field ตาม protocol ไม่สรุปว่า header ต่างกันเพียงขนาดที่อยู่"
+      },
+      {
+        "id": "week6-extra-2-4",
+        "title": "IPv4-compatible and mapped notation",
+        "thaiTitle": "IPv4-compatible and mapped notation",
+        "pdfPage": 44,
+        "content": "สไลด์แยกรูปแบบ representation ที่ฝัง IPv4 ใน IPv6 IPv4-compatible เป็นบริบทเก่า ส่วน IPv4-mapped ใช้รูปแบบ ::ffff: ตามด้วย IPv4 representation การเขียน address แบบนี้ไม่ได้หมายความว่า IPv4 packet กลายเป็น IPv6 connection โดยอัตโนมัติ",
+        "thaiCommentary": "สไลด์แยกรูปแบบ representation ที่ฝัง IPv4 ใน IPv6 IPv4-compatible เป็นบริบทเก่า ส่วน IPv4-mapped ใช้รูปแบบ ::ffff: ตามด้วย IPv4 representation การเขียน address แบบนี้ไม่ได้หมายความว่า IPv4 packet กลายเป็น IPv6 connection โดยอัตโนมัติ"
+      }
+    ]
+  },
+  {
+    "id": "week6-extra-3",
+    "weekId": "week6",
+    "moduleNumber": "+3",
+    "title": "DNS and the complete communication path",
+    "thaiTitle": "DNS และเส้นทางเว็บครบทุกชั้น",
+    "pdfPageStart": 57,
+    "pdfPageEnd": 66,
+    "subsections": [
+      {
+        "id": "week6-extra-3-1",
+        "title": "DNS name resolution",
+        "thaiTitle": "DNS name resolution",
+        "pdfPage": 59,
+        "content": "DNS แปลงชื่อ service เป็นข้อมูล address ที่ client ใช้เชื่อมต่อ ในแบบจำลองเว็บ client หา IP ก่อนใช้ TCP หรือ transport ที่เหมาะกับบริการ DNS resolution กับ HTTP request ทำคนละหน้าที่",
+        "thaiCommentary": "DNS แปลงชื่อ service เป็นข้อมูล address ที่ client ใช้เชื่อมต่อ ในแบบจำลองเว็บ client หา IP ก่อนใช้ TCP หรือ transport ที่เหมาะกับบริการ DNS resolution กับ HTTP request ทำคนละหน้าที่"
+      },
+      {
+        "id": "week6-extra-3-2",
+        "title": "MAC, IP and port",
+        "thaiTitle": "MAC, IP and port",
+        "pdfPage": 60,
+        "content": "MAC ระบุปลายทาง frame บน local link IP ระบุ host/network ปลายทางข้ามเครือข่าย และ port ระบุ process/service ในเครื่อง เมื่อข้าม router frame header ของแต่ละ link เปลี่ยนได้ โดยยังส่ง IP packet ไปยังปลายทางตามเส้นทาง",
+        "thaiCommentary": "MAC ระบุปลายทาง frame บน local link IP ระบุ host/network ปลายทางข้ามเครือข่าย และ port ระบุ process/service ในเครื่อง เมื่อข้าม router frame header ของแต่ละ link เปลี่ยนได้ โดยยังส่ง IP packet ไปยังปลายทางตามเส้นทาง"
+      },
+      {
+        "id": "week6-extra-3-3",
+        "title": "HTTPS and encapsulation",
+        "thaiTitle": "HTTPS and encapsulation",
+        "pdfPage": 61,
+        "content": "ตัวอย่างเว็บใช้ application data ผ่าน transport แล้วห่อเป็น IP packet และ link frame สำหรับ HTTPS ที่ใช้ TCP ต้องมี TLS เพื่อยืนยัน server และปกป้องเนื้อหาก่อนส่ง HTTP application data การแสดง HTTP ใน stack เป็นแบบจำลองหน้าที่ ไม่ใช่การส่งข้อความ plain text บน port 443",
+        "thaiCommentary": "ตัวอย่างเว็บใช้ application data ผ่าน transport แล้วห่อเป็น IP packet และ link frame สำหรับ HTTPS ที่ใช้ TCP ต้องมี TLS เพื่อยืนยัน server และปกป้องเนื้อหาก่อนส่ง HTTP application data การแสดง HTTP ใน stack เป็นแบบจำลองหน้าที่ ไม่ใช่การส่งข้อความ plain text บน port 443"
+      }
+    ]
+  }
+]

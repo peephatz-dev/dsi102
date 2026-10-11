@@ -11,12 +11,18 @@ const CpuSchedulingSimulator = lazy(() => import('./CpuSchedulingSimulator').the
 const PagingTlbSimulator = lazy(() => import('./PagingTlbSimulator').then(m => ({ default: m.PagingTlbSimulator })));
 const ServerConsolidationDemo = lazy(() => import('./ServerConsolidationDemo').then(m => ({ default: m.ServerConsolidationDemo })));
 const CloudSharedResponsibilityMatrix = lazy(() => import('./CloudSharedResponsibilityMatrix').then(m => ({ default: m.CloudSharedResponsibilityMatrix })));
+const NetworkTopologySimulator = lazy(() => import('./NetworkTopologySimulator').then(m => ({ default: m.NetworkTopologySimulator })));
+const HubSwitchRouterSimulator = lazy(() => import('./HubSwitchRouterSimulator').then(m => ({ default: m.HubSwitchRouterSimulator })));
+const CableWiringVisualizer = lazy(() => import('./CableWiringVisualizer').then(m => ({ default: m.CableWiringVisualizer })));
+const PacketEncapsulationFlow = lazy(() => import('./PacketEncapsulationFlow').then(m => ({ default: m.PacketEncapsulationFlow })));
+const TcpHandshakeSimulator = lazy(() => import('./TcpHandshakeSimulator').then(m => ({ default: m.TcpHandshakeSimulator })));
+const SubnetCidrCalculator = lazy(() => import('./SubnetCidrCalculator').then(m => ({ default: m.SubnetCidrCalculator })));
 
 const InfographicSkeleton: React.FC = () => (
-  <div className="my-6 rounded-2xl border border-slate-200 bg-slate-50 p-6 animate-pulse">
-    <div className="h-4 w-40 bg-slate-200 rounded mb-3" />
-    <div className="h-6 w-72 bg-slate-200 rounded mb-4" />
-    <div className="h-48 w-full bg-slate-200/70 rounded-xl" />
+  <div className="my-6 rounded-2xl border border-[var(--border-strong)] bg-[var(--surface-muted)] p-6 animate-pulse">
+    <div className="h-4 w-40 bg-[var(--surface-muted)] rounded mb-3" />
+    <div className="h-6 w-72 bg-[var(--surface-muted)] rounded mb-4" />
+    <div className="h-48 w-full bg-[var(--surface-muted)] rounded-xl" />
   </div>
 );
 
@@ -52,6 +58,18 @@ function renderInfographic(id: string) {
       return <ServerConsolidationDemo />;
     case 'infographic-w4-shared-responsibility':
       return <CloudSharedResponsibilityMatrix />;
+    case 'infographic-w5-topology':
+      return <NetworkTopologySimulator />;
+    case 'infographic-w5-devices':
+      return <HubSwitchRouterSimulator />;
+    case 'infographic-w5-cabling':
+      return <CableWiringVisualizer />;
+    case 'infographic-w6-encapsulation':
+      return <PacketEncapsulationFlow />;
+    case 'infographic-w6-tcp-udp':
+      return <TcpHandshakeSimulator />;
+    case 'infographic-w6-subnetting':
+      return <SubnetCidrCalculator />;
     default:
       return null;
   }

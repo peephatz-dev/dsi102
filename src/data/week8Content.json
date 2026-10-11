@@ -1,0 +1,1282 @@
+{
+  "modules": [
+    {
+      "id": "w8-m1",
+      "weekId": "week8",
+      "moduleNumber": 1,
+      "title": "Cyberattack foundations",
+      "thaiTitle": "พื้นฐานการโจมตีและผลกระทบ",
+      "pdfPageStart": 1,
+      "pdfPageEnd": 8,
+      "overview": "Cyberattack เมื่อบัญชีหยุดใช้งาน",
+      "subsections": [
+        {
+          "id": "w8-m1-s1",
+          "title": "Cyberattack and CIA",
+          "thaiTitle": "Cyberattack and CIA",
+          "pdfPage": 7,
+          "content": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี",
+          "thaiCommentary": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี",
+          "memoryTip": "Availability"
+        },
+        {
+          "id": "w8-m1-s2",
+          "title": "Verify before concluding",
+          "thaiTitle": "Verify before concluding",
+          "pdfPage": 2,
+          "content": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน",
+          "thaiCommentary": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน",
+          "memoryTip": "ตรวจผ่าน portal หรือช่องทางทางการที่เปิดเอง"
+        }
+      ]
+    },
+    {
+      "id": "w8-m2",
+      "weekId": "week8",
+      "moduleNumber": 2,
+      "title": "Threats, vulnerabilities and risk",
+      "thaiTitle": "แยกช่องโหว่ ภัยคุกคาม และความเสี่ยง",
+      "pdfPageStart": 9,
+      "pdfPageEnd": 17,
+      "overview": "Asset Attack การใช้รหัสเดียวกันกับเกมและ",
+      "subsections": [
+        {
+          "id": "w8-m2-s1",
+          "title": "Core vocabulary",
+          "thaiTitle": "Core vocabulary",
+          "pdfPage": 10,
+          "content": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว",
+          "thaiCommentary": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว",
+          "memoryTip": "Vulnerability"
+        },
+        {
+          "id": "w8-m2-s2",
+          "title": "Attack surface and insiders",
+          "thaiTitle": "Attack surface and insiders",
+          "pdfPage": 13,
+          "content": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้",
+          "thaiCommentary": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้",
+          "memoryTip": "ได้ ทั้งจากความผิดพลาด การใช้สิทธิ์ผิด หรือบัญชีถูกยึด"
+        },
+        {
+          "id": "w8-m2-s3",
+          "title": "Password reuse",
+          "thaiTitle": "Password reuse",
+          "pdfPage": 17,
+          "content": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง",
+          "thaiCommentary": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง",
+          "memoryTip": "ใช้รหัสไม่ซ้ำร่วมกับ MFA"
+        }
+      ]
+    },
+    {
+      "id": "w8-m3",
+      "weekId": "week8",
+      "moduleNumber": 3,
+      "title": "Malware and ransomware",
+      "thaiTitle": "แยกกลไกของซอฟต์แวร์อันตราย",
+      "pdfPageStart": 18,
+      "pdfPageEnd": 29,
+      "overview": "Virus Ransomware Spyware",
+      "subsections": [
+        {
+          "id": "w8-m3-s1",
+          "title": "Virus, worm and Trojan",
+          "thaiTitle": "Virus, worm and Trojan",
+          "pdfPage": 20,
+          "content": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน",
+          "thaiCommentary": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน",
+          "memoryTip": "Worm"
+        },
+        {
+          "id": "w8-m3-s2",
+          "title": "Ransomware",
+          "thaiTitle": "Ransomware",
+          "pdfPage": 24,
+          "content": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน",
+          "thaiCommentary": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน",
+          "memoryTip": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป"
+        },
+        {
+          "id": "w8-m3-s3",
+          "title": "Spyware, keylogger and botnet",
+          "thaiTitle": "Spyware, keylogger and botnet",
+          "pdfPage": 26,
+          "content": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย",
+          "thaiCommentary": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย",
+          "memoryTip": "Keylogger"
+        }
+      ]
+    },
+    {
+      "id": "w8-m4",
+      "weekId": "week8",
+      "moduleNumber": 4,
+      "title": "Social engineering and phishing",
+      "thaiTitle": "ตรวจความเชื่อถือและแรงกดดัน",
+      "pdfPageStart": 30,
+      "pdfPageEnd": 39,
+      "overview": "Social Spear หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์",
+      "subsections": [
+        {
+          "id": "w8-m4-s1",
+          "title": "Persuasion triggers",
+          "thaiTitle": "Persuasion triggers",
+          "pdfPage": 31,
+          "content": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ",
+          "thaiCommentary": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ",
+          "memoryTip": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้"
+        },
+        {
+          "id": "w8-m4-s2",
+          "title": "Phishing variants",
+          "thaiTitle": "Phishing variants",
+          "pdfPage": 35,
+          "content": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว",
+          "thaiCommentary": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว",
+          "memoryTip": "Vishing"
+        },
+        {
+          "id": "w8-m4-s3",
+          "title": "Trusted verification",
+          "thaiTitle": "Trusted verification",
+          "pdfPage": 36,
+          "content": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags",
+          "thaiCommentary": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags",
+          "memoryTip": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้"
+        }
+      ]
+    },
+    {
+      "id": "w8-m5",
+      "weekId": "week8",
+      "moduleNumber": 5,
+      "title": "Network-based attacks",
+      "thaiTitle": "ความพร้อมใช้ การดักฟัง และตัวตน",
+      "pdfPageStart": 40,
+      "pdfPageEnd": 50,
+      "overview": "DoS MITM IP",
+      "subsections": [
+        {
+          "id": "w8-m5-s1",
+          "title": "DoS vs DDoS",
+          "thaiTitle": "DoS vs DDoS",
+          "pdfPage": 42,
+          "content": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์",
+          "thaiCommentary": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์",
+          "memoryTip": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง"
+        },
+        {
+          "id": "w8-m5-s2",
+          "title": "MITM and sniffing",
+          "thaiTitle": "MITM and sniffing",
+          "pdfPage": 45,
+          "content": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้",
+          "thaiCommentary": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้",
+          "memoryTip": "ไม่ได้ อาจเห็น metadata แต่ไม่ควรอ่านเนื้อหาที่ได้รับการป้องกัน"
+        },
+        {
+          "id": "w8-m5-s3",
+          "title": "Spoofing and session misuse",
+          "thaiTitle": "Spoofing and session misuse",
+          "pdfPage": 47,
+          "content": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน",
+          "thaiCommentary": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน",
+          "memoryTip": "Session hijacking"
+        }
+      ]
+    },
+    {
+      "id": "w8-m6",
+      "weekId": "week8",
+      "moduleNumber": 6,
+      "title": "Web and application weaknesses",
+      "thaiTitle": "input output และการตรวจสิทธิ์",
+      "pdfPageStart": 51,
+      "pdfPageEnd": 59,
+      "overview": "SQL XSS Authentication",
+      "subsections": [
+        {
+          "id": "w8-m6-s1",
+          "title": "SQL injection",
+          "thaiTitle": "SQL injection",
+          "pdfPage": 53,
+          "content": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง",
+          "thaiCommentary": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง",
+          "memoryTip": "Parameterized queries"
+        },
+        {
+          "id": "w8-m6-s2",
+          "title": "XSS and CSRF",
+          "thaiTitle": "XSS and CSRF",
+          "pdfPage": 54,
+          "content": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว",
+          "thaiCommentary": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว",
+          "memoryTip": "CSRF"
+        },
+        {
+          "id": "w8-m6-s3",
+          "title": "Broken access control",
+          "thaiTitle": "Broken access control",
+          "pdfPage": 56,
+          "content": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries",
+          "thaiCommentary": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries",
+          "memoryTip": "ไม่ได้ ต้องตรวจสิทธิ์ที่ server"
+        }
+      ]
+    },
+    {
+      "id": "w8-m7",
+      "weekId": "week8",
+      "moduleNumber": 7,
+      "title": "Documented incidents",
+      "thaiTitle": "เชื่อมกรณีศึกษากับการป้องกัน",
+      "pdfPageStart": 60,
+      "pdfPageEnd": 65,
+      "overview": "สไลด์อธิบาย สไลด์เชื่อม",
+      "subsections": [
+        {
+          "id": "w8-m7-s1",
+          "title": "WannaCry",
+          "thaiTitle": "WannaCry",
+          "pdfPage": 61,
+          "content": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว",
+          "thaiCommentary": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว",
+          "memoryTip": "ติดตั้งและยืนยัน patch ที่มีอยู่ พร้อม segmentation และ tested backups"
+        },
+        {
+          "id": "w8-m7-s2",
+          "title": "Equifax and Colonial Pipeline",
+          "thaiTitle": "Equifax and Colonial Pipeline",
+          "pdfPage": 63,
+          "content": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity",
+          "thaiCommentary": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity",
+          "memoryTip": "ได้ ต้องมีการประสานงานและแผนความต่อเนื่องทางธุรกิจ"
+        }
+      ]
+    },
+    {
+      "id": "w8-m8",
+      "weekId": "week8",
+      "moduleNumber": 8,
+      "title": "Prevention, response and review",
+      "thaiTitle": "ตรวจหลักฐาน ควบคุม และคืนระบบ",
+      "pdfPageStart": 66,
+      "pdfPageEnd": 72,
+      "overview": "Prevent เมื่อ",
+      "subsections": [
+        {
+          "id": "w8-m8-s1",
+          "title": "Defense and response cycle",
+          "thaiTitle": "Defense and response cycle",
+          "pdfPage": 68,
+          "content": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ",
+          "thaiCommentary": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ",
+          "memoryTip": "ตรวจสาเหตุและเรียนรู้เพื่อปรับปรุงการควบคุม"
+        },
+        {
+          "id": "w8-m8-s2",
+          "title": "University incident triage",
+          "thaiTitle": "University incident triage",
+          "pdfPage": 70,
+          "content": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน",
+          "thaiCommentary": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน",
+          "memoryTip": "อาการบริการและ logs เพื่อแยก outage จาก malicious activity"
+        }
+      ]
+    }
+  ],
+  "flashcards": [
+    {
+      "id": "w8-f1",
+      "weekId": "week8",
+      "front": "บริการใช้งานไม่ได้กระทบวัตถุประสงค์ CIA ใดเป็นหลัก?",
+      "back": "Availability",
+      "thaiExplanation": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี",
+      "category": "Cyberattack foundations",
+      "pdfPage": 7
+    },
+    {
+      "id": "w8-f2",
+      "weekId": "week8",
+      "front": "อีเมลแจ้งบัญชีถูกล็อกพร้อมลิงก์ใหม่ ควรเริ่มจากอะไร?",
+      "back": "ตรวจผ่าน portal หรือช่องทางทางการที่เปิดเอง",
+      "thaiExplanation": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน",
+      "category": "Cyberattack foundations",
+      "pdfPage": 2
+    },
+    {
+      "id": "w8-f3",
+      "weekId": "week8",
+      "front": "บริการไม่ได้ patch คือ threat actor หรือ vulnerability?",
+      "back": "Vulnerability",
+      "thaiExplanation": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว",
+      "category": "Threats, vulnerabilities and risk",
+      "pdfPage": 10
+    },
+    {
+      "id": "w8-f4",
+      "weekId": "week8",
+      "front": "ผู้ใช้ภายในที่มีสิทธิ์เดิมทำให้เกิดเหตุได้หรือไม่?",
+      "back": "ได้ ทั้งจากความผิดพลาด การใช้สิทธิ์ผิด หรือบัญชีถูกยึด",
+      "thaiExplanation": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้",
+      "category": "Threats, vulnerabilities and risk",
+      "pdfPage": 13
+    },
+    {
+      "id": "w8-f5",
+      "weekId": "week8",
+      "front": "มาตรการใดลดผลจากการใช้รหัสที่เคยรั่วจากบริการอื่น?",
+      "back": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+      "thaiExplanation": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง",
+      "category": "Threats, vulnerabilities and risk",
+      "pdfPage": 17
+    },
+    {
+      "id": "w8-f6",
+      "weekId": "week8",
+      "front": "ชนิดใดออกแบบให้แพร่ข้ามระบบได้เองโดยไม่ต้องให้ผู้ใช้คัดลอกซ้ำ?",
+      "back": "Worm",
+      "thaiExplanation": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน",
+      "category": "Malware and ransomware",
+      "pdfPage": 20
+    },
+    {
+      "id": "w8-f7",
+      "weekId": "week8",
+      "front": "เหตุใดมี backup อย่างเดียวจึงยังไม่แก้ความเสี่ยงการขู่เปิดเผยข้อมูล?",
+      "back": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+      "thaiExplanation": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน",
+      "category": "Malware and ransomware",
+      "pdfPage": 24
+    },
+    {
+      "id": "w8-f8",
+      "weekId": "week8",
+      "front": "โปรแกรมแอบบันทึกการกดแป้นพิมพ์เรียกว่าอะไร?",
+      "back": "Keylogger",
+      "thaiExplanation": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย",
+      "category": "Malware and ransomware",
+      "pdfPage": 26
+    },
+    {
+      "id": "w8-f9",
+      "weekId": "week8",
+      "front": "ข้อความอ้าง IT และขอ password ภายใน 10 นาที ควรตอบทันทีหรือไม่?",
+      "back": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+      "thaiExplanation": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ",
+      "category": "Social engineering and phishing",
+      "pdfPage": 31
+    },
+    {
+      "id": "w8-f10",
+      "weekId": "week8",
+      "front": "Phishing ผ่านการโทรศัพท์เรียกว่าอะไร?",
+      "back": "Vishing",
+      "thaiExplanation": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว",
+      "category": "Social engineering and phishing",
+      "pdfPage": 35
+    },
+    {
+      "id": "w8-f11",
+      "weekId": "week8",
+      "front": "HTTPS กับหน้าตาคล้ายเว็บมหาวิทยาลัยพอพิสูจน์ว่าเป็นเว็บจริงหรือไม่?",
+      "back": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+      "thaiExplanation": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags",
+      "category": "Social engineering and phishing",
+      "pdfPage": 36
+    },
+    {
+      "id": "w8-f12",
+      "weekId": "week8",
+      "front": "สิ่งสำคัญที่ต่างระหว่าง DoS และ DDoS คืออะไร?",
+      "back": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+      "thaiExplanation": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์",
+      "category": "Network-based attacks",
+      "pdfPage": 42
+    },
+    {
+      "id": "w8-f13",
+      "weekId": "week8",
+      "front": "ผู้สังเกตเครือข่ายอ่าน application content ที่เข้ารหัสถูกต้องได้เสมอหรือไม่?",
+      "back": "ไม่ได้ อาจเห็น metadata แต่ไม่ควรอ่านเนื้อหาที่ได้รับการป้องกัน",
+      "thaiExplanation": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้",
+      "category": "Network-based attacks",
+      "pdfPage": 45
+    },
+    {
+      "id": "w8-f14",
+      "weekId": "week8",
+      "front": "การใช้ session token ของผู้อื่นโดยไม่ได้รับอนุญาตคืออะไร?",
+      "back": "Session hijacking",
+      "thaiExplanation": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน",
+      "category": "Network-based attacks",
+      "pdfPage": 47
+    },
+    {
+      "id": "w8-f15",
+      "weekId": "week8",
+      "front": "แนวทางเขียนฐานข้อมูลหลักที่ลด SQL injection คืออะไร?",
+      "back": "Parameterized queries",
+      "thaiExplanation": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง",
+      "category": "Web and application weaknesses",
+      "pdfPage": 53
+    },
+    {
+      "id": "w8-f16",
+      "weekId": "week8",
+      "front": "ตรวจเจตนาของคำขอเปลี่ยนสถานะด้วย anti-CSRF token ป้องกันปัญหาใด?",
+      "back": "CSRF",
+      "thaiExplanation": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว",
+      "category": "Web and application weaknesses",
+      "pdfPage": 54
+    },
+    {
+      "id": "w8-f17",
+      "weekId": "week8",
+      "front": "ซ่อนปุ่มแก้ไขใน UI เพียงอย่างเดียวบังคับสิทธิ์ได้หรือไม่?",
+      "back": "ไม่ได้ ต้องตรวจสิทธิ์ที่ server",
+      "thaiExplanation": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries",
+      "category": "Web and application weaknesses",
+      "pdfPage": 56
+    },
+    {
+      "id": "w8-f18",
+      "weekId": "week8",
+      "front": "บทเรียนสำคัญเรื่องการอัปเดตจาก WannaCry คืออะไร?",
+      "back": "ติดตั้งและยืนยัน patch ที่มีอยู่ พร้อม segmentation และ tested backups",
+      "thaiExplanation": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว",
+      "category": "Documented incidents",
+      "pdfPage": 61
+    },
+    {
+      "id": "w8-f19",
+      "weekId": "week8",
+      "front": "เหตุใน corporate IT สามารถกระทบการปฏิบัติงานธุรกิจได้หรือไม่?",
+      "back": "ได้ ต้องมีการประสานงานและแผนความต่อเนื่องทางธุรกิจ",
+      "thaiExplanation": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity",
+      "category": "Documented incidents",
+      "pdfPage": 63
+    },
+    {
+      "id": "w8-f20",
+      "weekId": "week8",
+      "front": "หลังคืนระบบแล้วควรทำอะไรเพื่อพัฒนาการป้องกัน?",
+      "back": "ตรวจสาเหตุและเรียนรู้เพื่อปรับปรุงการควบคุม",
+      "thaiExplanation": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ",
+      "category": "Prevention, response and review",
+      "pdfPage": 68
+    },
+    {
+      "id": "w8-f21",
+      "weekId": "week8",
+      "front": "ก่อนประกาศว่า portal ถูกโจมตีควรตรวจอะไร?",
+      "back": "อาการบริการและ logs เพื่อแยก outage จาก malicious activity",
+      "thaiExplanation": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน",
+      "category": "Prevention, response and review",
+      "pdfPage": 70
+    }
+  ],
+  "quizzes": [
+    {
+      "id": "w8-q1",
+      "weekId": "week8",
+      "question": "บริการใช้งานไม่ได้กระทบวัตถุประสงค์ CIA ใดเป็นหลัก?",
+      "options": [
+        {
+          "text": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี"
+        },
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี"
+        },
+        {
+          "text": "Availability",
+          "isCorrect": true,
+          "explanation": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี"
+        },
+        {
+          "text": "ได้ ทั้งจากความผิดพลาด การใช้สิทธิ์ผิด หรือบัญชีถูกยึด",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี"
+        }
+      ],
+      "pdfPage": 7,
+      "topic": "Cyberattack and CIA",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q2",
+      "weekId": "week8",
+      "question": "อีเมลแจ้งบัญชีถูกล็อกพร้อมลิงก์ใหม่ ควรเริ่มจากอะไร?",
+      "options": [
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน"
+        },
+        {
+          "text": "ตรวจผ่าน portal หรือช่องทางทางการที่เปิดเอง",
+          "isCorrect": true,
+          "explanation": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน"
+        },
+        {
+          "text": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน"
+        },
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน"
+        }
+      ],
+      "pdfPage": 2,
+      "topic": "Verify before concluding",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q3",
+      "weekId": "week8",
+      "question": "บริการไม่ได้ patch คือ threat actor หรือ vulnerability?",
+      "options": [
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว"
+        },
+        {
+          "text": "Vulnerability",
+          "isCorrect": true,
+          "explanation": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว"
+        },
+        {
+          "text": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว"
+        },
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว"
+        }
+      ],
+      "pdfPage": 10,
+      "topic": "Core vocabulary",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q4",
+      "weekId": "week8",
+      "question": "ผู้ใช้ภายในที่มีสิทธิ์เดิมทำให้เกิดเหตุได้หรือไม่?",
+      "options": [
+        {
+          "text": "ได้ ทั้งจากความผิดพลาด การใช้สิทธิ์ผิด หรือบัญชีถูกยึด",
+          "isCorrect": true,
+          "explanation": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้"
+        },
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้"
+        }
+      ],
+      "pdfPage": 13,
+      "topic": "Attack surface and insiders",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q5",
+      "weekId": "week8",
+      "question": "มาตรการใดลดผลจากการใช้รหัสที่เคยรั่วจากบริการอื่น?",
+      "options": [
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง"
+        },
+        {
+          "text": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+          "isCorrect": true,
+          "explanation": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง"
+        }
+      ],
+      "pdfPage": 17,
+      "topic": "Password reuse",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q6",
+      "weekId": "week8",
+      "question": "ชนิดใดออกแบบให้แพร่ข้ามระบบได้เองโดยไม่ต้องให้ผู้ใช้คัดลอกซ้ำ?",
+      "options": [
+        {
+          "text": "Worm",
+          "isCorrect": true,
+          "explanation": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน"
+        },
+        {
+          "text": "ใช้รหัสไม่ซ้ำร่วมกับ MFA",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน"
+        }
+      ],
+      "pdfPage": 20,
+      "topic": "Virus, worm and Trojan",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q7",
+      "weekId": "week8",
+      "question": "เหตุใดมี backup อย่างเดียวจึงยังไม่แก้ความเสี่ยงการขู่เปิดเผยข้อมูล?",
+      "options": [
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": true,
+          "explanation": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน"
+        }
+      ],
+      "pdfPage": 24,
+      "topic": "Ransomware",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q8",
+      "weekId": "week8",
+      "question": "โปรแกรมแอบบันทึกการกดแป้นพิมพ์เรียกว่าอะไร?",
+      "options": [
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย"
+        },
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": true,
+          "explanation": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย"
+        }
+      ],
+      "pdfPage": 26,
+      "topic": "Spyware, keylogger and botnet",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q9",
+      "weekId": "week8",
+      "question": "ข้อความอ้าง IT และขอ password ภายใน 10 นาที ควรตอบทันทีหรือไม่?",
+      "options": [
+        {
+          "text": "Worm",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": true,
+          "explanation": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ"
+        }
+      ],
+      "pdfPage": 31,
+      "topic": "Persuasion triggers",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q10",
+      "weekId": "week8",
+      "question": "Phishing ผ่านการโทรศัพท์เรียกว่าอะไร?",
+      "options": [
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว"
+        },
+        {
+          "text": "Vishing",
+          "isCorrect": true,
+          "explanation": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว"
+        }
+      ],
+      "pdfPage": 35,
+      "topic": "Phishing variants",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q11",
+      "weekId": "week8",
+      "question": "HTTPS กับหน้าตาคล้ายเว็บมหาวิทยาลัยพอพิสูจน์ว่าเป็นเว็บจริงหรือไม่?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": true,
+          "explanation": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags"
+        }
+      ],
+      "pdfPage": 36,
+      "topic": "Trusted verification",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q12",
+      "weekId": "week8",
+      "question": "สิ่งสำคัญที่ต่างระหว่าง DoS และ DDoS คืออะไร?",
+      "options": [
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์"
+        },
+        {
+          "text": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+          "isCorrect": true,
+          "explanation": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์"
+        },
+        {
+          "text": "Backup ช่วยกู้คืน แต่ไม่ได้ย้อนคืนความลับที่ถูกขโมยไป",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์"
+        }
+      ],
+      "pdfPage": 42,
+      "topic": "DoS vs DDoS",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q13",
+      "weekId": "week8",
+      "question": "ผู้สังเกตเครือข่ายอ่าน application content ที่เข้ารหัสถูกต้องได้เสมอหรือไม่?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้"
+        },
+        {
+          "text": "ไม่ได้ อาจเห็น metadata แต่ไม่ควรอ่านเนื้อหาที่ได้รับการป้องกัน",
+          "isCorrect": true,
+          "explanation": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้"
+        }
+      ],
+      "pdfPage": 45,
+      "topic": "MITM and sniffing",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q14",
+      "weekId": "week8",
+      "question": "การใช้ session token ของผู้อื่นโดยไม่ได้รับอนุญาตคืออะไร?",
+      "options": [
+        {
+          "text": "Session hijacking",
+          "isCorrect": true,
+          "explanation": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน"
+        },
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน"
+        }
+      ],
+      "pdfPage": 47,
+      "topic": "Spoofing and session misuse",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q15",
+      "weekId": "week8",
+      "question": "แนวทางเขียนฐานข้อมูลหลักที่ลด SQL injection คืออะไร?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง"
+        },
+        {
+          "text": "Parameterized queries",
+          "isCorrect": true,
+          "explanation": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง"
+        },
+        {
+          "text": "Keylogger",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง"
+        }
+      ],
+      "pdfPage": 53,
+      "topic": "SQL injection",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q16",
+      "weekId": "week8",
+      "question": "ตรวจเจตนาของคำขอเปลี่ยนสถานะด้วย anti-CSRF token ป้องกันปัญหาใด?",
+      "options": [
+        {
+          "text": "CSRF",
+          "isCorrect": true,
+          "explanation": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว"
+        },
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว"
+        }
+      ],
+      "pdfPage": 54,
+      "topic": "XSS and CSRF",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q17",
+      "weekId": "week8",
+      "question": "ซ่อนปุ่มแก้ไขใน UI เพียงอย่างเดียวบังคับสิทธิ์ได้หรือไม่?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries"
+        },
+        {
+          "text": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries"
+        },
+        {
+          "text": "ไม่ได้ ต้องตรวจสิทธิ์ที่ server",
+          "isCorrect": true,
+          "explanation": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries"
+        }
+      ],
+      "pdfPage": 56,
+      "topic": "Broken access control",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q18",
+      "weekId": "week8",
+      "question": "บทเรียนสำคัญเรื่องการอัปเดตจาก WannaCry คืออะไร?",
+      "options": [
+        {
+          "text": "ติดตั้งและยืนยัน patch ที่มีอยู่ พร้อม segmentation และ tested backups",
+          "isCorrect": true,
+          "explanation": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว"
+        },
+        {
+          "text": "ไม่ควร ให้ตรวจผ่านช่องทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว"
+        },
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว"
+        }
+      ],
+      "pdfPage": 61,
+      "topic": "WannaCry",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q19",
+      "weekId": "week8",
+      "question": "เหตุใน corporate IT สามารถกระทบการปฏิบัติงานธุรกิจได้หรือไม่?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity"
+        },
+        {
+          "text": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity"
+        },
+        {
+          "text": "ได้ ต้องมีการประสานงานและแผนความต่อเนื่องทางธุรกิจ",
+          "isCorrect": true,
+          "explanation": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity"
+        }
+      ],
+      "pdfPage": 63,
+      "topic": "Equifax and Colonial Pipeline",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q20",
+      "weekId": "week8",
+      "question": "หลังคืนระบบแล้วควรทำอะไรเพื่อพัฒนาการป้องกัน?",
+      "options": [
+        {
+          "text": "Vishing",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ"
+        },
+        {
+          "text": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ"
+        },
+        {
+          "text": "ตรวจสาเหตุและเรียนรู้เพื่อปรับปรุงการควบคุม",
+          "isCorrect": true,
+          "explanation": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ"
+        }
+      ],
+      "pdfPage": 68,
+      "topic": "Defense and response cycle",
+      "difficulty": "medium"
+    },
+    {
+      "id": "w8-q21",
+      "weekId": "week8",
+      "question": "ก่อนประกาศว่า portal ถูกโจมตีควรตรวจอะไร?",
+      "options": [
+        {
+          "text": "DDoS มีแหล่งกิจกรรมรบกวนที่กระจายหลายแหล่ง",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน"
+        },
+        {
+          "text": "ไม่ได้ อาจเห็น metadata แต่ไม่ควรอ่านเนื้อหาที่ได้รับการป้องกัน",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน"
+        },
+        {
+          "text": "อาการบริการและ logs เพื่อแยก outage จาก malicious activity",
+          "isCorrect": true,
+          "explanation": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน"
+        },
+        {
+          "text": "ไม่พอ ต้องตรวจอัตลักษณ์และที่มาของคำขอผ่านทางที่เชื่อถือได้",
+          "isCorrect": false,
+          "explanation": "คำตอบนี้ไม่ตรงกับสถานการณ์นี้ เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน"
+        }
+      ],
+      "pdfPage": 70,
+      "topic": "University incident triage",
+      "difficulty": "medium"
+    }
+  ],
+  "concepts": [
+    {
+      "id": "w8-c1",
+      "term": "Cyberattack and CIA",
+      "definition": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี",
+      "thaiDefinition": "Cyberattack คือความพยายามโดยเจตนาที่จะเข้าถึงโดยไม่ได้รับอนุญาต เปลี่ยนข้อมูล รบกวนบริการ หรือทำร้ายระบบ เป้าหมายเชื่อมกับ confidentiality, integrity และ availability ความพยายามอาจสำเร็จหรือไม่ก็ได้ อาการล็อกอินไม่ได้เพียงอย่างเดียวยังไม่ยืนยันว่าเกิดการโจมตี",
+      "pdfPage": 7,
+      "category": "Cyberattack foundations"
+    },
+    {
+      "id": "w8-c2",
+      "term": "Verify before concluding",
+      "definition": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน",
+      "thaiDefinition": "เมื่อบัญชีหยุดใช้งาน ให้ตรวจข้อความผ่านช่องทางทางการ หลีกเลี่ยงลิงก์ sign-in ไม่รู้จัก และรายงานอย่างรวดเร็ว ต้องตรวจอาการและหลักฐานก่อนสรุปสาเหตุ เพราะ outage กับ malicious activity อาจมีอาการคล้ายกัน",
+      "pdfPage": 2,
+      "category": "Cyberattack foundations"
+    },
+    {
+      "id": "w8-c3",
+      "term": "Core vocabulary",
+      "definition": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว",
+      "thaiDefinition": "Asset คือสิ่งมีค่า Threat actor คือผู้ที่ก่ออันตรายได้ Vulnerability คือจุดอ่อน Attack vector คือเส้นทางหรือวิธีเข้าถึงเป้าหมาย Exploit คือการใช้ช่องโหว่ให้เกิดผล Risk คือโอกาสการสูญเสียและผลตามมา การมีช่องโหว่ไม่เท่ากับมี incident เกิดแล้ว",
+      "pdfPage": 10,
+      "category": "Threats, vulnerabilities and risk"
+    },
+    {
+      "id": "w8-c4",
+      "term": "Attack surface and insiders",
+      "definition": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้",
+      "thaiDefinition": "Attack surface รวมจุดดิจิทัลและกายภาพที่อาจถูกใช้เข้าถึงหรือดึงข้อมูล ทั้ง devices, services และ people Insider มีสิทธิ์อยู่เดิม ส่วน external actor อยู่นอกองค์กร แต่ทั้งการกระทำตั้งใจ อุบัติเหตุ และบัญชีภายในที่ถูกยึดสร้างเหตุได้",
+      "pdfPage": 13,
+      "category": "Threats, vulnerabilities and risk"
+    },
+    {
+      "id": "w8-c5",
+      "term": "Password reuse",
+      "definition": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง",
+      "thaiDefinition": "การใช้รหัสเดียวกันกับเกมและ portal ทำให้ข้อมูลจากบริการหนึ่งเพิ่มความเสี่ยงอีกบริการ Asset คือบัญชี/ข้อมูลมหาวิทยาลัย จุดอ่อนคือรหัสซ้ำ Threat action อาจเป็น credential stuffing การใช้รหัสไม่ซ้ำกับ MFA ช่วยลดความเสี่ยง",
+      "pdfPage": 17,
+      "category": "Threats, vulnerabilities and risk"
+    },
+    {
+      "id": "w8-c6",
+      "term": "Virus, worm and Trojan",
+      "definition": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน",
+      "thaiDefinition": "Virus แทรกตัวใน host file/program และแพร่เมื่อ host ทำงาน Worm สามารถแพร่ข้ามระบบเองตามเงื่อนไขที่เอื้อ Trojan อำพรางจุดประสงค์อันตรายให้เหมือนซอฟต์แวร์ปกติ คำเหล่านี้บอกกลไกต่างกัน และอาจมีลักษณะบางอย่างร่วมกัน",
+      "pdfPage": 20,
+      "category": "Malware and ransomware"
+    },
+    {
+      "id": "w8-c7",
+      "term": "Ransomware",
+      "definition": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน",
+      "thaiDefinition": "Ransomware จำกัดการเข้าถึงระบบหรือข้อมูลเพื่อกดดันเรียกค่าไถ่ บางกรณีมีการขโมยข้อมูลและขู่เปิดเผย จึงกระทบ availability และอาจกระทบ confidentiality ด้วย ใช้ patch, least privilege, monitoring, isolation และ tested backups ร่วมกัน",
+      "pdfPage": 24,
+      "category": "Malware and ransomware"
+    },
+    {
+      "id": "w8-c8",
+      "term": "Spyware, keylogger and botnet",
+      "definition": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย",
+      "thaiDefinition": "Spyware เก็บข้อมูลหรือกิจกรรมโดยลับ Keylogger เน้นการกดแป้นพิมพ์ ส่วน botnet คืออุปกรณ์ที่ถูกยึดและประสานควบคุมเพื่อทำงานตามผู้โจมตี Malware อาจเข้าผ่าน attachments, downloads หรือระบบที่อัปเดตไม่ครบ แต่ไฟล์ทุกไฟล์ไม่ได้เป็นอันตราย",
+      "pdfPage": 26,
+      "category": "Malware and ransomware"
+    },
+    {
+      "id": "w8-c9",
+      "term": "Persuasion triggers",
+      "definition": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ",
+      "thaiDefinition": "Social engineering ชักจูงคนให้เปิดเผยข้อมูลหรือทำสิ่งเสี่ยงโดยใช้ความเร่งด่วน authority ความกลัว หรือรางวัล การหยุดเพื่อตรวจสอบช่วยลดโอกาสตัดสินใจตามแรงกดดัน ต้องตรวจทั้งผู้ส่ง ปลายทางลิงก์ และสิ่งที่ถูกขอ",
+      "pdfPage": 31,
+      "category": "Social engineering and phishing"
+    },
+    {
+      "id": "w8-c10",
+      "term": "Phishing variants",
+      "definition": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว",
+      "thaiDefinition": "Spear phishing เจาะจงบุคคลหรือกลุ่ม Whaling มุ่งผู้บริหาร Smishing ผ่าน SMS/chat Vishing ผ่านเสียง Pretexting สร้างเรื่องหรืออัตลักษณ์ และ baiting ใช้สิ่งล่อใจ ทุกแบบต้องดูเจตนาของคำขอมากกว่าจำชื่ออย่างเดียว",
+      "pdfPage": 35,
+      "category": "Social engineering and phishing"
+    },
+    {
+      "id": "w8-c11",
+      "term": "Trusted verification",
+      "definition": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags",
+      "thaiDefinition": "หน้าล็อกอินที่เหมือนแบรนด์ไม่พิสูจน์ตัวตนเว็บไซต์ และ HTTPS ไม่ทำให้เว็บเป็นองค์กรที่ถูกต้องอัตโนมัติ ให้เปิด portal ที่รู้จักเอง ใช้ข้อมูลติดต่อที่ประกาศไว้ และรายงาน คำขู่เกรดหายกับคำขอรหัสผ่านนอกขั้นตอนปกติเป็น red flags",
+      "pdfPage": 36,
+      "category": "Social engineering and phishing"
+    },
+    {
+      "id": "w8-c12",
+      "term": "DoS vs DDoS",
+      "definition": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์",
+      "thaiDefinition": "DoS ทำให้บริการ unavailable/degraded ด้วยการรบกวนหรือใช้ทรัพยากรจนหมด DDoS มีแหล่งที่กระจายหลายจุด การมี traffic มากไม่ใช่หลักฐานการโจมตีโดยตัวมันเอง ต้องตรวจรูปแบบและบริบท ใช้ traffic management, capacity และ coordinated response ตามสถานการณ์",
+      "pdfPage": 42,
+      "category": "Network-based attacks"
+    },
+    {
+      "id": "w8-c13",
+      "term": "MITM and sniffing",
+      "definition": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้",
+      "thaiDefinition": "MITM พยายามสังเกตหรือเปลี่ยนการสื่อสารระหว่างคู่สนทนา Sniffing คือสังเกต traffic แต่ไม่เท่ากับอ่านเนื้อหาที่เข้ารหัส TLS ที่ตั้งค่าและตรวจ certificate ถูกต้องช่วยป้องกันเนื้อหาและตรวจการเปลี่ยนแปลง Metadata บางอย่างอาจยังมองเห็นได้",
+      "pdfPage": 45,
+      "category": "Network-based attacks"
+    },
+    {
+      "id": "w8-c14",
+      "term": "Spoofing and session misuse",
+      "definition": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน",
+      "thaiDefinition": "IP spoofing ปลอม source IP, ARP spoofing บิดข้อมูลการจับคู่ใน LAN, DNS spoofing บิดคำตอบการแปลงชื่อ และ email spoofing บิดข้อมูลผู้ส่ง Session hijacking ใช้ session/token โดยไม่ได้รับสิทธิ์ Credential stuffing ใช้รหัสที่เคยรั่ว ใช้ MFA, secure sessions, rate limits และ monitoring ร่วมกัน",
+      "pdfPage": 47,
+      "category": "Network-based attacks"
+    },
+    {
+      "id": "w8-c15",
+      "term": "SQL injection",
+      "definition": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง",
+      "thaiDefinition": "SQL injection เกิดเมื่อการสร้าง query ไม่ปลอดภัยทำให้ข้อมูลที่ไม่เชื่อถือถูกตีความเป็นคำสั่งฐานข้อมูล แนวทางหลักคือ parameterized queries และสิทธิ์ฐานข้อมูลที่เหมาะสม Input handling ที่ทดสอบแล้วช่วยเสริม ต้องแยกข้อมูลจากคำสั่ง",
+      "pdfPage": 53,
+      "category": "Web and application weaknesses"
+    },
+    {
+      "id": "w8-c16",
+      "term": "XSS and CSRF",
+      "definition": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว",
+      "thaiDefinition": "XSS คือเนื้อหาที่ไม่เชื่อถือถูก browser ตีความเป็น script ใช้ context-aware output encoding และ CSP เป็นส่วนเสริม CSRF ทำให้ browser ที่ยืนยันตัวตนแล้วส่งคำขอเปลี่ยนสถานะที่ผู้ใช้ไม่ตั้งใจ ใช้ anti-CSRF tokens, SameSite cookies และ reauthentication สำหรับงานอ่อนไหว",
+      "pdfPage": 54,
+      "category": "Web and application weaknesses"
+    },
+    {
+      "id": "w8-c17",
+      "term": "Broken access control",
+      "definition": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries",
+      "thaiDefinition": "Authentication ยืนยันตัวตน ส่วน authorization ตรวจสิทธิ์ต่อ resource และ action ต้องตรวจที่ server ทุก request ที่เกี่ยวข้อง ซ่อนปุ่มบนหน้าจอไม่ได้เป็น security boundary ใช้ least privilege และทดสอบ role boundaries",
+      "pdfPage": 56,
+      "category": "Web and application weaknesses"
+    },
+    {
+      "id": "w8-c18",
+      "term": "WannaCry",
+      "definition": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว",
+      "thaiDefinition": "สไลด์อธิบาย WannaCry ปี 2017 ว่า ransomware แพร่แบบ worm ผ่าน Windows SMB ที่มี patch แล้ว จุดเรียนรู้คือ inventory, security updates และลดบริการที่เปิดเกินจำเป็น ระหว่างเหตุใช้ isolation/segmentation และหลังเหตุ restore จาก backup ที่ทดสอบแล้ว",
+      "pdfPage": 61,
+      "category": "Documented incidents"
+    },
+    {
+      "id": "w8-c19",
+      "term": "Equifax and Colonial Pipeline",
+      "definition": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity",
+      "thaiDefinition": "สไลด์เชื่อม Equifax 2017 กับ Apache Struts ที่ยังไม่ได้ patch และการเปิดเผยข้อมูล ส่วน Colonial Pipeline 2021 เป็น ransomware ใน corporate IT ที่นำไปสู่การหยุดงาน pipeline ระหว่างตอบสนอง ต้องแยกสิ่งที่หลักฐานบอกกับการคาดเดา และดูทั้ง patch verification, access control, monitoring และ business continuity",
+      "pdfPage": 63,
+      "category": "Documented incidents"
+    },
+    {
+      "id": "w8-c20",
+      "term": "Defense and response cycle",
+      "definition": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ",
+      "thaiDefinition": "Prevent ลดจุดอ่อน Detect สังเกตและยืนยันหลักฐาน Respond จำกัดผลกระทบ Recover คืนระบบ วงจรตัวอย่างคือ prepare, detect, contain, eradicate, recover, learn ชื่อขั้นอาจต่างตาม framework แต่ต้องมีงานเตรียมตัวและเรียนรู้หลังเหตุ",
+      "pdfPage": 68,
+      "category": "Prevention, response and review"
+    },
+    {
+      "id": "w8-c21",
+      "term": "University incident triage",
+      "definition": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน",
+      "thaiDefinition": "เมื่อ portal เข้าไม่ได้และมีข้อความบัญชีผิดปกติ ให้ยืนยันอาการและ log ตรวจว่าเป็น outage หรือกิจกรรมอันตราย ปกป้องบัญชี/ระบบที่เกี่ยวข้อง และสื่อสารผ่านช่องทางสถานะที่เชื่อถือได้ อย่าเริ่มด้วยการสรุปสาเหตุที่ยังไม่มีหลักฐาน",
+      "pdfPage": 70,
+      "category": "Prevention, response and review"
+    }
+  ]
+}

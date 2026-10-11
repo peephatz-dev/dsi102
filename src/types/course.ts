@@ -1,4 +1,4 @@
-export type WeekId = 'week1' | 'week2' | 'week3' | 'week4';
+export type WeekId = 'week1' | 'week2' | 'week3' | 'week4' | 'week5' | 'week6' | 'week7' | 'week8';
 
 export type StudyMode = 'study' | 'flashcards' | 'quiz' | 'exam';
 
@@ -42,6 +42,7 @@ export interface StudyModule {
   pdfPageStart: number;
   pdfPageEnd: number;
   overview?: string;
+  description?: string;
   subsections: StudySubsection[];
 }
 
@@ -49,8 +50,10 @@ export interface Flashcard {
   id: string;
   weekId: WeekId;
   front: string;
+  thaiFront?: string;
   back: string;
   thaiExplanation?: string;
+  thaiBack?: string;
   category: string;
   pdfPage: number;
   examTip?: string;

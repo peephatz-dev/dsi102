@@ -144,7 +144,7 @@ export const QuizView: React.FC = React.memo(() => {
       {/* Week Selector Chips if in All mode */}
       {currentWeek === 'all' && (
         <div className="flex flex-wrap gap-2">
-          {(['week1', 'week2', 'week3', 'week4'] as WeekId[]).map(wId => (
+          {(['week1', 'week2', 'week3', 'week4', 'week5', 'week6'] as WeekId[]).map(wId => (
             <button
               key={wId}
               onClick={() => setCurrentWeek(wId)}

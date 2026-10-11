@@ -1,3 +1,4 @@
+import { Button } from '../../arc/button/button';
 import React, { useState } from 'react';
 import { Zap, Database } from 'lucide-react';
 
@@ -27,7 +28,7 @@ const tiers: Tier[] = [
     capacity: 'Hundreds of Bytes (e.g. 64 registers × 64-bit)',
     cost: 'Astronomical per GB (silicon die real estate)',
     volatile: true,
-    color: 'from-amber-500 to-red-500',
+    color: ' ',
     pyramidWidth: 'w-48',
     description: 'Immediate workspace for arithmetic and logical instructions. Zero bus delay.'
   },
@@ -41,7 +42,7 @@ const tiers: Tier[] = [
     capacity: 'Megabytes (e.g. 32 MB L3 cache)',
     cost: 'Very High (~$1,000 / GB equivalent)',
     volatile: true,
-    color: 'from-purple-600 to-indigo-600',
+    color: ' ',
     pyramidWidth: 'w-64',
     description: 'Bridges the speed gap between high-speed CPU core and slower main memory.'
   },
@@ -55,7 +56,7 @@ const tiers: Tier[] = [
     capacity: '16 GB - 128 GB',
     cost: 'Moderate (~$3 / GB)',
     volatile: true,
-    color: 'from-blue-600 to-cyan-600',
+    color: ' ',
     pyramidWidth: 'w-80',
     description: 'Holds currently executing OS kernel, application binaries, and runtime variables.'
   },
@@ -69,7 +70,7 @@ const tiers: Tier[] = [
     capacity: '512 GB - 4 TB',
     cost: 'Low (~$0.08 / GB)',
     volatile: false,
-    color: 'from-emerald-600 to-teal-600',
+    color: ' ',
     pyramidWidth: 'w-96',
     description: 'Non-volatile persistent storage. Keeps applications and file systems across reboots.'
   },
@@ -83,7 +84,7 @@ const tiers: Tier[] = [
     capacity: '10 TB - Exabytes',
     cost: 'Lowest (~$0.015 / GB)',
     volatile: false,
-    color: 'from-slate-600 to-slate-700',
+    color: ' ',
     pyramidWidth: 'w-full max-w-md',
     description: 'Massive archive capacity for backups and big data lakes. High mechanical latency.'
   }
@@ -95,22 +96,22 @@ export const MemoryHierarchyPyramid: React.FC = React.memo(() => {
   const current = tiers.find(t => t.id === selectedTier) || tiers[1];
 
   return (
-    <div className="my-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-xs">
-      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-slate-100 pb-4">
+    <div className="my-6 rounded-2xl border border-[var(--border-strong)] bg-[var(--surface)] p-5 shadow-none">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-[var(--border-strong)] pb-4">
         <div>
-          <span className="text-xs font-semibold tracking-wider text-blue-700 uppercase">Hardware Organization</span>
-          <h4 className="text-base font-bold text-slate-900 mt-0.5">The Memory & Storage Hierarchy Pyramid</h4>
-          <p className="text-xs text-slate-500">Trade-offs between Speed, Capacity, Cost per bit, and Volatility.</p>
+          <span className="text-xs font-medium tracking-wider text-[var(--accent)] uppercase">Hardware Organization</span>
+          <h4 className="text-base font-medium text-[var(--foreground)] mt-0.5">The Memory & Storage Hierarchy Pyramid</h4>
+          <p className="text-xs text-[var(--text-secondary)]">Trade-offs between Speed, Capacity, Cost per bit, and Volatility.</p>
         </div>
 
         <div className="flex items-center gap-2 text-xs font-mono">
-          <span className="flex items-center gap-1 text-amber-700 font-semibold">
-            <Zap className="h-3 w-3 text-amber-600" />
+          <span className="flex items-center gap-1 text-[var(--warning)] font-medium">
+            <Zap className="h-3 w-3 text-[var(--warning)]" />
             <span>Fastest & Expensive</span>
           </span>
-          <span className="text-slate-400">vs</span>
-          <span className="flex items-center gap-1 text-slate-600 font-semibold">
-            <Database className="h-3 w-3 text-slate-500" />
+          <span className="text-[var(--text-secondary)]">vs</span>
+          <span className="flex items-center gap-1 text-[var(--text-secondary)] font-medium">
+            <Database className="h-3 w-3 text-[var(--text-secondary)]" />
             <span>Largest & Cheap</span>
           </span>
         </div>
@@ -123,75 +124,75 @@ export const MemoryHierarchyPyramid: React.FC = React.memo(() => {
             const isSelected = selectedTier === tier.id;
 
             return (
-              <button
+              <Button variant="ghost"
                 key={tier.id}
                 onClick={() => setSelectedTier(tier.id)}
                 className={`relative flex items-center justify-between px-4 py-2.5 rounded-xl border transition-all ${tier.pyramidWidth} ${
                   isSelected
-                    ? 'border-blue-600 bg-blue-50/70 shadow-sm ring-1 ring-blue-500 scale-102'
-                    : 'border-slate-200 bg-slate-50/70 hover:bg-white hover:border-slate-300'
+                    ? 'border-[var(--border-strong)] bg-[var(--surface-muted)] shadow-none ring-1 ring-[var(--border-strong)] scale-102'
+                    : 'border-[var(--border-strong)] bg-[var(--surface-muted)] hover:bg-[var(--surface)] hover:border-[var(--border-strong)]'
                 }`}
               >
                 <div className="flex items-center gap-2 text-left">
-                  <div className={`h-2.5 w-2.5 rounded-full bg-gradient-to-r ${tier.color}`} />
+                  <div className={`h-2.5 w-2.5 rounded-full bg-[var(--surface-muted)] ${tier.color}`} />
                   <div>
-                    <p className="text-xs font-bold text-slate-900 leading-tight">{tier.name}</p>
-                    <p className="text-[10px] text-slate-500">{tier.thaiName}</p>
+                    <p className="text-xs font-medium text-[var(--foreground)] leading-tight">{tier.name}</p>
+                    <p className="text-[10px] text-[var(--text-secondary)]">{tier.thaiName}</p>
                   </div>
                 </div>
 
                 <div className="text-right">
-                  <span className="text-[10px] font-mono text-slate-500 font-semibold">{tier.latency}</span>
+                  <span className="text-[10px] font-mono text-[var(--text-secondary)] font-medium">{tier.latency}</span>
                   {tier.volatile ? (
-                    <span className="block text-[9px] font-bold text-rose-600">Volatile</span>
+                    <span className="block text-[9px] font-medium text-[var(--danger)]">Volatile</span>
                   ) : (
-                    <span className="block text-[9px] font-bold text-emerald-600">Non-Volatile</span>
+                    <span className="block text-[9px] font-medium text-[var(--success)]">Non-Volatile</span>
                   )}
                 </div>
-              </button>
+              </Button>
             );
           })}
         </div>
 
         {/* Selected Tier Metrics Card */}
-        <div className="lg:col-span-6 rounded-xl border border-slate-200 bg-slate-50/70 p-5 shadow-xs">
-          <div className="flex items-center justify-between border-b border-slate-200 pb-3">
+        <div className="lg:col-span-6 rounded-xl border border-[var(--border-strong)] bg-[var(--surface-muted)] p-5 shadow-none">
+          <div className="flex items-center justify-between border-b border-[var(--border-strong)] pb-3">
             <div>
-              <span className="text-xs font-mono text-blue-700 font-bold">TIER METRICS</span>
-              <h5 className="text-base font-bold text-slate-900">{current.name}</h5>
-              <p className="text-xs text-slate-500">{current.thaiName}</p>
+              <span className="text-xs font-mono text-[var(--accent)] font-medium">TIER METRICS</span>
+              <h5 className="text-base font-medium text-[var(--foreground)]">{current.name}</h5>
+              <p className="text-xs text-[var(--text-secondary)]">{current.thaiName}</p>
             </div>
-            <span className={`px-2.5 py-1 rounded-full text-xs font-semibold ${
+            <span className={`px-2.5 py-1 rounded-full text-xs font-medium ${
               current.volatile
-                ? 'bg-rose-50 text-rose-700 border border-rose-200'
-                : 'bg-emerald-50 text-emerald-700 border border-emerald-200'
+                ? 'bg-[var(--surface-muted)] text-[var(--danger)] border border-[var(--border-strong)]'
+                : 'bg-[var(--surface-muted)] text-[var(--success)] border border-[var(--border-strong)]'
             }`}>
               {current.volatile ? '⚡ Volatile (Power off = Lost)' : '🔒 Non-Volatile (Persistent)'}
             </span>
           </div>
 
-          <p className="mt-3 text-xs text-slate-700 leading-relaxed">{current.description}</p>
+          <p className="mt-3 text-xs text-[var(--foreground)] leading-relaxed">{current.description}</p>
 
           <div className="mt-4 grid grid-cols-2 gap-3 text-xs font-mono">
-            <div className="rounded-lg bg-white p-2.5 border border-slate-200 shadow-xs">
-              <span className="text-[10px] text-slate-500 block font-sans">Access Latency</span>
-              <span className="text-slate-900 font-bold">{current.latency}</span>
-              <span className="text-[10px] text-blue-700 block mt-0.5">~{current.cycles}</span>
+            <div className="rounded-lg bg-[var(--surface)] p-2.5 border border-[var(--border-strong)] shadow-none">
+              <span className="text-[10px] text-[var(--text-secondary)] block font-sans">Access Latency</span>
+              <span className="text-[var(--foreground)] font-medium">{current.latency}</span>
+              <span className="text-[10px] text-[var(--accent)] block mt-0.5">~{current.cycles}</span>
             </div>
 
-            <div className="rounded-lg bg-white p-2.5 border border-slate-200 shadow-xs">
-              <span className="text-[10px] text-slate-500 block font-sans">Typical Capacity</span>
-              <span className="text-slate-900 font-bold">{current.capacity}</span>
+            <div className="rounded-lg bg-[var(--surface)] p-2.5 border border-[var(--border-strong)] shadow-none">
+              <span className="text-[10px] text-[var(--text-secondary)] block font-sans">Typical Capacity</span>
+              <span className="text-[var(--foreground)] font-medium">{current.capacity}</span>
             </div>
 
-            <div className="rounded-lg bg-white p-2.5 border border-slate-200 shadow-xs">
-              <span className="text-[10px] text-slate-500 block font-sans">Cost Metric</span>
-              <span className="text-amber-800 font-bold">{current.cost}</span>
+            <div className="rounded-lg bg-[var(--surface)] p-2.5 border border-[var(--border-strong)] shadow-none">
+              <span className="text-[10px] text-[var(--text-secondary)] block font-sans">Cost Metric</span>
+              <span className="text-[var(--warning)] font-medium">{current.cost}</span>
             </div>
 
-            <div className="rounded-lg bg-white p-2.5 border border-slate-200 shadow-xs">
-              <span className="text-[10px] text-slate-500 block font-sans">Physical Circuit</span>
-              <span className="text-slate-700 font-bold text-[11px] truncate block">{current.tech}</span>
+            <div className="rounded-lg bg-[var(--surface)] p-2.5 border border-[var(--border-strong)] shadow-none">
+              <span className="text-[10px] text-[var(--text-secondary)] block font-sans">Physical Circuit</span>
+              <span className="text-[var(--foreground)] font-medium text-[11px] truncate block">{current.tech}</span>
             </div>
           </div>
         </div>

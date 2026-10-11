@@ -4,7 +4,7 @@ import { ALL_MODULES } from '../../data/allContent';
 import { WEEKS_INFO } from '../../data/weeksInfo';
 import { WeekId, StudyModule, StudySubsection } from '../../types/course';
 import { InfographicRenderer } from './infographics/InfographicRenderer';
-import { FormattedText } from '../../utils/formatContent';
+import { FormattedText, ReadableFormula } from '../../utils/formatContent';
 import {
   CheckCircle2,
   Circle,
@@ -96,7 +96,7 @@ const SubsectionCard: React.FC<{
       {sub.formula && (
         <div className="rounded-xl border border-slate-200 bg-slate-50/90 p-3.5 text-center font-mono text-xs font-semibold text-slate-900 overflow-x-auto">
           <span className="text-[10px] text-slate-500 block uppercase mb-1 font-sans font-bold">Key Model / Formula:</span>
-          <code>{sub.formula}</code>
+          <ReadableFormula formula={sub.formula} />
         </div>
       )}
 
@@ -135,6 +135,8 @@ export const StudyView: React.FC = () => {
     'w2-m1': true,
     'w3-m1': true,
     'w4-m1': true,
+    'w5-m1': true,
+    'w6-m1': true,
   });
 
   const toggleModule = useCallback((modId: string) => {
@@ -143,7 +145,7 @@ export const StudyView: React.FC = () => {
 
   const activeWeeks: WeekId[] = useMemo(() => {
     return currentWeek === 'all'
-      ? ['week1', 'week2', 'week3', 'week4']
+      ? ['week1', 'week2', 'week3', 'week4', 'week5', 'week6']
       : [currentWeek];
   }, [currentWeek]);
 
@@ -158,13 +160,13 @@ export const StudyView: React.FC = () => {
               Comprehensive Course Map
             </span>
           </div>
-          <h2 className="mt-2 text-xl sm:text-2xl font-black text-slate-900">DSI102: Complete Study Modules (Weeks 1 - 4)</h2>
+          <h2 className="mt-2 text-xl sm:text-2xl font-black text-slate-900">DSI102: Complete Study Modules (Weeks 1 - 6)</h2>
           <p className="mt-1 text-xs text-slate-600">
             Full lecture notes, bilingual Thai commentaries, interactive infographics, and direct slide references.
           </p>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {(['week1', 'week2', 'week3', 'week4'] as WeekId[]).map(wId => {
+            {(['week1', 'week2', 'week3', 'week4', 'week5', 'week6'] as WeekId[]).map(wId => {
               const info = WEEKS_INFO[wId];
               return (
                 <button

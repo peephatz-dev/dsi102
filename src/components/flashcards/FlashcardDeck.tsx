@@ -107,14 +107,14 @@ export const FlashcardDeck: React.FC = React.memo(() => {
 
   const knownCount = useMemo(() => {
     return Object.keys(flashcardMastery).filter(id => {
-      if (currentWeek !== 'all' && !id.startsWith(`${currentWeek}-`)) return false;
+      if (currentWeek !== 'all' && !ALL_FLASHCARDS[currentWeek].some(c => c.id === id)) return false;
       return flashcardMastery[id] === 'known';
     }).length;
   }, [currentWeek, flashcardMastery]);
 
   const reviewCount = useMemo(() => {
     return Object.keys(flashcardMastery).filter(id => {
-      if (currentWeek !== 'all' && !id.startsWith(`${currentWeek}-`)) return false;
+      if (currentWeek !== 'all' && !ALL_FLASHCARDS[currentWeek].some(c => c.id === id)) return false;
       return flashcardMastery[id] === 'review';
     }).length;
   }, [currentWeek, flashcardMastery]);
@@ -269,10 +269,10 @@ export const FlashcardDeck: React.FC = React.memo(() => {
                     <FormattedText content={currentCard.back} />
                   </div>
 
-                  {currentCard.thaiExplanation && (
+                  {(currentCard.thaiExplanation || currentCard.thaiBack) && (
                     <div className="rounded-xl border border-amber-200 bg-amber-50/90 p-3.5 text-xs text-amber-950 shadow-xs">
                       <span className="font-bold text-amber-900 block mb-1">คำอธิบายภาษาไทย:</span>
-                      <p className="leading-relaxed">{currentCard.thaiExplanation}</p>
+                      <p className="leading-relaxed">{(currentCard.thaiExplanation || currentCard.thaiBack)}</p>
                     </div>
                   )}
 
