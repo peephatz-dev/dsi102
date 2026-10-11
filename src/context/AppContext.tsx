@@ -49,6 +49,16 @@ const STORAGE_KEYS = {
   PDF_SPLIT: 'dsi102_pdf_split',
 };
 
+function applyTheme(theme: 'dark' | 'light') {
+  const root = document.documentElement;
+  root.classList.add('theme-switching');
+  root.classList.toggle('dark', theme === 'dark');
+  root.classList.toggle('light', theme === 'light');
+  root.dataset.theme = theme;
+  void document.body.offsetHeight;
+  requestAnimationFrame(() => requestAnimationFrame(() => root.classList.remove('theme-switching')));
+}
+
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
   const [currentWeek, setCurrentWeek] = useState<WeekId | 'all'>('all');
   const [currentMode, setCurrentMode] = useState<StudyMode>('study');
@@ -74,11 +84,9 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
       const savedTheme = localStorage.getItem(STORAGE_KEYS.THEME) as 'dark' | 'light' | null;
       if (savedTheme) {
         setTheme(savedTheme);
-        document.documentElement.classList.toggle('dark', savedTheme === 'dark');
-        document.documentElement.dataset.theme = savedTheme;
+        applyTheme(savedTheme);
       } else {
-        document.documentElement.classList.remove('dark');
-        document.documentElement.classList.add('light');
+        applyTheme('light');
       }
 
       const savedCompleted = localStorage.getItem(STORAGE_KEYS.COMPLETED_SECTIONS);
@@ -112,8 +120,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     setTheme(prev => {
       const next = prev === 'dark' ? 'light' : 'dark';
       localStorage.setItem(STORAGE_KEYS.THEME, next);
-      document.documentElement.classList.toggle('dark', next === 'dark');
-      document.documentElement.dataset.theme = next;
+      applyTheme(next);
       return next;
     });
   };

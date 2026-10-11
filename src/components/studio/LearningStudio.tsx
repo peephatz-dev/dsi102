@@ -3,6 +3,9 @@ import { BookOpen, ArrowUpRight, ArrowRight, Check, CheckCircle2, ChevronLeft, C
 import { Button } from '../arc/button/button';
 import SegmentedControl from '../arc/segmented-control/segmented-control';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../arc/tabs/tabs';
+import { LanguageSwitch } from './LanguageSwitch';
+import { useLanguage } from '../../i18n/LocaleContext';
+import { translate } from '../../i18n/translate';
 import { useApp } from '../../context/AppContext';
 import { ALL_MODULES, ALL_KEY_CONCEPTS, shuffle } from '../../data/allContent';
 import { ALL_WEEKS_LIST, WEEKS_INFO } from '../../data/weeksInfo';
@@ -32,6 +35,7 @@ function Reference({ week, page, label }: {week: WeekId; page: number; label?: s
 }
 
 export function LearningStudio() {
+  const { language } = useLanguage();
   const {currentWeek, setCurrentWeek, completedSections, theme, toggleTheme, pdfViewerOpen, searchQuery, setSearchQuery} = useApp();
   const [view, setView] = useState<View>('visual');
   const [menu, setMenu] = useState(false);
@@ -77,10 +81,10 @@ export function LearningStudio() {
   const results = useMemo(() => {
     const q = searchQuery.trim().toLocaleLowerCase(); if (q.length < 2) return [];
     return WEEK_IDS.flatMap(week => [
-      ...ALL_MODULES[week].flatMap(m => m.subsections.filter(s => `${s.title} ${s.thaiTitle} ${s.content} ${s.thaiCommentary}`.toLocaleLowerCase().includes(q)).map(s => ({id:s.id,week,title:s.title,text:summary(s.thaiCommentary || s.content,180),page:s.pdfPage || m.pdfPageStart,kind:'บทเรียน'}))),
-      ...(sources[week]?.pages || []).filter(p => p.text.toLocaleLowerCase().includes(q)).map(p => ({id:`source-${p.page}`,week,title:p.title,text:summary(p.text,180),page:p.page,kind:'สไลด์ต้นฉบับ'}))
+      ...ALL_MODULES[week].flatMap(m => m.subsections.filter(s => `${s.title} ${s.thaiTitle} ${s.content} ${s.thaiCommentary} ${translate(s.content, language)} ${translate(s.thaiCommentary || '', language)}`.toLocaleLowerCase().includes(q)).map(s => ({id:s.id,week,title:s.title,text:summary(s.thaiCommentary || s.content,180),page:s.pdfPage || m.pdfPageStart,kind:'บทเรียน'}))),
+      ...(sources[week]?.pages || []).filter(p => `${p.text} ${translate(p.text, language)}`.toLocaleLowerCase().includes(q)).map(p => ({id:`source-${p.page}`,week,title:p.title,text:summary(p.text,180),page:p.page,kind:'สไลด์ต้นฉบับ'}))
     ]);
-  }, [searchQuery,sources]);
+  }, [searchQuery,sources,language]);
   return <div className="studio">
     <a className="skip-link" href="#learning-main">ข้ามไปเนื้อหา</a>
     <aside ref={sidebar} className={`studio-sidebar ${menu ? 'is-open' : ''}`} aria-label="เลือกบทเรียน">
@@ -98,6 +102,7 @@ export function LearningStudio() {
     <div className="studio-workspace">
       <header className="studio-topbar"><div className="breadcrumb"><Button variant="ghost" size="sm" className="mobile-only" aria-label="เปิดเมนูบทเรียน" onClick={()=>setMenu(true)}><Menu size={20}/></Button><span>My workspace</span><ChevronRight size={14}/><span>{currentWeek==='all' ? 'Course overview' : `Week ${WEEKS_INFO[currentWeek].weekNumber}`}</span></div>
         <label className="studio-search"><Search size={17}/><input ref={search} value={searchQuery} onChange={e=>setSearchQuery(e.target.value)} placeholder="ค้นหาทุกบทเรียนและสไลด์…" aria-label="ค้นหาบทเรียนและสไลด์"/>{searchQuery ? <button aria-label="ล้างการค้นหา" onClick={()=>setSearchQuery('')}><X size={16}/></button> : <kbd>⌘ K</kbd>}</label>
+        <LanguageSwitch/>
         <Button variant="ghost" size="sm" onClick={toggleTheme} aria-label={theme==='light' ? 'เปลี่ยนเป็นธีมมืด' : 'เปลี่ยนเป็นธีมสว่าง'}>{theme==='light' ? <Moon size={18}/> : <Sun size={18}/>}</Button>
       </header>
       <div className={`studio-body ${pdfViewerOpen && view !== 'source' ? 'with-source' : ''}`}>
@@ -131,13 +136,13 @@ function Overview({onSelect,onExam}:{onSelect:(w:WeekId)=>void;onExam:()=>void})
     <div className="section-title"><h2>เส้นทางการเรียนรู้</h2><Button variant="ghost" onClick={onExam}>สำรวจภาพบทเรียน <ArrowUpRight size={16}/></Button></div>
     <div className="course-grid">{ALL_WEEKS_LIST.map(w=>{
       const subs=ALL_MODULES[w.id].flatMap(m=>m.subsections),done=subs.filter(s=>completedSections[s.id]).length;
-      return <button className="course-tile" onClick={()=>onSelect(w.id)} key={w.id}><div className="tile-top"><span>Week {String(w.weekNumber).padStart(2,'0')}</span><ArrowUpRight size={18}/></div><h3>{w.title.split(':')[0]}</h3><p>{w.thaiTitle}</p><div className="tile-foot"><span>{w.totalPages} สไลด์ · {subs.length} หัวข้อ</span><span>{Math.round(done/subs.length*100)}%</span></div><progress value={done} max={subs.length}/></button>;
+      return <button className="course-tile" onClick={()=>onSelect(w.id)} key={w.id}><div className="tile-top"><span>Week {String(w.weekNumber).padStart(2,'0')}</span><ArrowUpRight size={18}/></div><h3>{w.title.split(':')[0]}</h3><p>{w.shortDesc}</p><div className="tile-foot"><span>{w.totalPages} สไลด์ · {subs.length} หัวข้อ</span><span>{Math.round(done/subs.length*100)}%</span></div><progress value={done} max={subs.length}/></button>;
     })}</div>
   </section>;
 }
 function WeekHeading({week}:{week:WeekId}) {
   const info=WEEKS_INFO[week];
-  return <section className="week-heading"><div><h1>{info.title}</h1><p>{info.thaiTitle}</p><div className="meta-line"><span>Week {info.weekNumber}</span><span>{ALL_MODULES[week].length} บท</span><span>{info.totalPages} สไลด์</span><span>{QUESTION_BANK[week].length} คำถาม</span></div>{info.weekNumber>=7 && <p className="source-note">ใช้ลำดับ Week {info.weekNumber} ตามโฟลเดอร์ของคุณ · ชื่อต้นฉบับระบุ Week {info.weekNumber+1}</p>}</div><Reference week={week} page={1} label="เปิดสไลด์ต้นฉบับ"/></section>;
+  return <section className="week-heading"><div><h1>{info.title}</h1><p>{info.shortDesc}</p><div className="meta-line"><span>Week {info.weekNumber}</span><span>{ALL_MODULES[week].length} บท</span><span>{info.totalPages} สไลด์</span><span>{QUESTION_BANK[week].length} คำถาม</span></div>{info.weekNumber>=7 && <p className="source-note">ใช้ลำดับ Week {info.weekNumber} ตามโฟลเดอร์ของคุณ · ชื่อต้นฉบับระบุ Week {info.weekNumber+1}</p>}</div><Reference week={week} page={1} label="เปิดสไลด์ต้นฉบับ"/></section>;
 }
 function Lessons({weeks}:{weeks:WeekId[]}) {
   const [detail,setDetail]=useState('summary');
@@ -186,7 +191,7 @@ function Practice({weeks}:{weeks:WeekId[]}) {
   const score=round.filter(q=>q.options[answers[q.id]]?.isCorrect).length,finished=round.length>0 && Object.keys(answers).length===round.length;
   useEffect(()=>{if(finished&&!recorded.current){recorded.current=true;recordQuizScore(key,score,round.length);}},[finished,key,score,round.length,recordQuizScore]);
   return <section className="practice"><div className="section-title"><div><h2>ฝึกก่อนสอบ</h2><p className="muted">เลือกหัวข้อ สุ่มโจทย์ และตรวจเหตุผลกับต้นฉบับ</p></div><SegmentedControl label="ประเภทแบบฝึก" value={type} onValueChange={setType} options={[{value:'quiz',label:'แบบทดสอบ'},{value:'match',label:'จับคู่แนวคิด'}]}/></div>
-    {type==='match'?<Matching weeks={weeks}/>:<><div className="practice-toolbar"><label>หัวข้อ <select value={topic} onChange={e=>setTopic(e.target.value)}><option value="all">ทุกหัวข้อในสัปดาห์ที่เลือก</option>{topics.map(t=><option key={t}>{t}</option>)}</select></label><Button variant="secondary" size="sm" onClick={()=>setAttempt(n=>n+1)}><Shuffle size={15}/>สุ่มชุดใหม่</Button></div>
+    {type==='match'?<Matching weeks={weeks}/>:<><div className="practice-toolbar"><label>หัวข้อ <select value={topic} onChange={e=>setTopic(e.target.value)}><option value="all">ทุกหัวข้อในสัปดาห์ที่เลือก</option>{topics.map(t=><option key={t} value={t}>{t}</option>)}</select></label><Button variant="secondary" size="sm" onClick={()=>setAttempt(n=>n+1)}><Shuffle size={15}/>สุ่มชุดใหม่</Button></div>
     {round[index] && <div className="practice-surface" key={`${attempt}-${topic}-${round[index].id}`}><div className="section-title"><span>ข้อ {index+1}/{round.length} · Week {WEEKS_INFO[round[index].weekId].weekNumber}</span><span>{score} ถูก · {Object.keys(answers).length} ตอบแล้ว</span></div><progress value={Object.keys(answers).length} max={round.length}/><Question q={round[index]} selected={answers[round[index].id]} onAnswer={i=>setAnswers(old=>({...old,[round[index].id]:i}))}/><div className="button-row"><Button variant="secondary" disabled={index===0} onClick={()=>setIndex(n=>n-1)}><ChevronLeft size={16}/>ก่อนหน้า</Button><Button disabled={index===round.length-1} onClick={()=>setIndex(n=>n+1)}>ถัดไป<ChevronRight size={16}/></Button></div><div className="question-palette">{round.map((q,i)=><button className={i===index?'active':answers[q.id]!==undefined?'answered':''} key={q.id} aria-label={`ไปข้อ ${i+1}${answers[q.id]!==undefined?' ตอบแล้ว':''}`} onClick={()=>setIndex(i)}>{i+1}</button>)}</div></div>}
     {finished && <div className="result-panel" role="status"><h3>ทำครบแล้ว: {score}/{round.length}</h3><p>บันทึกผลรอบนี้แล้ว · คะแนนสูงสุด {quizScores[key]?.bestScore ?? score}/{round.length}</p><Button onClick={()=>setAttempt(n=>n+1)}>ลองอีกชุด <RotateCcw size={16}/></Button></div>}</>}
   </section>;

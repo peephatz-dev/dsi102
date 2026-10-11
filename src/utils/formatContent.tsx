@@ -1,4 +1,6 @@
 import React from 'react';
+import { useLanguage } from '../i18n/LocaleContext';
+import { translate } from '../i18n/translate';
 
 /**
  * Strips raw markdown syntax and renders clean, typography-rich JSX elements.
@@ -10,7 +12,9 @@ import React from 'react';
  * - Bullet lists -> <ul><li>
  * - Numbered lists -> <ol><li>
  */
-export const FormattedText: React.FC<{ content: string; className?: string }> = React.memo(({ content, className = '' }) => {
+export const FormattedText: React.FC<{ content: string; className?: string }> = React.memo(({ content: originalContent, className = '' }) => {
+  const { language } = useLanguage();
+  const content = translate(originalContent, language);
   if (!content) return null;
 
   // Split into paragraphs by double newlines or single newlines

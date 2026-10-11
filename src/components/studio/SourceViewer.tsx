@@ -5,18 +5,28 @@ import { Button } from '../arc/button/button';
 import { ChevronLeft, ChevronRight, ExternalLink, X, ZoomIn, ZoomOut, FileText } from 'lucide-react';
 import { useApp } from '../../context/AppContext';
 import { WEEKS_INFO, ALL_WEEKS_LIST } from '../../data/weeksInfo';
+import { useLanguage } from '../../i18n/LocaleContext';
 import { WeekId } from '../../types/course';
 GlobalWorkerOptions.workerSrc = workerUrl;
 
 export function SourceViewer({ inline = false }: { inline?: boolean }) {
   const { activePdfWeek, setActivePdfWeek, pdfPage, setPdfPage, setPdfViewerOpen } = useApp();
+  const { language } = useLanguage();
+  const [textPages, setTextPages] = useState<{ page: number; text: string }[]>([]);
+  const [textError, setTextError] = useState(false);
+  const [retry, setRetry] = useState(0);
   const info = WEEKS_INFO[activePdfWeek];
+  useEffect(() => {
+    const controller = new AbortController();
+    setTextPages([]); setTextError(false);
+    fetch(`/content/${activePdfWeek}.json`, { signal: controller.signal }).then(response => { if (!response.ok) throw new Error('source text'); return response.json(); }).then(data => setTextPages(data.pages)).catch(error => { if (error.name !== 'AbortError') setTextError(true); });
+    return () => controller.abort();
+  }, [activePdfWeek, retry]);
   const [doc, setDoc] = useState<PDFDocumentProxy | null>(null);
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(true);
   const [zoom, setZoom] = useState(1);
   const [width, setWidth] = useState(480);
-  const [retry, setRetry] = useState(0);
   const wrap = useRef<HTMLDivElement>(null), canvas = useRef<HTMLCanvasElement>(null);
   const close = useRef<HTMLButtonElement>(null);
   const page = Math.min(Math.max(1, pdfPage), doc?.numPages || info.totalPages);
@@ -77,6 +87,11 @@ export function SourceViewer({ inline = false }: { inline?: boolean }) {
       {error && <div role="alert"><p>{error}</p><Button variant="secondary" onClick={() => setRetry(n => n + 1)}>โหลด PDF ใหม่</Button></div>}
       <canvas ref={canvas} aria-label={`สไลด์ Week ${info.weekNumber} หน้า ${page}`} />
     </div>
-    <footer><p>{info.pdfFileName}</p>{info.weekNumber >= 7 && <p>ลำดับโฟลเดอร์ Week {info.weekNumber}; เอกสารต้นฉบับระบุ Week {info.weekNumber + 1}</p>}<a href={`${info.pdfFilePath}#page=${page}`} target="_blank" rel="noreferrer">เปิดต้นฉบับในแท็บใหม่ <ExternalLink size={14}/></a><p>เลขหน้าใช้ลำดับจริงของ PDF ซึ่งอาจต่างจากเลขที่พิมพ์บนสไลด์</p></footer>
+    <section className="source-translation" aria-label="ข้อความสไลด์ในภาษาที่เลือก">
+      <h3>ข้อความสไลด์ · {language === 'th' ? 'ภาษาไทย' : 'ภาษาอังกฤษ'}</h3>
+      <p className="muted">ภาพ PDF ด้านบนคงต้นฉบับไว้ ข้อความด้านล่างแสดงในภาษาที่เลือก ใช้เทียบกับรูปและตารางบนสไลด์</p>
+      {textError ? <p role="alert">โหลดข้อความไม่สำเร็จ กรุณาลองโหลด PDF ใหม่</p> : textPages.length === 0 ? <p role="status">กำลังโหลดข้อความสไลด์…</p> : textPages.find(item => item.page === page)?.text.trim() ? <pre>{textPages.find(item => item.page === page)?.text}</pre> : <p>หน้านี้เป็นภาพหรือไม่มีข้อความที่ถอดได้ กรุณาเปิด PDF</p>}
+    </section>
+    <footer><p data-no-translate>{info.pdfFileName}</p>{info.weekNumber >= 7 && <p>ลำดับโฟลเดอร์ Week {info.weekNumber}; เอกสารต้นฉบับระบุ Week {info.weekNumber + 1}</p>}<a href={`${info.pdfFilePath}#page=${page}`} target="_blank" rel="noreferrer">เปิดต้นฉบับในแท็บใหม่ <ExternalLink size={14}/></a><p>เลขหน้าใช้ลำดับจริงของ PDF ซึ่งอาจต่างจากเลขที่พิมพ์บนสไลด์</p></footer>
   </aside>;
 }

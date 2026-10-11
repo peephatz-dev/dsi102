@@ -6,6 +6,9 @@ import { AnimatePresence, animate, motion, useIsPresent, useMotionValue, useRedu
 import type { TargetAndTransition, Variants } from "motion/react";
 import { motionTokens } from "../lib/motion-tokens";
 import styles from "./button.module.css";
+import { useLanguage } from "../../../i18n/LocaleContext";
+import { localizeContent } from "../../../i18n/content";
+import { translate } from "../../../i18n/translate";
 
 export type ButtonVariant = "primary" | "secondary" | "ghost" | "danger";
 export type ButtonSize = "sm" | "md" | "lg";
@@ -72,19 +75,22 @@ function useMorphWidth(content: RefObject<HTMLElement | null>, key: string, redu
   return width;
 }
 
-function LabelPhase({ children, icon, reduced, ref }: { children: ReactNode; icon: boolean; reduced: boolean; ref?: Ref<HTMLSpanElement> }) {
+const LabelPhase = forwardRef<HTMLSpanElement, { children: ReactNode; icon: boolean; reduced: boolean }>(function LabelPhase({ children, icon, reduced }, ref) {
   const present = useIsPresent();
   return <motion.span ref={ref} className={styles.labelPhase} aria-hidden={present ? undefined : true} initial={reduced ? fadeIn : icon ? iconIn : textIn} animate={rest} exit={reduced ? fadeOut : icon ? iconOut : textOut} transition={reduced ? { duration: motionTokens.duration.instant } : icon ? iconEnter : { duration: motionTokens.duration.standard, ease: [...motionTokens.ease.enter] }}>{children}</motion.span>;
-}
+});
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(function Button(
-  { className, variant = "primary", size = "md", loading = false, disabled, children, onClick, ...props },
+  { className, variant = "primary", size = "md", loading = false, disabled, children: originalChildren, onClick, ...props },
   ref,
 ) {
+  const { language } = useLanguage();
+  const children = localizeContent(originalChildren, language);
+  for (const attribute of ["aria-label", "title"] as const) if (props[attribute]) props[attribute] = translate(props[attribute]!, language);
   const reduceMotion = useReducedMotion() ?? false;
   const buttonRef = useRef<HTMLButtonElement | null>(null);
   const contentRef = useRef<HTMLSpanElement>(null);
-  const key = labelKey(children);
+  const key = labelKey(originalChildren);
   const width = useMorphWidth(contentRef, key, reduceMotion);
   const setRefs = useCallback((node: HTMLButtonElement | null) => {
     buttonRef.current = node;
