@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "check": "node scripts/validate-course.cjs && node scripts/validate-locales.cjs"
+    "check": "node scripts/validate-course.cjs && node scripts/validate-reading.cjs && node scripts/validate-locales.cjs"
   },
   "dependencies": {
     "@radix-ui/react-tabs": "^1.1.22",

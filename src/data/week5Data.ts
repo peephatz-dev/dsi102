@@ -17,7 +17,7 @@ export const week5KeyConcepts: KeyConcept[] = [
     term: 'Hub (Layer 1 Physical)',
     thaiTerm: 'ฮับ (อุปกรณ์เลเยอร์ 1 - ทวนสัญญาณ)',
     definition: 'A physical-layer multiport repeater with zero address intelligence (cannot read MAC or IP). Repeats incoming electrical/optical signals out to ALL ports. All connected devices share a single collision domain.',
-    thaiDefinition: 'อุปกรณ์ฮาร์ดแวร์เลเยอร์ 1 ที่ไม่มีหน่วยความจำและอ่านแอดเดรสไม่เป็น เมื่อมีสัญญาณเข้ามาทางพอร์ตหนึ่ง จะกระจายสัญญาณซ้ำออกไปทุกพอร์ตพร้อมกัน ส่งผลให้อยู่ใน Collision Domain เดียวกันและเสี่ยงต่อสัญญาณชนกัน',
+    thaiDefinition: 'อุปกรณ์ฮาร์ดแวร์เลเยอร์ 1 ที่ไม่อ่าน MAC หรือ IP address เพื่อเลือกพอร์ตปลายทาง เมื่อมีสัญญาณเข้ามาทางพอร์ตหนึ่ง จะกระจายสัญญาณซ้ำออกไปทุกพอร์ตพร้อมกัน ส่งผลให้อยู่ใน Collision Domain เดียวกันและเสี่ยงต่อสัญญาณชนกัน',
     example: 'Legacy 10BASE-T hub broadcasting every packet to all 8 desktop computers in a lab.',
     pdfPage: 9,
     category: 'Network Devices',

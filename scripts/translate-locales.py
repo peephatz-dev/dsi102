@@ -7,7 +7,7 @@ cachefile=root/'translations.json'
 cache=json.loads(cachefile.read_text()) if cachefile.exists() else {'th':{},'en':{}}
 tasks=[]
 for lang in ['en','th']:
- pending=[s for s in strings if s not in cache[lang] and (bool(re.search('[\u0e00-\u0e7f]',s)) if lang=='en' else not re.search('[\u0e00-\u0e7f]',s))]
+ pending=[s for s in strings if (s not in cache[lang] or not cache[lang][s].strip()) and (bool(re.search('[\u0e00-\u0e7f]',s)) if lang=='en' else not re.search('[\u0e00-\u0e7f]',s))]
  batch=[];length=0
  for s in pending:
   n=len(urllib.parse.quote(s))*1.05+5

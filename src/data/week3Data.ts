@@ -141,15 +141,15 @@ export const week3Modules: StudyModule[] = [
     moduleNumber: 1,
     title: 'Introduction to Operating Systems: The "No-OS" Dilemma & Roles',
     thaiTitle: 'บทนำสู่ระบบปฏิบัติการ: วิกฤตหากไม่มี OS และ 3 บทบาทหลัก',
-    pdfPageStart: 8,
-    pdfPageEnd: 21,
+    pdfPageStart: 1,
+    pdfPageEnd: 7,
     overview: 'Why modern computing is impossible without an operating system, the hardware-software mediation layer, and the 3 cornerstone roles of an OS.',
     subsections: [
       {
         id: 'w3-m1-s1',
         title: 'What Happens When You Click an Application?',
         thaiTitle: 'เกิดอะไรขึ้นเบื้องหลังเมื่อคุณคลิกเปิดแอปพลิเคชัน?',
-        pdfPage: 9,
+        pdfPage: 4,
         content: `Every simple user action triggers an invisible multi-layer cascade:
 1. **User Input**: Mouse click or screen tap on the application icon.
 2. **OS System Call**: The GUI shell requests the OS kernel to instantiate a new process.
@@ -168,7 +168,7 @@ export const week3Modules: StudyModule[] = [
         id: 'w3-m1-s2',
         title: 'The "No-OS" Dilemma & The 3 Roles of an OS',
         thaiTitle: 'วิกฤตหากระบบไร้ OS และ 3 บทบาทสำคัญของระบบปฏิบัติการ',
-        pdfPage: 12,
+        pdfPage: 6,
         content: `Without an Operating System, every single software application would be forced to contain custom assembly drivers for every motherboard chipset, GPU, network card, and keyboard. This produces four catastrophic failures:
 1. **Duplicated Code**: Enormous code bloat across every installed program.
 2. **Resource Conflicts**: Multiple programs competing to drive the printer or network card simultaneously.
@@ -193,15 +193,15 @@ export const week3Modules: StudyModule[] = [
     moduleNumber: 2,
     title: 'Handling Input/Output: Polling, Interrupts, Traps & DMA',
     thaiTitle: 'การจัดการระบบ I/O: โพลลิ่ง สัญญาณขัดจังหวะ แทรป และ DMA',
-    pdfPageStart: 22,
-    pdfPageEnd: 26,
+    pdfPageStart: 8,
+    pdfPageEnd: 21,
     overview: 'How the CPU coordinates with external peripherals without wasting computational cycles in busy-waiting loops.',
     subsections: [
       {
         id: 'w3-m2-s1',
         title: 'Polling vs. Hardware Interrupts vs. Traps/Exceptions',
         thaiTitle: 'เปรียบเทียบ Polling, Hardware Interrupt และ Software Trap',
-        pdfPage: 23,
+        pdfPage: 14,
         content: `* **Polling (Busy-Waiting)**: The CPU sits in an active loop reading a device status register continuously until data arrives. This wastes 100% of CPU cycles doing no productive work.
 * **Hardware Interrupt**: **Asynchronous** physical signal triggered by external devices (keyboard key press, network packet arrival, disk controller ready). The CPU suspends the current instruction sequence, saves state, and jumps to the Interrupt Service Routine (ISR) in the kernel.
 * **Trap / Exception**: **Synchronous** software-generated interrupt originating directly from inside the CPU core. Triggered either by an execution error (Divide-by-zero, Invalid Memory Access / Segmentation Fault) or intentionally via a **System Call** (software interrupt to switch from User Mode to Kernel Mode).`,
@@ -218,7 +218,7 @@ export const week3Modules: StudyModule[] = [
         id: 'w3-m2-s2',
         title: 'Direct Memory Access (DMA): Eliminating the CPU Bottleneck',
         thaiTitle: 'DMA: ขนถ่ายข้อมูลบล็อกใหญ่ตรงสู่ RAM โดยไม่ต้องรบกวนซีพียู',
-        pdfPage: 25,
+        pdfPage: 19,
         content: `In early computers (Programmed I/O), every single byte read from a disk had to travel through the CPU: \`Disk -> CPU Register -> RAM\`. For a 4K video stream or Gigabit network, this caused the CPU to spike to 100% utilization doing nothing but copying memory bytes.\n\n**Direct Memory Access (DMA)** solves this:
 1. The CPU programs the DMA Controller with: Source Device, Target RAM Address, and Byte Count.
 2. The CPU immediately resumes running other user application threads!
@@ -242,15 +242,15 @@ export const week3Modules: StudyModule[] = [
     moduleNumber: 3,
     title: 'Inside the Kernel I/O Subsystem: Spooling vs. Buffering',
     thaiTitle: 'โครงสร้างภายในระบบย่อย I/O: Spooling เทียบกับ Buffering',
-    pdfPageStart: 27,
-    pdfPageEnd: 36,
+    pdfPageStart: 22,
+    pdfPageEnd: 26,
     overview: 'Techniques used by the kernel to bridge device speed mismatches and manage dedicated sequential peripherals.',
     subsections: [
       {
         id: 'w3-m3-s1',
         title: 'Spooling vs. Buffering vs. Caching',
         thaiTitle: 'Spooling (เข้าคิวบนดิสก์) vs Buffering (พักข้อมูลในแรม)',
-        pdfPage: 34,
+        pdfPage: 24,
         content: `* **Buffering**: Storing data temporarily in main memory (RAM) while it is being transferred between two devices with different speeds or block sizes (e.g. video streaming buffer to prevent playback stutter).
 * **Spooling (Simultaneous Peripheral Operations On-Line)**: Overlaps the I/O of one job with the computation of others by storing dedicated sequential jobs in a queue on disk. Standard example: **Print Spooler**. Since a laser printer cannot interleave pages from five different users at once, print jobs are written to spool files on disk and fed sequentially.
 * **Caching**: Keeping a high-speed copy of frequently accessed data in faster memory to accelerate subsequent read requests.`,
@@ -271,7 +271,7 @@ export const week3Modules: StudyModule[] = [
     moduleNumber: 4,
     title: 'Process Management, PCB & Context Switching',
     thaiTitle: 'การจัดการโพรเซส, โครงสร้าง PCB และการสลับบริบทการทำงาน',
-    pdfPageStart: 37,
+    pdfPageStart: 27,
     pdfPageEnd: 45,
     overview: 'The lifecycle of executing programs, the 5 standard process states, and how context switching enables preemptive multitasking.',
     subsections: [
@@ -279,7 +279,7 @@ export const week3Modules: StudyModule[] = [
         id: 'w3-m4-s1',
         title: 'Program vs. Process & The 5 Process States',
         thaiTitle: 'โปรแกรม (ไฟล์บนดิสก์) vs โพรเซส (มีชีวิตในแรม) และ 5 สถานะการทำงาน',
-        pdfPage: 37,
+        pdfPage: 28,
         content: `* **Program**: A passive entity stored on disk (executable binary file, e.g. \`chrome.exe\`).
 * **Process**: An active entity loaded in memory, with an allocated Program Counter, stack, heap, data section, and system resources.\n\n**The 5 Classic Process States**:
 1. **New**: The process is currently being instantiated by the OS loader.
@@ -299,7 +299,7 @@ export const week3Modules: StudyModule[] = [
         id: 'w3-m4-s2',
         title: 'The Process Control Block (PCB) & Context Switch Overhead',
         thaiTitle: 'โครงสร้าง PCB และภาระงานส่วนเกินจากการสลับบริบท (Overhead)',
-        pdfPage: 38,
+        pdfPage: 34,
         content: `Every process has a dedicated **PCB** in the kernel containing:
 * Process ID (PID) and Process State
 * Program Counter (PC) indicating next instruction address

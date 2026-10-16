@@ -12,6 +12,9 @@ import { ALL_WEEKS_LIST, WEEKS_INFO } from '../../data/weeksInfo';
 import sourceManifest from '../../data/sourceManifest.json';
 import { ExamAttempt, Flashcard, QuizQuestion, StudySubsection, WeekId } from '../../types/course';
 import { FormattedText } from '../../utils/formatContent';
+import { SlideReader, sourcePageKey } from './SlideReader';
+import { ReadingLibrary } from './ReadingLibrary';
+import './reading.css';
 import { VisualLearning } from './VisualLearning';
 import { SecurityLab } from './SecurityLab';
 import { InfographicRenderer } from '../study/infographics/InfographicRenderer';
@@ -21,7 +24,7 @@ import { CARD_BANK, QUESTION_BANK, TOPIC_QUESTIONS, clean, examPool, summary } f
 type SourcePage = { page: number; title: string; text: string };
 type Source = { pages: SourcePage[]; count: number; source: string };
 type Sources = Partial<Record<WeekId, Source>>;
-type View = 'visual' | 'learn' | 'practice' | 'cards' | 'exam' | 'source';
+type View = 'read' | 'visual' | 'learn' | 'practice' | 'cards' | 'exam' | 'source';
 const WEEK_IDS = ALL_WEEKS_LIST.map(w => w.id);
 function useSaved<T>(key: string, initial: T): [T, (value: T | ((old: T) => T)) => void] {
   const [value, setValue] = useState(initial);
@@ -37,7 +40,7 @@ function Reference({ week, page, label }: {week: WeekId; page: number; label?: s
 export function LearningStudio() {
   const { language } = useLanguage();
   const {currentWeek, setCurrentWeek, completedSections, theme, toggleTheme, pdfViewerOpen, searchQuery, setSearchQuery} = useApp();
-  const [view, setView] = useState<View>('visual');
+  const [view, setView] = useState<View>('read');
   const [menu, setMenu] = useState(false);
   const [sources, setSources] = useState<Sources>({});
   const [sourceErrors, setSourceErrors] = useState<WeekId[]>([]);
@@ -75,9 +78,10 @@ export function LearningStudio() {
     return () => { window.removeEventListener('keydown', trap); previous?.focus(); };
   }, [menu]);
   const sections = Object.values(ALL_MODULES).flat().flatMap(m => m.subsections);
-  const completed = sections.filter(s => completedSections[s.id]).length;
-  const progress = Math.round(completed / sections.length * 100);
-  const selectWeek = (id: WeekId | 'all') => {setCurrentWeek(id); setView('visual'); setMenu(false); setSearchQuery('');};
+  const totalPages = ALL_WEEKS_LIST.reduce((n,w)=>n+w.totalPages,0);
+  const completed = ALL_WEEKS_LIST.reduce((n,w)=>n+Array.from({length:w.totalPages},(_,i)=>completedSections[sourcePageKey(w.id,i+1)]).filter(Boolean).length,0);
+  const progress = Math.round(completed / totalPages * 100);
+  const selectWeek = (id: WeekId | 'all') => {setCurrentWeek(id); setView('read'); setMenu(false); setSearchQuery('');};
   const results = useMemo(() => {
     const q = searchQuery.trim().toLocaleLowerCase(); if (q.length < 2) return [];
     return WEEK_IDS.flatMap(week => [
@@ -85,17 +89,17 @@ export function LearningStudio() {
       ...(sources[week]?.pages || []).filter(p => `${p.text} ${translate(p.text, language)}`.toLocaleLowerCase().includes(q)).map(p => ({id:`source-${p.page}`,week,title:p.title,text:summary(p.text,180),page:p.page,kind:'สไลด์ต้นฉบับ'}))
     ]);
   }, [searchQuery,sources,language]);
-  return <div className="studio">
+  return <div className="studio library-world">
     <a className="skip-link" href="#learning-main">ข้ามไปเนื้อหา</a>
     <aside ref={sidebar} className={`studio-sidebar ${menu ? 'is-open' : ''}`} aria-label="เลือกบทเรียน">
       <div className="brand"><GraduationCap size={26}/><div><span>DSI102</span><small>Learning studio</small></div><Button variant="ghost" size="sm" className="mobile-only" aria-label="ปิดเมนู" onClick={() => setMenu(false)}><X size={20}/></Button></div>
       <button className={`nav-home ${currentWeek === 'all' ? 'active' : ''}`} onClick={() => selectWeek('all')}><Layers size={18}/><span>ภาพรวมรายวิชา</span><ArrowUpRight size={16}/></button>
       <div className="sidebar-label">บทเรียนทั้งหมด <span>8 weeks</span></div>
       <nav className="week-navigation">{ALL_WEEKS_LIST.map(w => {
-        const subs = ALL_MODULES[w.id].flatMap(m=>m.subsections), done = subs.filter(s=>completedSections[s.id]).length;
-        return <button key={w.id} className={`week-link ${currentWeek === w.id ? 'active' : ''}`} onClick={()=>selectWeek(w.id)} aria-current={currentWeek===w.id ? 'page' : undefined}><span className="week-number">{String(w.weekNumber).padStart(2,'0')}</span><span><span>{['Digital fundamentals','Computer platforms','Operating systems','VMs & cloud','Computer networks','Network communication','Security layers','Cyber threats'][w.weekNumber-1]}</span><small>{done}/{subs.length} หัวข้อ</small></span>{done===subs.length ? <CheckCircle2 size={16}/> : <ChevronRight size={14}/>}</button>;
+        const subs = Array.from({length:w.totalPages},(_,i)=>sourcePageKey(w.id,i+1)), done = subs.filter(id=>completedSections[id]).length;
+        return <button key={w.id} className={`week-link ${currentWeek === w.id ? 'active' : ''}`} onClick={()=>selectWeek(w.id)} aria-current={currentWeek===w.id ? 'page' : undefined}><span className={`week-number week-color-${w.weekNumber}`}>{String(w.weekNumber).padStart(2,'0')}</span><span><span>{['Digital fundamentals','Computer platforms','Operating systems','VMs & cloud','Computer networks','Network communication','Security layers','Cyber threats'][w.weekNumber-1]}</span><small>{done}/{subs.length} หน้า</small></span>{done===subs.length ? <CheckCircle2 size={16}/> : <ChevronRight size={14}/>}</button>;
       })}</nav>
-      <div className="sidebar-progress"><div><span>ความก้าวหน้าของคุณ</span><span>{progress}%</span></div><progress max={100} value={progress}/><small>{completed} จาก {sections.length} หัวข้อที่อ่านแล้ว</small><p>บันทึกบนเบราว์เซอร์นี้</p></div>
+      <div className="sidebar-progress"><div><span>ความก้าวหน้าของคุณ</span><span>{progress}%</span></div><progress max={100} value={progress}/><small>{completed} จาก {totalPages} หน้าที่อ่านแล้ว</small><p>บันทึกบนเบราว์เซอร์นี้</p></div>
       <div className="sidebar-bottom"><ShieldCheck size={16}/><span>ตรวจเทียบสไลด์ได้ทุกบท</span></div>
     </aside>
     {menu && <button className="nav-scrim" onClick={()=>setMenu(false)} aria-label="ปิดเมนูบทเรียน"/>}
@@ -109,9 +113,9 @@ export function LearningStudio() {
         <main ref={content} id="learning-main" className="studio-main" tabIndex={-1}>
           {searchQuery.trim().length>=2 ? <div className="page-container"><h1>ผลการค้นหา</h1><p className="muted">พบ {results.length} รายการสำหรับ “{searchQuery}”{Object.keys(sources).length<8 ? ' · ข้อความสไลด์บางส่วนยังโหลดไม่ครบ' : ''}</p><div className="search-results">{results.length ? results.slice(0,100).map(r=><article key={`${r.week}-${r.id}`}><div><small>Week {WEEKS_INFO[r.week].weekNumber} · {r.kind} · หน้า {r.page}</small><h2>{r.title}</h2><p>{r.text}</p></div><div className="button-row"><Button variant="secondary" size="sm" onClick={()=>{selectWeek(r.week);setView(r.kind==='บทเรียน'?'learn':'source');}}>เปิดบทเรียน</Button><Reference week={r.week} page={r.page}/></div></article>) : <div className="empty-state">ไม่พบเนื้อหา ลองคำอื่น เช่น CPU, subnet, phishing หรือคลาวด์</div>}</div>{results.length>100 && <p className="muted">แสดง 100 รายการแรก กรุณาเพิ่มคำค้นเพื่อเจาะจงขึ้น</p>}</div>
           : <div className="page-container">
-            {currentWeek==='all' ? <Overview onSelect={selectWeek} onExam={()=>setView('visual')}/> : <WeekHeading week={currentWeek}/>}
+            {currentWeek==='all' ? <ReadingLibrary onSelect={selectWeek}/> : <WeekHeading week={currentWeek}/>}
             <Tabs value={view} onValueChange={v=>setView(v as View)}>
-              <TabsList aria-label="วิธีเรียน"><TabsTrigger value="visual">เรียนด้วยภาพ</TabsTrigger><TabsTrigger value="learn">อ่านบทเรียน</TabsTrigger><TabsTrigger value="source">เปิดสไลด์</TabsTrigger><TabsTrigger value="cards">แฟลชการ์ด</TabsTrigger><TabsTrigger value="practice">ทบทวนเพิ่มเติม</TabsTrigger></TabsList><TabsContent value="visual"><VisualLearning weeks={currentWeek==='all'?WEEK_IDS:[currentWeek]}/></TabsContent>
+              <TabsList aria-label="วิธีเรียน"><TabsTrigger value="read">อ่านตามสไลด์</TabsTrigger><TabsTrigger value="visual">เรียนด้วยภาพ</TabsTrigger><TabsTrigger value="learn">อ่านบทเรียน</TabsTrigger><TabsTrigger value="source">เปิดสไลด์</TabsTrigger><TabsTrigger value="cards">แฟลชการ์ด</TabsTrigger><TabsTrigger value="practice">ทบทวนเพิ่มเติม</TabsTrigger></TabsList><TabsContent value="read">{currentWeek!=='all'&&<SlideReader key={currentWeek} week={currentWeek} onExplore={()=>setView('visual')}/>}</TabsContent><TabsContent value="visual"><VisualLearning weeks={currentWeek==='all'?WEEK_IDS:[currentWeek]}/></TabsContent>
               <TabsContent value="learn"><Lessons weeks={currentWeek==='all'?WEEK_IDS:[currentWeek]}/></TabsContent>
               <TabsContent value="practice"><Practice key={currentWeek} weeks={currentWeek==='all'?WEEK_IDS:[currentWeek]}/></TabsContent>
               <TabsContent value="cards"><Cards key={currentWeek} weeks={currentWeek==='all'?WEEK_IDS:[currentWeek]}/></TabsContent>
